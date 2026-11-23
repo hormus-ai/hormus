@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-17"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
+<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-20"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <title>HORMUS | Know the token before you trade it</title>
 <style>
@@ -498,6 +498,47 @@
 #application .preset-rule{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:10px;border-top:1px solid var(--a-line);font-size:14px}
 @media(max-width:900px){#application .preset-grid{grid-template-columns:1fr}}
 @media(max-width:560px){#application .tg-card{flex-wrap:wrap}#application .tg-acts{width:100%}#application .tg-acts .btn{flex:1}#application .preset-rule{flex-direction:column;align-items:flex-start}}
+/* token socials */
+#application .ti-socials{grid-column:1/-1;display:flex;gap:8px;flex-wrap:wrap;margin-top:-4px}
+#application .ti-social{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:10px;border:1px solid var(--a-line2);color:var(--a-mut);transition:color .15s,border-color .15s}
+#application .ti-social:hover{color:var(--a-fg);border-color:#3b4b47}
+#application .ti-social svg{width:16px;height:16px;fill:currentColor}
+/* launch check + screener */
+.ca-copy{display:inline-flex;align-items:center;gap:8px;max-width:100%;margin-top:6px;padding:4px 8px;border:1px solid #24312e;border-radius:8px;background:#0a100f;color:#cfdad7;font:12.5px "Geist Mono",Consolas,monospace;cursor:pointer}
+.ca-copy span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.ca-copy i{font-style:normal;font-family:Geist,sans-serif;color:#5ff0b0;flex:none}
+.ca-copy:hover{border-color:#2f5a4b}
+#application .alert-ev small,.alert-pop small{white-space:pre-line}
+#application .alert-ev .ca-copy{display:flex;width:fit-content}
+#application .ti-launch .lc-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+#application .lc-cell{padding:14px;border:1px solid var(--a-line);border-radius:12px}
+#application .lc-cell small{display:block;font-size:13px;color:var(--a-dim)}
+#application .lc-cell b{display:block;margin-top:6px;font:600 20px "Geist Mono",Consolas,monospace}
+#application .lc-cell span{display:block;margin-top:4px;font-size:13px;color:var(--a-mut)}
+#application .lc-cell span a{color:var(--a-mut)}
+#application .lc-cell.good b{color:var(--a-mint)}#application .lc-cell.warn b{color:#f2c46d}#application .lc-cell.bad b{color:#ff7a7a}
+.lc-mini{display:inline-flex;flex-wrap:wrap;gap:4px}
+.lc-mini i{font:500 12px "Geist Mono",Consolas,monospace;font-style:normal;padding:2px 6px;border-radius:6px;background:#121a18;color:#a9b7b3;white-space:nowrap}
+.lc-mini i.good{color:#5ff0b0}.lc-mini i.warn{color:#f2c46d;background:#1d1a10}.lc-mini i.bad{color:#ff8a8a;background:#1e1212}
+#application .tm-act{white-space:nowrap}
+#application .pulse-table .lc-mini{display:grid;grid-template-columns:auto auto;gap:3px}
+#application .pulse-table td[data-label="Launch"]{min-width:150px}
+#application .pulse-table .tm-act .tm-open{padding:9px 12px}
+#application .tm-bell{display:inline-grid;place-items:center;width:38px;height:38px;padding:0!important;margin-right:6px;vertical-align:middle}
+#application .tm-bell svg{width:15px;height:15px;fill:currentColor}
+#application .screener{margin-bottom:16px;border-color:#2f5a4b}
+#application .sc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 16px;margin-top:14px}
+#application .sc-f{display:flex;flex-direction:column;gap:6px;font-size:13px;color:var(--a-mut)}
+#application .sc-in{display:flex;align-items:center;gap:6px}
+#application .sc-in .input{width:100%;font-family:"Geist Mono",Consolas,monospace}
+#application .sc-in em{font-style:normal;color:var(--a-dim);white-space:nowrap}
+#application .sc-acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+#application .sc-preview{margin-top:16px;border-top:1px solid var(--a-line);padding-top:12px}
+#application .sc-hit{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px 14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--a-line);text-decoration:none;color:var(--a-fg)}
+#application .sc-hit small{display:block;color:var(--a-mut);font-size:13px;margin-top:2px}
+#application .sc-hit .ca-copy{grid-column:1/-1;margin:0;width:fit-content}
+@media(max-width:1023px){#application .ti-launch .lc-grid{grid-template-columns:repeat(2,minmax(0,1fr))}#application .sc-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){#application .sc-grid{grid-template-columns:1fr}#application .sc-hit{grid-template-columns:1fr}#application .tm-bell{width:40px;height:40px}}
 /* since you were here */
 #application .recap{margin-top:24px;border-color:#2f5a4b;background:#0b1513}
 #application .recap-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0 6px}
@@ -618,7 +659,7 @@
 #application .ov-token b{display:block;font-size:17px}#application .ov-token small{display:block;color:var(--a-mut);font-size:14px;margin-top:3px}#application .ov-token i{font-style:normal;color:var(--a-mint);white-space:nowrap}
 @media(max-width:1023px){#application .appnav>.toolbar{display:flex;gap:8px;align-items:center}#application .navlink-x{margin:0;height:40px;width:40px!important;flex:0 0 40px;padding:0!important;border-radius:10px}#application .navlink-x span{display:none}}
 
-/* homepage footer (DAY-2-17) */
+/* homepage footer (DAY-2-20) */
 #public .hp-foot{border-top:1px solid var(--hp-line);padding-top:72px;overflow:hidden;position:relative}
 #public .hp-fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.25fr;gap:40px}
 #public .hp-fbrand p{margin:18px 0 0;max-width:340px;font-size:15px;line-height:1.65;color:var(--hp-mut)}
@@ -1194,7 +1235,7 @@ async function loadOverviewPulse(){
  if(pagePath==='/overview')renderApp('overview');
 }
 
-function renderApp(route){if(route.startsWith('markets/token/')){const address=route.split('/')[2]||'';appHead('Token Intelligence','Market detail · Robinhood Chain 4663');document.getElementById('appview').innerHTML=tokenIntelligenceShell(address);bindApp();bindTokenIntelligence();loadTokenIntelligence(address);return}let map={overview:['Overview','Your agents, wallet and watchlist.',appOverview],agents:['Agents','Create agents, give them skills, run research and set schedules.',appAgents],skills:['Skills','Community skills: add them to your agents or type /name in the Terminal.',appSkills],funding:['Agent funding','Set how much each agent may use, and manage USDG in the vault.',appFunding],'agent-analytics':['Agent analytics','Run counts, durations and swap results.',appAgentAnalytics],markets:['Markets','Explore live pools and token activity across Robinhood Chain.',appMarkets],alerts:['Alerts','Token moves, new Pons launches and graduations, sent to you here and on Telegram. Checked every 30 seconds.',appAlerts],terminal:['Research terminal','Ask about a token or market and get an answer with sources.',appTerminal],trade:['Trade','Swap tokens from your wallet.',appTrade],'paper-trading':['Trade','Swap tokens from your wallet.',appTrade],portfolio:['Portfolio','Your real balances on Robinhood Chain, your vault and your swaps.',appPortfolio],activity:['Activity','Review completed and failed agent runs, with persistent alerts.',appActivity],settings:['Settings','Manage account preferences and export your workspace.',appSettings]};let x=map[route]||map.overview;appHead(x[0],x[1]);document.getElementById('appview').innerHTML=x[2]();bindApp();bindTradeAndPortfolio();if(route==='skills')bindSkills();if(route==='funding')bindFunding()}
+function renderApp(route){if(route.startsWith('markets/token/')){const address=route.split('/')[2]||'';appHead('Token Intelligence','Market detail · Robinhood Chain 4663');document.getElementById('appview').innerHTML=tokenIntelligenceShell(address);bindApp();bindTokenIntelligence();loadTokenIntelligence(address);return}let map={overview:['Overview','Your agents, wallet and watchlist.',appOverview],agents:['Agents','Create agents, give them skills, run research and set schedules.',appAgents],skills:['Skills','Community skills: add them to your agents or type /name in the Terminal.',appSkills],funding:['Agent funding','Set how much each agent may use, and manage USDG in the vault.',appFunding],'agent-analytics':['Agent analytics','Run counts, durations and swap results.',appAgentAnalytics],markets:['Markets','Explore live pools and token activity across Robinhood Chain.',appMarkets],alerts:['Alerts','Token moves, new Pons launches, graduations and your own fresh-token screener, sent here and on Telegram. Checked every 30 seconds.',appAlerts],terminal:['Research terminal','Ask about a token or market and get an answer with sources.',appTerminal],trade:['Trade','Swap tokens from your wallet.',appTrade],'paper-trading':['Trade','Swap tokens from your wallet.',appTrade],portfolio:['Portfolio','Your real balances on Robinhood Chain, your vault and your swaps.',appPortfolio],activity:['Activity','Review completed and failed agent runs, with persistent alerts.',appActivity],settings:['Settings','Manage account preferences and export your workspace.',appSettings]};let x=map[route]||map.overview;appHead(x[0],x[1]);document.getElementById('appview').innerHTML=x[2]();bindApp();bindTradeAndPortfolio();if(route==='skills')bindSkills();if(route==='funding')bindFunding()}
 // ===== Agent funding: Privy wallet + USDG vault =====
 const USDG_ADDRESS='0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168';
 const RH_CHAIN_ID=4663;
@@ -1551,7 +1592,7 @@ function renderTokenIntelligence(){
  const explorer=`https://robinhoodchain.blockscout.com/token/${encodeURIComponent(addr)}`,ponsUrl=`https://www.ponsfamily.com/launchpad/${encodeURIComponent(addr)}`;
  const hero=`<section class="panel ti-hero"><div class="ti-id">${marketTokenImage(t.imageUrl,t.symbol||t.name||'TOKEN')}<div><h2>${tiEsc(t.name||'Token')}</h2><div class="ti-sub"><span class="ti-sym">${tiEsc(t.symbol||'')}</span>${isPons?'<span class="ti-chip">Pons</span>':''}${status&&status!=='market data only'?`<span class="ti-chip">${tiEsc(status)}</span>`:''}<button class="ti-copy" data-copy="${esc(addr)}" title="Copy contract address">${tiShort(addr)}<i>Copy</i></button></div></div></div>
   <div class="ti-pricebox"><b>${tiPrice(t.priceUsd)}</b>${chg===null?'':`<span class="ti-chg ${chg>=0?'up':'down'}">${chg>0?'+':''}${chg.toFixed(2)}% <small>24h</small></span>`}</div>
-  <div class="ti-actions"><a class="btn primary" href="#ti-trade" data-ti-jump>Trade</a>${tiAlertButton()}<a class="btn" href="${explorer}" target="_blank" rel="noopener noreferrer">Explorer ↗</a>${isPons?`<a class="btn" href="${ponsUrl}" target="_blank" rel="noopener noreferrer">Pons ↗</a>`:''}<button class="btn ghost" id="ti-refresh" title="Refresh">↻</button></div></section>`;
+  <div class="ti-actions"><a class="btn primary" href="#ti-trade" data-ti-jump>Trade</a>${tiAlertButton()}<a class="btn" href="${explorer}" target="_blank" rel="noopener noreferrer">Explorer ↗</a>${isPons?`<a class="btn" href="${ponsUrl}" target="_blank" rel="noopener noreferrer">Pons ↗</a>`:''}<button class="btn ghost" id="ti-refresh" title="Refresh">↻</button></div>${tiSocials(t.links)}</section>`;
  const metrics=`<div class="ti-metrics">${[['24h volume',tiMoney(t.volume24h)],['Liquidity',tiMoney(t.liquidityUsd)],['Market cap',tiMoney(t.marketCapUsd)],['FDV',tiMoney(t.fdvUsd)],['Holders',tiNum(t.holders)],['Circulating',t.circulatingSupply?tiNum(t.circulatingSupply):tiNum(t.totalSupply)]].map(([k,v])=>`<div class="ti-metric"><small>${k}</small><b>${v}</b></div>`).join('')}</div>`;
  const intervals=`<div class="ti-intervals">${['5m','15m','1h','4h','1d'].map(v=>`<button data-ti-interval="${v}" class="${S.interval===v?'active':''}">${v}</button>`).join('')}</div>`;
  const chartSection=`<section class="panel"><div class="ti-section-head"><h3>Price</h3>${intervals}</div>${tiChart(chartRows)}</section>`;
@@ -1566,7 +1607,7 @@ function renderTokenIntelligence(){
  const signals=`<section class="panel"><div class="ti-section-head"><h3>Signals</h3></div><p class="ti-muted">${tiEsc(d.intelligence?.note||'Signals show up when there is enough data behind them.')}</p>${Array.isArray(d.intelligence?.signals)&&d.intelligence.signals.length?d.intelligence.signals.map(x=>`<div class="ti-signal"><div><b>${tiEsc(x.label||x.key)}</b><p class="ti-muted">${tiEsc(x.evidence||'')}</p></div><span class="ti-chip">${tiEsc(x.confidence||x.risk||'limited')}</span></div>`).join(''):''}<p class="ti-muted" style="margin-top:14px">Want a deeper read? <a href="/terminal" data-ti-ask>Ask the agent about ${tiEsc(t.symbol||'this token')}</a>.</p></section>`;
  const content=sel==='overview'?`${chartSection}${bonding}<div class="ti-grid2">${about}${links}</div>${recent}`:sel==='transactions'?`<section class="panel"><div class="ti-section-head"><h3>Trades</h3>${txFilters}</div>${trades}</section>`:sel==='holders'?renderTokenHolders(d.holders||{}):signals;
  const src=Object.entries(d.sources||{}).filter(([k,v])=>['profile','candles','trades','pool','holders'].includes(k)&&v&&v!=='unavailable').map(([,v])=>v);
- root.innerHTML=`${hero}${tiAlertPanel()}${metrics}${S.error?`<div class="ti-warning">${tiEsc(S.error)}</div>`:''}<div class="ti-tabs">${tabs.map(([k,v])=>`<button data-ti-tab="${k}" class="${sel===k?'active':''}">${v}</button>`).join('')}</div>${content}<p class="ti-foot">Data from ${src.length?[...new Set(src)].map(esc).join(', '):'public market sources'}${d.fetchedAt?' · updated '+new Date(d.fetchedAt).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}):''}. Empty fields were not reported by the source. Not financial advice.</p>`;
+ root.innerHTML=`${hero}${tiAlertPanel()}${metrics}${tiLaunchPanel()}${S.error?`<div class="ti-warning">${tiEsc(S.error)}</div>`:''}<div class="ti-tabs">${tabs.map(([k,v])=>`<button data-ti-tab="${k}" class="${sel===k?'active':''}">${v}</button>`).join('')}</div>${content}<p class="ti-foot">Data from ${src.length?[...new Set(src)].map(esc).join(', '):'public market sources'}${d.fetchedAt?' · updated '+new Date(d.fetchedAt).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}):''}. Empty fields were not reported by the source. Not financial advice.</p>`;
  bindTokenIntelligence();
 }
 async function loadTokenIntelligence(address,interval=tokenIntelligenceState.interval||'15m'){
@@ -2312,7 +2353,7 @@ async function runSkillCommand(text){
 let pulseState={tf:'5m',sort:'gainers',data:null,loading:false,error:'',timer:null,tick:null};
 function fmtAge(m){if(m===null||m===undefined||!Number.isFinite(Number(m)))return '—';m=Number(m);if(m<1)return 'just now';if(m<60)return m+'m';if(m<1440)return Math.floor(m/60)+'h '+(m%60?m%60+'m':'');return Math.floor(m/1440)+'d'}
 function pulseUsd(n){if(n===null||n===undefined||n===0)return '—';const a=Math.abs(n);return '$'+(a>=1e9?(n/1e9).toFixed(2)+'B':a>=1e6?(n/1e6).toFixed(2)+'M':a>=1e3?(n/1e3).toFixed(1)+'K':n.toFixed(a<10?2:0))}
-// ===== DAY-2-17: since you were here =====
+// ===== DAY-2-20: since you were here =====
 const recapState={base:null,seen:{},data:null,loading:false};
 (function(){try{
  recapState.seen=JSON.parse(localStorage.getItem('hormus-seen')||'{}')||{};
@@ -2358,8 +2399,8 @@ const BELL_SVG='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 
 const TG_SVG='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 4.2 2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.6.2 1.8-.8l3.3-15.5c.3-1.3-.5-1.9-1.4-1.5ZM8.2 14.2l9.6-6.1c.5-.3.9-.1.5.2l-8.2 7.4-.3 3.4-1.6-4.9Z"/></svg>';
 const alertsState={unread:0,lastId:0,polling:false,lastPoll:0,page:null,tg:null,tgWait:0};
 try{alertsState.lastId=+localStorage.getItem('hormus-alert-seen')||0}catch{}
-const MARKET_KINDS=['new_launch','near_graduation','graduated','any_pump'];
-function alertLabel(a){const v=Number(a.value),w=a.window_tf==='1h'?'1h':'5m',mv=Number(a.min_volume)||0,mb=Number(a.min_buys)||0;
+const MARKET_KINDS=['new_launch','near_graduation','graduated','any_pump','screener'];
+function alertLabel(a){if(a.kind==='screener')return screenerLabel(a.filters);const v=Number(a.value),w=a.window_tf==='1h'?'1h':'5m',mv=Number(a.min_volume)||0,mb=Number(a.min_buys)||0;
  return a.kind==='pump'?`Pumps ${v}% in ${w}`:a.kind==='dump'?`Dumps ${v}% in ${w}`:a.kind==='price_above'?`Goes above ${tiPrice(v)}`:a.kind==='price_below'?`Goes below ${tiPrice(v)}`
  :a.kind==='volume'?`Volume over ${tiMoney(v)} in ${w}`:a.kind==='buy_pressure'?`Buys ${v}x sells in ${w}`
  :a.kind==='new_launch'?`New Pons launches${mv||mb?` with ${[mv?tiMoney(mv)+' volume':'',mb?mb+' buys':''].filter(Boolean).join(' and ')} in the first hour`:''}`
@@ -2369,7 +2410,7 @@ function setAlertBadges(n){alertsState.unread=n;document.querySelectorAll('[data
 function alertPop(a){
  let box=document.getElementById('alert-pops');if(!box){box=document.createElement('div');box.id='alert-pops';document.body.appendChild(box)}
  const addr=a.payload?.tokenAddress,el=document.createElement('a');el.className='alert-pop'+(a.severity==='warning'?' warn':'');el.href=addr?`/markets/token/${addr}`:'/alerts';
- el.innerHTML=`<i>${BELL_SVG}</i><span><b>${esc(a.title)}</b><small>${esc(a.message)}</small></span>`;
+ el.innerHTML=`<i>${BELL_SVG}</i><span><b>${esc(a.title)}</b><small>${esc(a.message)}</small>${caChip(addr)}</span>`;
  el.addEventListener('click',()=>el.remove());box.prepend(el);setTimeout(()=>el.classList.add('out'),8500);setTimeout(()=>el.remove(),9000);
  try{if('Notification' in window&&Notification.permission==='granted'){const n=new Notification(a.title,{body:a.message,icon:'/hormus-logo.svg',tag:'hormus-alert-'+a.id});n.onclick=()=>{window.focus();if(addr)go('/markets/token/'+addr);n.close()}}}catch{}
 }
@@ -2417,6 +2458,8 @@ function tiAlertPanel(){
 function bindTiAlerts(){
  const S=tokenIntelligenceState;
  if(S.alerts===undefined&&S.address){S.alerts=null;loadTiAlerts()}
+ if(S.launch===undefined&&S.address){S.launch=null;loadTiLaunch()}
+ if(!S.alertAuto&&new URLSearchParams(location.search).get('alert')==='1'){S.alertAuto=true;S.alertOpen=true;setTimeout(()=>{renderTokenIntelligence();document.querySelector('.ti-alert')?.scrollIntoView({behavior:'smooth',block:'center'})},0)}
  const btn=document.getElementById('ti-alert-btn');if(btn)btn.onclick=()=>{S.alertOpen=!S.alertOpen;renderTokenIntelligence();if(S.alertOpen)document.querySelector('.ti-alert')?.scrollIntoView({behavior:'smooth',block:'nearest'})};
  document.querySelectorAll('[data-ti-alert-close]').forEach(b=>b.onclick=()=>{S.alertOpen=false;renderTokenIntelligence()});
  document.querySelectorAll('[data-ti-alert-kind]').forEach(b=>b.onclick=()=>{S.alertKind=b.dataset.tiAlertKind;S.alertValue=undefined;renderTokenIntelligence()});
@@ -2468,19 +2511,21 @@ function alertsPageHtml(){
  const tok=a=>`<a href="/markets/token/${esc(a.token_address)}"><b>${esc(a.token_symbol||String(a.token_address||'').slice(0,6)+'…'+String(a.token_address||'').slice(-4))}</b></a>`;
  return `<div class="alerts-top">${telegramCard()}${perm==='default'?`<section class="panel alerts-notify"><div><b>Browser notifications</b><p class="muted">Get alerts even when this tab is in the background.</p></div><button class="btn" data-alert-notify>Turn on</button></section>`:''}</div>
  <section class="panel presets"><div class="ov-head"><div><h3>Launchpad and market</h3><p class="muted" style="margin:4px 0 0;font-size:14px">No token to pick. Turn one on and new hits come to you.</p></div></div><div class="preset-grid">${PRESETS.map(x=>presetCard(x,p.rules)).join('')}</div></section>
+ ${screenerCard(p.rules)}
  <div class="alerts-grid">
   <section class="panel"><div class="ov-head"><h3>Token alerts</h3><span class="muted" style="font-size:14px">${active.length} active</span></div>
    ${tokenRules.length?tokenRules.map(a=>`<div class="alert-rule${a.enabled?'':' off'}"><span>${tok(a)}<small>${esc(alertLabel(a))}</small></span><small class="muted">${a.enabled?'active':a.last_triggered_at?'fired '+tiAgo(a.last_triggered_at):'paused'}</small><span class="alert-acts">${['price_above','price_below'].includes(a.kind)&&a.last_triggered_at?'':`<button class="btn ghost" data-alert-toggle="${esc(a.id)}" data-on="${a.enabled?1:0}">${a.enabled?'Pause':'Resume'}</button>`}<button class="btn ghost" data-alert-del="${esc(a.id)}">Remove</button></span></div>`).join('')
    :`<p class="muted" style="margin:6px 0 14px">Open any token and press Alert to get pinged when it pumps, dumps, hits a price, spikes in volume or gets heavy buying.</p><a class="btn primary" href="/markets">Find a token</a>`}
   </section>
   <section class="panel"><div class="ov-head"><h3>Recent</h3>${p.events.some(e=>!e.acknowledged_at)?'<button class="btn ghost" data-alert-readall>Mark all read</button>':''}</div>
-   ${p.events.length?p.events.map(e=>{const addr=e.payload?.tokenAddress;return `<a class="alert-ev${e.acknowledged_at?'':' new'}${e.severity==='warning'?' warn':''}" href="${addr?'/markets/token/'+esc(addr):'/alerts'}"><b>${esc(e.title)}</b><small>${esc(e.message)}</small><em>${tiAgo(e.created_at)}</em></a>`}).join('')
+   ${p.events.length?p.events.map(e=>{const addr=e.payload?.tokenAddress;return `<a class="alert-ev${e.acknowledged_at?'':' new'}${e.severity==='warning'?' warn':''}" href="${addr?'/markets/token/'+esc(addr):'/alerts'}"><b>${esc(e.title)}</b><small>${esc(e.message)}</small>${caChip(addr)}<em>${tiAgo(e.created_at)}</em></a>`}).join('')
    :'<p class="muted" style="margin:6px 0">Nothing fired yet. When an alert hits, it shows up here, as a pop-up and on Telegram.</p>'}
   </section>
  </div>`;
 }
 function bindAlertsPage(){
  const root=document.getElementById('alerts-page');if(!root)return;
+ bindScreener();
  root.querySelectorAll('[data-alert-del]').forEach(b=>b.onclick=async()=>{b.disabled=true;try{await apiRequest('/api/v1/price-alerts/'+encodeURIComponent(b.dataset.alertDel),{method:'DELETE'})}catch{toast('Could not remove the alert')}loadAlertsPage()});
  root.querySelectorAll('[data-alert-toggle]').forEach(b=>b.onclick=async()=>{b.disabled=true;try{await apiRequest('/api/v1/price-alerts/'+encodeURIComponent(b.dataset.alertToggle),{method:'PATCH',body:JSON.stringify({enabled:b.dataset.on!=='1'})})}catch(e){toast(e.message==='too_many_alerts'?'You already have 50 active alerts.':'Could not update the alert')}loadAlertsPage()});
  root.querySelectorAll('[data-preset]').forEach(b=>b.onclick=async()=>{
@@ -2498,6 +2543,80 @@ function bindAlertsPage(){
  };
  const tt=root.querySelector('[data-tg-test]');if(tt)tt.onclick=async()=>{tt.disabled=true;try{await apiRequest('/api/v1/telegram/test',{method:'POST',body:'{}'});toast('Test sent. Check Telegram.')}catch{toast('Could not send. Try connecting again.')}tt.disabled=false};
  const to=root.querySelector('[data-tg-off]');if(to)to.onclick=async()=>{to.disabled=true;try{await apiRequest('/api/v1/telegram/link',{method:'DELETE'})}catch{}await loadTelegramStatus();toast('Telegram disconnected')};
+}
+// ===== token socials =====
+const SOCIAL_ICONS={
+ twitter:['X','<path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>'],
+ website:['Website','<path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20Zm6.93 6h-2.95a15.7 15.7 0 0 0-1.38-3.56A8.03 8.03 0 0 1 18.93 8ZM12 4.04c.83 1.2 1.48 2.53 1.91 3.96h-3.82c.43-1.43 1.08-2.76 1.91-3.96ZM4.26 14a8.2 8.2 0 0 1 0-4h3.38a16.5 16.5 0 0 0 0 4H4.26Zm.81 2h2.95c.32 1.25.78 2.45 1.38 3.56A8.03 8.03 0 0 1 5.07 16Zm2.95-8H5.07a8.03 8.03 0 0 1 4.33-3.56A15.7 15.7 0 0 0 8.02 8ZM12 19.96A14.1 14.1 0 0 1 10.09 16h3.82A14.1 14.1 0 0 1 12 19.96ZM14.34 14H9.66a14.7 14.7 0 0 1 0-4h4.68a14.7 14.7 0 0 1 0 4Zm.26 5.56c.6-1.11 1.06-2.31 1.38-3.56h2.95a8.03 8.03 0 0 1-4.33 3.56ZM16.36 14a16.5 16.5 0 0 0 0-4h3.38a8.2 8.2 0 0 1 0 4h-3.38Z"/>'],
+ telegram:['Telegram','<path d="M21.6 4.2 2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.6.2 1.8-.8l3.3-15.5c.3-1.3-.5-1.9-1.4-1.5ZM8.2 14.2l9.6-6.1c.5-.3.9-.1.5.2l-8.2 7.4-.3 3.4-1.6-4.9Z"/>'],
+ discord:['Discord','<path d="M19.3 5.3A16.6 16.6 0 0 0 15.2 4l-.5 1a15.3 15.3 0 0 0-5.4 0l-.5-1a16.6 16.6 0 0 0-4.1 1.3C2.1 9.2 1.4 13 1.7 16.7a16.7 16.7 0 0 0 5 2.5l1.1-1.7c-.6-.2-1.2-.5-1.7-.8l.4-.3a11.9 11.9 0 0 0 11 0l.4.3c-.5.3-1.1.6-1.7.8l1.1 1.7a16.6 16.6 0 0 0 5-2.5c.4-4.3-.7-8-3-11.4ZM8.5 14.4c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm7 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/>'],
+ github:['GitHub','<path d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.5 9.5 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.69-4.57 4.93.36.31.68.92.68 1.85v2.75c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/>'],
+ farcaster:['Farcaster','<path d="M4 3h16v3h-1.5v12.5H20V21h-6v-2.5h1.5v-6a3.5 3.5 0 0 0-7 0v6H10V21H4v-2.5h1.5V6H4V3Z"/>']
+};
+function tiSocials(links){
+ const l=links&&typeof links==='object'?links:{};
+ const items=Object.keys(SOCIAL_ICONS).filter(k=>/^https?:\/\//i.test(l[k]||''));
+ if(!items.length)return '';
+ return `<div class="ti-socials">${items.map(k=>`<a class="ti-social" href="${esc(l[k])}" target="_blank" rel="noopener noreferrer nofollow" title="${SOCIAL_ICONS[k][0]} (from the token creator)" aria-label="${SOCIAL_ICONS[k][0]}"><svg viewBox="0 0 24 24" aria-hidden="true">${SOCIAL_ICONS[k][1]}</svg></a>`).join('')}</div>`;
+}
+// ===== launch check + fresh token screener (UI) =====
+function caChip(addr){return /^0x[a-fA-F0-9]{40}$/.test(addr||'')?`<button type="button" class="ca-copy" data-copy-ca="${esc(addr)}" title="Copy contract address"><span>${esc(addr)}</span><i>Copy</i></button>`:''}
+document.addEventListener('click',async e=>{const b=e.target.closest('[data-copy-ca]');if(!b)return;e.preventDefault();e.stopPropagation();try{await navigator.clipboard.writeText(b.dataset.copyCa);toast('Contract address copied')}catch{toast(b.dataset.copyCa)}},true);
+const lcPct=v=>v===null||v===undefined?'—':`${Number(v).toFixed(Number(v)<10?1:0)}%`;
+const lcCls=(v,warn,bad)=>v===null||v===undefined?'':v>=bad?'bad':v>=warn?'warn':'good';
+function lcDev(c){return c.devPct===null?'—':c.devBought&&c.devPct===0?'sold':lcPct(c.devPct)}
+// token page panel
+async function loadTiLaunch(){const S=tokenIntelligenceState,addr=S.address;try{const r=await apiRequest('/api/v1/markets/launch-check/'+encodeURIComponent(addr));if(S.address===addr){S.launch=r.check||{available:false};if(S.launch.available)renderTokenIntelligence()}}catch{if(S.address===addr)S.launch={available:false}}}
+function tiLaunchPanel(){
+ const c=tokenIntelligenceState.launch;if(!c||!c.available)return '';
+ const cell=(label,val,cls,sub)=>`<div class="lc-cell ${cls}"><small>${label}</small><b>${val}</b>${sub?`<span>${sub}</span>`:''}</div>`;
+ return `<section class="panel ti-launch"><div class="ti-section-head"><h3>Launch check</h3><span class="ti-muted">read from the chain</span></div><div class="lc-grid">
+  ${cell('Snipers',`${c.sniperWallets}`,lcCls(c.sniperPct,5,15),`${lcPct(c.sniperPct)} still held`)}
+  ${cell('Bundle',lcPct(c.bundlePct),lcCls(c.bundlePct,5,15),`${c.bundleWallets} wallet${c.bundleWallets===1?'':'s'} at launch`)}
+  ${cell('Dev',lcDev(c),c.devBought&&c.devPct===0?'warn':lcCls(c.devPct,5,10),c.devAddress?`<a href="https://robinhoodchain.blockscout.com/address/${esc(c.devAddress)}" target="_blank" rel="noopener noreferrer">${esc(c.devAddress.slice(0,6)+'…'+c.devAddress.slice(-4))} ↗</a>`:'')}
+  ${cell('Top 10',lcPct(c.top10Pct),lcCls(c.top10Pct,25,40),'of supply, curve excluded')}
+  ${cell('Holders',String(c.holders),c.holders<10?'warn':'good','wallets holding now')}
+ </div><p class="ti-muted" style="margin-top:12px">Snipers bought in the first ${c.snipeSeconds} seconds, bundle in the launch block or the one right after. ${c.transfers} transfers read.</p></section>`;
+}
+// live pulse fresh tab
+function pulseLaunchCell(addr){
+ const c=pulseState.launch?.[addr];if(c===undefined)return '<span class="muted">…</span>';if(!c||!c.available)return '<span class="muted">—</span>';
+ return `<span class="lc-mini"><i class="${lcCls(c.sniperPct,5,15)}" title="snipers still holding">S ${c.sniperWallets}·${lcPct(c.sniperPct)}</i><i class="${lcCls(c.bundlePct,5,15)}" title="bundle">B ${lcPct(c.bundlePct)}</i><i class="${c.devBought&&c.devPct===0?'warn':lcCls(c.devPct,5,10)}" title="dev">D ${lcDev(c)}</i><i class="${lcCls(c.top10Pct,25,40)}" title="top 10 holders">T10 ${lcPct(c.top10Pct)}</i></span>`;
+}
+async function loadPulseLaunch(){
+ if(pulseState.sort!=='fresh'||pulseState.launchLoading)return;
+ const rows=(pulseState.data?.rows||[]).slice(0,12),need=rows.map(r=>r.address).filter(a=>!(pulseState.launch&&a in pulseState.launch));
+ if(!need.length)return;
+ pulseState.launchLoading=true;
+ try{const r=await apiRequest('/api/v1/markets/launch-checks',{method:'POST',body:JSON.stringify({addresses:need})});pulseState.launch={...(pulseState.launch||{}),...(r.checks||{})}}
+ catch{pulseState.launch={...(pulseState.launch||{}),...Object.fromEntries(need.map(a=>[a,null]))}}
+ finally{pulseState.launchLoading=false;if(pagePath==='/markets')renderPulse()}
+}
+// alerts page: screener
+const SCREENER_FIELDS=[['maxAgeMin','Max age','min',60,1],['minVol5m','Volume 5m over','$',500,50],['risingPct','Volume rising: 5m at least','% of 1h',40,5],['minBuys1h','Buys in 1h at least','',15,1],['minHolders','Holders at least','',20,1],['maxSniperPct','Snipers holding at most','%',10,1],['maxBundlePct','Bundle at most','%',5,1],['maxDevPct','Dev holding at most','%',5,1],['maxTop10Pct','Top 10 at most','%',30,1],['minCurve','Curve from','%',0,1],['maxCurve','Curve up to','%',80,1]];
+function screenerLabel(f){f=f||{};const p=[];const has=k=>f[k]!==undefined&&f[k]!==null&&f[k]!=='';
+ if(has('maxAgeMin'))p.push(`up to ${f.maxAgeMin}m old`);if(has('minVol5m'))p.push(`${tiMoney(f.minVol5m)}+ vol 5m`);if(has('risingPct')&&+f.risingPct>0)p.push(`rising ${f.risingPct}%`);if(has('minBuys1h'))p.push(`${f.minBuys1h}+ buys`);if(has('minHolders'))p.push(`${f.minHolders}+ holders`);
+ if(has('maxSniperPct'))p.push(`snipers ≤ ${f.maxSniperPct}%`);if(has('maxBundlePct'))p.push(`bundle ≤ ${f.maxBundlePct}%`);if(has('maxDevPct'))p.push(`dev ≤ ${f.maxDevPct}%`);if(has('maxTop10Pct'))p.push(`top10 ≤ ${f.maxTop10Pct}%`);
+ if(has('minCurve')||has('maxCurve'))p.push(`curve ${has('minCurve')?f.minCurve:0}–${has('maxCurve')?f.maxCurve:100}%`);return 'Screener: '+(p.join(' · ')||'any fresh launch')}
+function readScreenerFilters(){const f={};for(const [k] of SCREENER_FIELDS){const el=document.getElementById('sc-'+k);if(!el||el.value.trim()==='')continue;const n=Number(el.value);if(!Number.isFinite(n)||n<0)return null;f[k]=['minBuys1h','minHolders'].includes(k)?Math.round(n):n}return f}
+function screenerCard(rules){
+ const mine=rules.filter(a=>a.kind==='screener'),pv=alertsState.preview;
+ const keep=alertsState.scValues||{};
+ return `<section class="panel screener"><div class="ov-head"><div><h3>Fresh token screener</h3><p class="muted" style="margin:4px 0 0;font-size:14px">Your own filters for new Pons launches, checked on-chain: rising volume, snipers, bundle, dev and top 10. Leave a box empty to skip it.</p></div></div>
+  ${mine.map(a=>`<div class="preset-rule"><span>${esc(screenerLabel(a.filters))}</span><span class="alert-acts"><button class="btn ghost" data-alert-toggle="${esc(a.id)}" data-on="${a.enabled?1:0}">${a.enabled?'Pause':'Resume'}</button><button class="btn ghost" data-alert-del="${esc(a.id)}">Remove</button></span></div>`).join('')}
+  <div class="sc-grid">${SCREENER_FIELDS.map(([k,label,unit,def,step])=>`<label class="sc-f"><span>${label}</span><span class="sc-in">${unit==='$'?'<em>$</em>':''}<input class="input" id="sc-${k}" type="number" min="0" step="${step}" inputmode="decimal" value="${esc(keep[k]??def)}">${unit&&unit!=='$'?`<em>${unit}</em>`:''}</span></label>`).join('')}</div>
+  <div class="sc-acts"><button class="btn" data-sc-preview>Preview matches</button><button class="btn primary" data-sc-save>${mine.length?'Add this screener':'Turn on'}</button></div>
+  ${pv?`<div class="sc-preview">${pv.loading?'<p class="muted">Checking fresh launches on-chain…</p>':pv.matches.length?`<p class="muted" style="margin:0 0 6px">${pv.matches.length} token${pv.matches.length===1?'':'s'} match right now</p>${pv.matches.map(m=>`<a class="sc-hit" href="/markets/token/${esc(m.address)}"><span><b>${esc(m.symbol)}</b><small>${esc(m.name||'')} · ${fmtAge(m.ageMinutes)} old · ${tiMoney(m.volume5m)} vol 5m</small></span>${m.launch?.available?pulseLaunchMini(m.launch):''}${caChip(m.address)}</a>`).join('')}`:'<p class="muted">Nothing matches right now. Loosen a filter or wait for the next launch.</p>'}</div>`:''}
+ </section>`;
+}
+function pulseLaunchMini(c){return `<span class="lc-mini"><i class="${lcCls(c.sniperPct,5,15)}">S ${c.sniperWallets}·${lcPct(c.sniperPct)}</i><i class="${lcCls(c.bundlePct,5,15)}">B ${lcPct(c.bundlePct)}</i><i class="${c.devBought&&c.devPct===0?'warn':lcCls(c.devPct,5,10)}">D ${lcDev(c)}</i><i class="${lcCls(c.top10Pct,25,40)}">T10 ${lcPct(c.top10Pct)}</i></span>`}
+function bindScreener(){
+ const root=document.getElementById('alerts-page');if(!root)return;
+ root.querySelectorAll('.sc-grid input').forEach(i=>i.oninput=()=>{alertsState.scValues={...(alertsState.scValues||{}),[i.id.slice(3)]:i.value}});
+ const pvb=root.querySelector('[data-sc-preview]');if(pvb)pvb.onclick=async()=>{const f=readScreenerFilters();if(!f)return toast('Check the numbers and try again.');alertsState.preview={loading:true,matches:[]};renderAlertsPage();
+  try{const r=await apiRequest('/api/v1/price-alerts/preview',{method:'POST',body:JSON.stringify({filters:f})});alertsState.preview={matches:r.matches||[]}}catch{alertsState.preview={matches:[]};toast('Could not check right now. Try again.')}renderAlertsPage()};
+ const sv=root.querySelector('[data-sc-save]');if(sv)sv.onclick=async()=>{const f=readScreenerFilters();if(!f)return toast('Check the numbers and try again.');if(f.minCurve!==undefined&&f.maxCurve!==undefined&&f.minCurve>f.maxCurve)return toast('Curve from must be below curve up to.');sv.disabled=true;
+  if(await createAlert({kind:'screener',filters:f})){toast('Screener is on. New matches come to you here and on Telegram.');alertsState.preview=null;loadAlertsPage()}else sv.disabled=false};
 }
 // ===== live numbers, agent working steps, onboarding =====
 function pulseFlashDiff(oldD,newD){notePons(newD?.rows);notePrices(newD?.rows);
@@ -2572,7 +2691,7 @@ function renderPulse(){
  const stage=r=>r.progressPct!==null&&r.progressPct!==undefined&&r.stage!=='market'&&r.stage!=='graduated'?`<span class="tm-prog"><span class="tm-progbar"><i style="width:${Math.max(0,Math.min(100,r.progressPct))}%"></i></span>${r.progressPct.toFixed(0)}% curve</span>`:esc(r.stage==='market'||!r.stage?'Pool':r.stage.replace(/^./,c=>c.toUpperCase()));
  const flow=x=>{const b=Number(x.buys)||0,se=Number(x.sells)||0,t=b+se;return t?`<span class="tm-flow"><span class="tm-flowbar"><i style="width:${(b/t*100).toFixed(0)}%"></i></span><small><b class="positive">${b}</b> buys · <b class="negative">${se}</b> sells</small></span>`:'<span class="muted">—</span>'};
  const chg=v=>v===null||v===undefined?'<span class="muted">—</span>':`<span class="${v>=0?'positive':'negative'}">${v>0?'+':''}${Math.abs(v)>=1000?Math.round(v).toLocaleString():v.toFixed(2)}%</span>`;
- const table=rows.length?`<div class="tablewrap tm-table pulse-table"><table><thead><tr><th>Token</th><th>Age</th><th>Price</th><th>Change ${tf}</th><th>Volume ${tf}</th><th>Buys / sells ${tf}</th><th>Liquidity</th><th>Stage</th><th></th></tr></thead><tbody>${rows.map(r=>{const x=r.tf?.[tf]||{};return `<tr class="${pulseState.fresh?.has(r.address)?'pulse-new':''}"><td data-label="Token">${nm(r)}</td><td data-label="Age">${fmtAge(r.ageMinutes)}</td><td data-label="Price"><span class="${pulseState.flash?.[r.address]?'flash-'+pulseState.flash[r.address]:''}">${r.priceUsd===null?'—':tiPrice(r.priceUsd)}</span></td><td data-label="Change ${tf}">${chg(x.change)}</td><td data-label="Volume ${tf}">${pulseUsd(x.volume)}</td><td data-label="Buys / sells ${tf}">${flow(x)}</td><td data-label="Liquidity">${pulseUsd(r.liquidityUsd)}</td><td data-label="Stage">${stage(r)}</td><td class="tm-act" data-label=""><a class="btn tm-open" href="/markets/token/${esc(r.address)}">Trade <span>→</span></a></td></tr>`}).join('')}</tbody></table></div>`
+ const table=rows.length?`<div class="tablewrap tm-table pulse-table"><table><thead><tr><th>Token</th><th>Age</th><th>Price</th><th>Change ${tf}</th><th>Volume ${tf}</th><th>Buys / sells ${tf}</th>${s.sort==='fresh'?'':'<th>Liquidity</th>'}<th>Stage</th>${s.sort==='fresh'?'<th>Launch check</th>':''}<th></th></tr></thead><tbody>${rows.map(r=>{const x=r.tf?.[tf]||{};return `<tr class="${pulseState.fresh?.has(r.address)?'pulse-new':''}"><td data-label="Token">${nm(r)}</td><td data-label="Age">${fmtAge(r.ageMinutes)}</td><td data-label="Price"><span class="${pulseState.flash?.[r.address]?'flash-'+pulseState.flash[r.address]:''}">${r.priceUsd===null?'—':tiPrice(r.priceUsd)}</span></td><td data-label="Change ${tf}">${chg(x.change)}</td><td data-label="Volume ${tf}">${pulseUsd(x.volume)}</td><td data-label="Buys / sells ${tf}">${flow(x)}</td>${s.sort==='fresh'?'':`<td data-label="Liquidity">${pulseUsd(r.liquidityUsd)}</td>`}<td data-label="Stage">${stage(r)}</td>${s.sort==='fresh'?`<td data-label="Launch">${pulseLaunchCell(r.address)}</td>`:''}<td class="tm-act" data-label=""><a class="btn ghost tm-bell" href="/markets/token/${esc(r.address)}?alert=1" title="Set an alert" aria-label="Set an alert"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2Z"/></svg></a><a class="btn tm-open" href="/markets/token/${esc(r.address)}">Trade <span>→</span></a></td></tr>`}).join('')}</tbody></table></div>`
   :`<div class="empty" style="margin-top:12px">${s.loading?'Reading live data…':s.error?esc(s.error):s.sort==='fresh'?`No new tokens in this window yet. Try a longer window.`:`Nothing is moving enough in the last ${tf} yet. Try a longer window.`}</div>`;
  const hint={gainers:`Biggest price gains in the last ${tf}, with real volume behind them.`,losers:`Biggest drops in the last ${tf}.`,volume:`Most traded tokens in the last ${tf}.`,fresh:`Newest tokens and pools first, with their numbers for the last ${tf}.`}[s.sort];
  const focused=document.activeElement?.closest?.('#pulse-panel');
@@ -2582,6 +2701,7 @@ function renderPulse(){
  root.querySelectorAll('[data-pulse-tf]').forEach(b=>b.onclick=()=>{pulseState.tf=b.dataset.pulseTf;pulseState.data=null;loadPulse()});
  const ask=document.getElementById('pulse-ask');if(ask)ask.onclick=e=>{e.preventDefault();data._terminalPrefill={gainers:`What pumped in the last ${tf} and is it organic?`,losers:`Which tokens dumped in the last ${tf} and why?`,volume:`Which tokens had the most volume in the last ${tf}?`,fresh:`Show fresh launches from the last ${tf} and the risks`}[pulseState.sort];go('/terminal')};
  if(focused)root.querySelector(`[data-pulse-tf="${pulseState.tf}"]`)?.focus();
+ if(s.sort==='fresh')setTimeout(loadPulseLaunch,0);
 }
 
 
