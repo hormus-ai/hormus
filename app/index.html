@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-23"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
+<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-28"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <title>HORMUS | Know the token before you trade it</title>
 <style>
@@ -358,6 +358,42 @@
 #public h1 span{color:#6f7f7b}
 #public .hp-lead{max-width:640px;margin:32px 0 0;font-size:21px;line-height:1.55;color:#c3cfcc}
 #public .hp-cta{display:flex;align-items:center;gap:26px;margin-top:36px;flex-wrap:wrap}
+/* hormus token card */
+#public #hp-coin[hidden]{display:none}
+#public .hp-coin{margin-top:56px;border:1px solid #24453d;border-radius:18px;background:linear-gradient(180deg,#0d1715,#0b1211);padding:26px 28px}
+#public .hp-coin+.hp-board,#public #hp-coin:not([hidden])+.hp-board{margin-top:40px}
+#public .hp-coin-top{display:flex;align-items:center;gap:16px;flex-wrap:wrap}
+#public .hp-coin-id{display:flex;align-items:center;gap:14px;flex:1;min-width:240px}
+#public .hp-coin-id>svg{width:44px;height:44px;flex:none}
+#public .hp-coin-id b{display:block;font-size:24px;letter-spacing:-.02em}
+#public .hp-coin-id small{display:flex;align-items:center;flex-wrap:wrap;gap:8px;font-size:14px;color:var(--hp-mut);margin-top:3px}
+#public .hp-coin-id small i{width:7px;height:7px;border-radius:50%;background:var(--hp-mint);box-shadow:0 0 0 4px rgba(95,240,176,.12)}
+#public .hp-coin-id small i.off{background:#f2c46d;box-shadow:0 0 0 4px rgba(242,196,109,.12)}
+#public .hp-coin-ago{color:var(--hp-dim);font-size:13px}#public .hp-coin-ago:before{content:"·";margin-right:8px}
+#public .hp-coin-price{text-align:right}
+#public .hp-coin-price b{display:block;font:600 30px "Geist Mono",ui-monospace,monospace;letter-spacing:-.02em}
+#public .hp-coin-price span{font:600 15px "Geist Mono",ui-monospace,monospace}
+#public .hp-coin-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:22px}
+#public .hp-coin-stats div{padding:14px 16px;border:1px solid var(--hp-line);border-radius:12px;background:#0a0f0e;min-width:0}
+#public .hp-coin-stats small{display:block;font-size:13px;color:var(--hp-dim)}
+#public .hp-coin-stats b{display:block;margin-top:5px;font:600 19px "Geist Mono",ui-monospace,monospace;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#public .hp-coin-stats .bs{font-size:15px}#public .hp-coin-stats .bs em{font-style:normal;color:var(--hp-mint)}#public .hp-coin-stats .bs u{text-decoration:none;color:#ff8a80}
+#public .hp-coin-curve{margin-top:18px}
+#public .hp-coin-curve-h{display:flex;justify-content:space-between;font-size:14px;color:var(--hp-mut)}
+#public .hp-coin-curve-h b{color:var(--hp-fg);font-family:"Geist Mono",ui-monospace,monospace}
+#public .hp-coin-bar{height:8px;border-radius:8px;background:#16201e;margin-top:8px;overflow:hidden}
+#public .hp-coin-bar i{display:block;height:100%;background:var(--hp-mint);border-radius:8px;transition:width .6s ease}
+#public .hp-coin-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:22px}
+#public .hp-coin-ca{display:inline-flex;align-items:center;gap:10px;padding:9px 12px;border:1px solid var(--hp-line);border-radius:10px;background:transparent;font:13.5px "Geist Mono",ui-monospace,monospace;color:#cfdad7;max-width:100%;cursor:pointer;text-align:left}
+#public .hp-coin-ca:hover{border-color:#2f5a4b}
+#public .hp-coin-ca span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;min-width:0}
+#public .hp-coin-ca em{font-style:normal;color:var(--hp-mint);font-family:Geist,system-ui,sans-serif;flex:none}
+#public .hp-coin-btns{display:flex;gap:10px}
+#public .hp-coin-btns a{display:inline-flex;align-items:center;height:44px;padding:0 18px;border-radius:11px;text-decoration:none;font-weight:600;font-size:15px}
+#public .hp-coin-btns .pri{background:#f1f5f4;color:#07100e}#public .hp-coin-btns .sec{border:1px solid var(--hp-line);color:var(--hp-fg)}
+#public .hp-coin-btns .sec:hover{border-color:#2f5a4b}
+@media(max-width:640px){#public .hp-coin{padding:20px;margin-top:40px}#public .hp-coin-ago{flex-basis:100%;margin-left:15px}#public .hp-coin-ago:before{display:none}#public .hp-coin-price{text-align:left;width:100%}#public .hp-coin-stats{grid-template-columns:1fr 1fr}#public .hp-coin-ca{width:100%}#public .hp-coin-btns{width:100%}#public .hp-coin-btns a{flex:1;justify-content:center;padding:0 12px;white-space:nowrap;font-size:14.5px}}
+#application .ov-token em{font-style:normal;font-family:"Geist Mono",Consolas,monospace;font-size:15px;margin-left:6px}#application .ov-token em.ov-token-px{color:var(--a-fg,#f1f5f4)}
 #public .hp-board{margin-top:72px;border:1px solid var(--hp-line);border-radius:16px;background:var(--hp-card);overflow:hidden}
 #public .hp-board-head{display:flex;justify-content:space-between;align-items:center;gap:12px;padding:20px 24px;font-size:16px;color:var(--hp-mut);border-bottom:1px solid var(--hp-line)}
 #public .hp-board-head b{color:var(--hp-fg);font-weight:600}
@@ -665,7 +701,7 @@
 #application .ov-token b{display:block;font-size:17px}#application .ov-token small{display:block;color:var(--a-mut);font-size:14px;margin-top:3px}#application .ov-token i{font-style:normal;color:var(--a-mint);white-space:nowrap}
 @media(max-width:1023px){#application .appnav>.toolbar{display:flex;gap:8px;align-items:center}#application .navlink-x{margin:0;height:40px;width:40px!important;flex:0 0 40px;padding:0!important;border-radius:10px}#application .navlink-x span{display:none}}
 
-/* homepage footer (DAY-2-23) */
+/* homepage footer (DAY-2-24) */
 #public .hp-foot{border-top:1px solid var(--hp-line);padding-top:72px;overflow:hidden;position:relative}
 #public .hp-fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.25fr;gap:40px}
 #public .hp-fbrand p{margin:18px 0 0;max-width:340px;font-size:15px;line-height:1.65;color:var(--hp-mut)}
@@ -1030,6 +1066,7 @@
   <h1>Know the token<br><span>before you trade it.</span></h1>
   <p class="hp-lead">HORMUS is a research and trading app for Robinhood Chain. Live markets, an AI agent that reads them for you, and swaps from your own wallet, all in one place.</p>
   <div class="hp-cta"><a class="hp-btn hp-btn-light" href="https://app.hormus.io/login">Open the app</a><a class="hp-textlink" href="https://docs.hormus.io">How it works →</a></div>
+  <div id="hp-coin" hidden></div>
   <div class="hp-board">
    <div class="hp-board-head"><span><b>Trending on Robinhood Chain</b> right now</span><span class="hp-mono" id="hp-updated">loading…</span></div>
    <div class="hp-board-cols hp-mono"><span>Token</span><span>Price</span><span>24h</span><span class="hp-hide-sm">Volume 24h</span></div>
@@ -1078,7 +1115,7 @@
   <div class="hp-three">
    <div><h4>Your own wallet</h4><p>Sign in with Google and a wallet is created for you. Same wallet on phone and laptop, and HORMUS never holds your keys.</p></div>
    <div><h4>Checked before you sign</h4><p>Every swap is simulated first. You see the route, the minimum you receive and how far it is from the market price.</p></div>
-   <div><h4>Verified vault</h4><p>Keep USDG in a vault contract verified on Blockscout and give each agent its own budget. Withdraw whenever you want. <a href="https://robinhoodchain.blockscout.com/address/0xC1a68e303354537A29F34aA178821F799a91D32e?tab=contract" target="_blank" rel="noopener noreferrer">View contract →</a></p></div>
+   <div><h4>Verified vault</h4><p>Keep USDG in a vault contract verified on Blockscout and give each agent its own budget. Withdraw whenever you want. <a href="https://robinhoodchain.blockscout.com/address/0x5156281349c6EF0F992F2D20B33376585257F3d9?tab=contract" target="_blank" rel="noopener noreferrer">View contract →</a></p></div>
   </div>
   <p class="hp-works hp-mono">Built with Robinhood Chain · Pons · Uniswap · GeckoTerminal · Blockscout · Privy</p>
  </section>
@@ -1096,7 +1133,7 @@
    <nav class="hp-fcol" aria-label="Learn"><h4>Learn</h4><a href="https://docs.hormus.io">Docs</a><a href="https://docs.hormus.io/#quick-start">Quick start</a><a href="https://docs.hormus.io/#usdg-vault">USDG vault</a><a href="https://docs.hormus.io/#contract-reference">Contract reference</a><a href="https://docs.hormus.io/#faq">FAQ</a></nav>
    <div class="hp-fcol hp-fchain"><h4>Onchain</h4>
     <div><small>Network</small><span>Robinhood Chain · 4663</span></div>
-    <div><small>HORMUS vault</small><a class="hp-mono" href="https://robinhoodchain.blockscout.com/address/0xC1a68e303354537A29F34aA178821F799a91D32e" target="_blank" rel="noopener noreferrer">0xC1a6…D32e ↗</a></div>
+    <div><small>HORMUS vault</small><a class="hp-mono" href="https://robinhoodchain.blockscout.com/address/0x5156281349c6EF0F992F2D20B33376585257F3d9" target="_blank" rel="noopener noreferrer">0x5156…F3d9 ↗</a></div>
     <div><small>USDG</small><a class="hp-mono" href="https://robinhoodchain.blockscout.com/address/0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168" target="_blank" rel="noopener noreferrer">0x5fc5…d168 ↗</a></div>
    </div>
   </div>
@@ -1124,12 +1161,12 @@ function money(n){return '$'+Number(n||0).toFixed(2)}
 function toast(s){let t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
 function go(path){history.pushState({},'',path);route()}
 window.addEventListener('popstate',route);
-function route(){pagePath=location.pathname.replace(/\/+$/,'')||'/';if(location.hostname==='app.hormus.io'&&pagePath==='/'){history.replaceState({},'', '/login');pagePath='/login'}if(!['/','/login','/docs'].includes(pagePath)&&!pagePath.startsWith('/docs/')){if(!window.__privyReady){document.getElementById('public').classList.add('hidden');document.getElementById('loginpage').classList.remove('hidden');return}if(!window.__privyAuthenticated){history.replaceState({},'', '/login');pagePath='/login'}}['public','loginpage','docsPage','application'].forEach(id=>document.getElementById(id).classList.add('hidden'));document.getElementById('application').classList.remove('show');if(pagePath==='/'){document.getElementById('public').classList.remove('hidden');document.title='HORMUS | Know the token before you trade it';initDemo()}else if(pagePath==='/login'){document.getElementById('loginpage').classList.remove('hidden');document.title='Sign in — HORMUS'}else if(pagePath==='/docs'||pagePath.startsWith('/docs/')){location.replace('https://docs.hormus.io/');return;document.getElementById('docsPage').classList.remove('hidden');document.title='Documentation — HORMUS';renderDocs()}else{document.getElementById('application').classList.remove('hidden');document.getElementById('application').classList.add('show');renderApp(pagePath.slice(1));document.title=(document.getElementById('apptitle').textContent||'Overview')+' — HORMUS'}}
+function route(){pagePath=location.pathname.replace(/\/+$/,'')||'/';if(location.hostname==='app.hormus.io'&&pagePath==='/'){history.replaceState({},'', '/login');pagePath='/login'}if(!['/','/login','/docs'].includes(pagePath)&&!pagePath.startsWith('/docs/')){if(!window.__privyReady){document.getElementById('public').classList.add('hidden');document.getElementById('loginpage').classList.remove('hidden');return}if(!window.__privyAuthenticated){try{if(pagePath!=='/login')sessionStorage.setItem('hormus_next',pagePath+location.search)}catch{}history.replaceState({},'', '/login');pagePath='/login'}}['public','loginpage','docsPage','application'].forEach(id=>document.getElementById(id).classList.add('hidden'));document.getElementById('application').classList.remove('show');if(pagePath==='/'){document.getElementById('public').classList.remove('hidden');document.title='HORMUS | Know the token before you trade it';initDemo()}else if(pagePath==='/login'){document.getElementById('loginpage').classList.remove('hidden');document.title='Sign in — HORMUS'}else if(pagePath==='/docs'||pagePath.startsWith('/docs/')){location.replace('https://docs.hormus.io/');return;document.getElementById('docsPage').classList.remove('hidden');document.title='Documentation — HORMUS';renderDocs()}else{document.getElementById('application').classList.remove('hidden');document.getElementById('application').classList.add('show');renderApp(pagePath.slice(1));document.title=(document.getElementById('apptitle').textContent||'Overview')+' — HORMUS'}}
 document.addEventListener('click',e=>{let a=e.target.closest('a[href^="/"]');if(a&&!e.ctrlKey&&!e.metaKey){e.preventDefault();go(a.getAttribute('href'))}});
 document.getElementById('google-signin').onclick=async()=>{const b=document.getElementById('google-signin');const err=document.getElementById('login-error');b.disabled=true;b.textContent='Connecting to Google…';err.classList.add('hidden');err.textContent='';try{let auth=window.__hormusPrivy;const deadline=Date.now()+12000;while((!auth||!auth.ready||typeof auth.login!=='function')&&Date.now()<deadline){await new Promise(resolve=>setTimeout(resolve,250));auth=window.__hormusPrivy}if(!auth||!auth.ready||typeof auth.login!=='function'){throw new Error('Privy did not finish loading. Check that this site URL is listed under Privy → App Settings → Basics → Allowed origins, then check the browser console for a loading error.')}await auth.login()}catch(e){console.error('HORMUS sign-in error:',e);err.textContent=e?.message||'Google sign-in could not start. Please check your Privy configuration.';err.classList.remove('hidden')}finally{b.disabled=false;b.textContent='◎　Continue with Google'}};
 document.getElementById('app-signout').onclick=()=>{localStorage.removeItem(STORE);window.dispatchEvent(new Event('hormus:logout'))};
 function resetPrivateWorkspace(){data=structuredClone(defaults);data.tradingPolicy={max_trade_usdg:50,daily_spending_limit_usdg:100,max_slippage_bps:200,auto_authorize_after_risk:false,kill_switch:false,execution_mode:'paper',live_execution_enabled:false};data.tradingProposals=[];data.tradingOrders=[];data.agentRuns=[];backendUser=null;backendStatus='connecting';chat=[];localStorage.removeItem(STORE)}
-window.addEventListener('hormus:auth-state',e=>{const d=e.detail||{};window.__privyAuthenticated=!!d.authenticated;if(d.authenticated){const nextId=d.user?.id||d.user?.userId||null;if(!activePrivyUserId||!nextId||activePrivyUserId!==nextId)resetPrivateWorkspace();activePrivyUserId=nextId||activePrivyUserId;if(pagePath==='/login'){history.replaceState({},'', '/overview');pagePath='/overview'}document.getElementById('application').classList.add('hidden');loadBackendWorkspace().then(ok=>{if(!ok)route()});return}if(d.ready){resetPrivateWorkspace();activePrivyUserId=null;if(pagePath!=='/'&&pagePath!=='/login'&&pagePath!=='/docs'&&!pagePath.startsWith('/docs')){history.replaceState({},'', '/login');pagePath='/login';route()}}});
+window.addEventListener('hormus:auth-state',e=>{const d=e.detail||{};window.__privyAuthenticated=!!d.authenticated;if(d.authenticated){const nextId=d.user?.id||d.user?.userId||null;if(!activePrivyUserId||!nextId||activePrivyUserId!==nextId)resetPrivateWorkspace();activePrivyUserId=nextId||activePrivyUserId;if(pagePath==='/login'){let next='/overview';try{const n=sessionStorage.getItem('hormus_next')||'';sessionStorage.removeItem('hormus_next');if(/^\/[a-z]/.test(n)&&!n.startsWith('/login'))next=n}catch{}history.replaceState({},'', next);pagePath=next.split('?')[0]}document.getElementById('application').classList.add('hidden');loadBackendWorkspace().then(ok=>{if(!ok)route()});return}if(d.ready){resetPrivateWorkspace();activePrivyUserId=null;if(pagePath!=='/'&&pagePath!=='/login'&&pagePath!=='/docs'&&!pagePath.startsWith('/docs')){history.replaceState({},'', '/login');pagePath='/login';route()}}});
 window.addEventListener('hormus:auth-error',e=>{const box=document.getElementById('login-error');box.textContent=e.detail?.message||'Google sign-in could not be started.';box.classList.remove('hidden')});
 window.hormusGetAccessToken=async()=>{if(!window.__hormusPrivy?.authenticated)return null;return await window.__hormusPrivy.getAccessToken()};
 window.hormusFetch=async(url,options={})=>{const token=await window.hormusGetAccessToken();if(!token)throw new Error('Not authenticated');return fetch(url,{...options,headers:{...(options.headers||{}),Authorization:`Bearer ${token}`}})};
@@ -1202,7 +1239,7 @@ function toApiAgent(a){return {name:String(a.name||'').trim(),role:apiRole(a.rol
 async function loadBackendWorkspace(){try{const [me,agents,workspaceResult,runsResult,paperResult,tradingResult,proposalsResult,ordersResult]=await Promise.all([apiRequest('/api/v1/me'),apiRequest('/api/v1/agents'),apiRequest('/api/v1/workspace'),apiRequest('/api/v1/runs?limit=100').catch(()=>({runs:[]})),apiRequest('/api/v1/paper'),apiRequest('/api/v1/trading/config'),apiRequest('/api/v1/trading/proposals?limit=50').catch(()=>({proposals:[]})),apiRequest('/api/v1/trading/orders?limit=50').catch(()=>({orders:[]}))]);backendUser=me.user||null;data.agentRuns=Array.isArray(runsResult.runs)?runsResult.runs:[];let remote=agents.agents||[];const workspace=workspaceResult.workspace||{};data.watchlist=Array.isArray(workspace.watchlist)?workspace.watchlist:[];data.activity=Array.isArray(workspace.activity)?workspace.activity:[];data.paper=paperResult.paper||{cash:0,positions:[],trades:[]};data.tradingPolicy=tradingResult.policy||data.tradingPolicy;data.tradingProposals=Array.isArray(proposalsResult.proposals)?proposalsResult.proposals:[];data.tradingOrders=Array.isArray(ordersResult.orders)?ordersResult.orders:[];data.settings=workspace.settings&&typeof workspace.settings==='object'?workspace.settings:defaults.settings;data.briefs=Array.isArray(workspace.briefs)?workspace.briefs:[];data.alertRules=Array.isArray(workspace.alertRules)?workspace.alertRules:[];data.agents=remote.map(fromApiAgent);backendStatus='connected';save();if(pagePath!=='/login'&&pagePath!=='/'&&!pagePath.startsWith('/docs'))renderApp(pagePath.slice(1));return true}catch(err){backendStatus='error';console.error('HORMUS backend sync failed:',err);toast('Backend sync failed: '+err.message);return false}}
 function appHead(title,sub){setTimeout(loadTicker,0);setTimeout(pollAlerts,0);document.getElementById('more-sheet')?.classList.add('hidden');document.querySelector('#application .apphead')?.classList.toggle('is-overview',pagePath==='/overview');document.querySelector('#application .apphead')?.classList.toggle('is-token',pagePath.startsWith('/markets/token/'));document.getElementById('apptitle').textContent=title;document.getElementById('appsubtitle').textContent=sub;document.querySelectorAll('#appnavlinks a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='/'+pagePath.slice(1)));document.querySelectorAll('#mobile-app-nav a').forEach(a=>a.classList.toggle('active',a.dataset.mobileRoute===pagePath.slice(1)))}
 function appOverview(){
- setTimeout(()=>{loadLivePortfolio(false);loadTradeIdeas(false);loadOverviewPulse();loadOnboardData()},0);
+ setTimeout(()=>{loadLivePortfolio(false);loadTradeIdeas(false);loadOverviewPulse();loadOnboardData();coinLoad()},0);
  const pf=data.livePortfolio,v=pf?.vault,h=new Date().getHours();
  const hello=h<5?'Still up':h<12?'Good morning':h<18?'Good afternoon':'Good evening';
  const pulse=data._ovPulse?.rows||[],tf=data._ovPulse?.timeframe||'5m';
@@ -1216,7 +1253,7 @@ function appOverview(){
   <a class="ov-action" href="/trade"><i>→</i><div><b>Swap</b><br><span>USDG or ETH from your own wallet</span></div></a>
   <a class="ov-action" href="/agents"><i>→</i><div><b>${agents.length?'Your agents':'Create an agent'}</b><br><span>${agents.length?agents.length+' agent'+(agents.length>1?'s':'')+' in your workspace':'Let it watch the market every hour'}</span></div></a>
  </div>
- ${HORMUS_TOKEN_ADDRESS?`<a class="ov-token" href="/markets/token/${HORMUS_TOKEN_ADDRESS}"><span><b>HORMUS token</b><small>Price, chart, holders and live trades</small></span><i>Open token page →</i></a>`:''}
+ ${ovTokenHtml()}
  ${onboardHtml()}
  ${(data.tradeIdeas||[]).length?`<section class="panel ideas-panel" style="margin-top:16px"><div class="ov-head"><h3>${data.tradeIdeas.length} trade idea${data.tradeIdeas.length>1?'s':''} from your agents</h3><a class="btn" href="/trade">See all</a></div><div class="ideas-list">${data.tradeIdeas.slice(0,2).map(i=>ideaCard(i,true)).join('')}</div></section>`:''}
  <div class="ov-grid">
@@ -1241,7 +1278,7 @@ async function loadOverviewPulse(){
  if(pagePath==='/overview')renderApp('overview');
 }
 
-function renderApp(route){if(route.startsWith('markets/token/')){const address=route.split('/')[2]||'';appHead('Token Intelligence','Market detail · Robinhood Chain 4663');document.getElementById('appview').innerHTML=tokenIntelligenceShell(address);bindApp();bindTokenIntelligence();loadTokenIntelligence(address);return}let map={overview:['Overview','Your agents, wallet and watchlist.',appOverview],agents:['Agents','Create agents, give them skills, run research and set schedules.',appAgents],skills:['Skills','Community skills: add them to your agents or type /name in the Terminal.',appSkills],funding:['Agent funding','Set how much each agent may use, and manage USDG in the vault.',appFunding],'agent-analytics':['Agent analytics','Run counts, durations and swap results.',appAgentAnalytics],markets:['Markets','Explore live pools and token activity across Robinhood Chain.',appMarkets],alerts:['Alerts','Token moves, new Pons launches, graduations and your own fresh-token screener, sent here and on Telegram. Checked every 30 seconds.',appAlerts],terminal:['Research terminal','Ask about a token or market and get an answer with sources.',appTerminal],trade:['Trade','Swap tokens from your wallet.',appTrade],'paper-trading':['Trade','Swap tokens from your wallet.',appTrade],portfolio:['Portfolio','Your real balances on Robinhood Chain, your vault and your swaps.',appPortfolio],activity:['Activity','Review completed and failed agent runs, with persistent alerts.',appActivity],settings:['Settings','Manage account preferences and export your workspace.',appSettings]};let x=map[route]||map.overview;appHead(x[0],x[1]);document.getElementById('appview').innerHTML=x[2]();bindApp();bindTradeAndPortfolio();if(route==='skills')bindSkills();if(route==='funding')bindFunding()}
+function renderApp(route){if(route.startsWith('agent-allow/')){appHead('Agent request','Your agent found a token that passes your rules.');document.getElementById('appview').innerHTML=appAgentAllowShell();bindApp();loadAgentAllow(route.split('/')[1]||'');return}if(route.startsWith('markets/token/')){const address=route.split('/')[2]||'';appHead('Token Intelligence','Market detail · Robinhood Chain 4663');document.getElementById('appview').innerHTML=tokenIntelligenceShell(address);bindApp();bindTokenIntelligence();loadTokenIntelligence(address);return}let map={overview:['Overview','Your agents, wallet and watchlist.',appOverview],agents:['Agents','Create agents, give them skills, run research and set schedules.',appAgents],skills:['Skills','Community skills: add them to your agents or type /name in the Terminal.',appSkills],funding:['Agent funding','Set how much each agent may use, and manage USDG in the vault.',appFunding],'agent-analytics':['Agent analytics','Run counts, durations and swap results.',appAgentAnalytics],markets:['Markets','Explore live pools and token activity across Robinhood Chain.',appMarkets],alerts:['Alerts','Token moves, new Pons launches, graduations and your own fresh-token screener, sent here and on Telegram. Checked every 30 seconds.',appAlerts],terminal:['Research terminal','Ask about a token or market and get an answer with sources.',appTerminal],trade:['Trade','Swap tokens from your wallet.',appTrade],'paper-trading':['Trade','Swap tokens from your wallet.',appTrade],portfolio:['Portfolio','Your real balances on Robinhood Chain, your vault and your swaps.',appPortfolio],activity:['Activity','Review completed and failed agent runs, with persistent alerts.',appActivity],settings:['Settings','Manage account preferences and export your workspace.',appSettings]};let x=map[route]||map.overview;appHead(x[0],x[1]);document.getElementById('appview').innerHTML=x[2]();bindApp();bindTradeAndPortfolio();if(route==='skills')bindSkills();if(route==='funding')bindFunding()}
 // ===== Agent funding: Privy wallet + USDG vault =====
 const USDG_ADDRESS='0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168';
 const RH_CHAIN_ID=4663;
@@ -1313,7 +1350,7 @@ function appFunding(){
  const available=fundState.deposited===null?null:Math.max(0,fundState.deposited-(fundState.reserved||0));
  const walletBlock=w?`<div class="fund-addr"><span class="fund-badge">${esc(w.type==='embedded'?'Privy wallet':'Browser wallet')}</span><code>${esc(w.address)}</code><button class="btn" data-copy-addr="${esc(w.address)}">Copy</button><a class="btn" href="https://robinhoodchain.blockscout.com/address/${esc(w.address)}" target="_blank" rel="noopener noreferrer">Blockscout ↗</a></div>`
   :`<div class="fund-addr"><span class="muted" style="font-size:14px">${walletsReady?'No wallet on this account yet.':'Loading your wallet…'}</span>${walletsReady?'<button class="btn primary" id="fund-create-wallet">Create my wallet</button>':''}<button class="btn" id="fund-browser-wallet">Use browser wallet instead</button></div>`;
- const planRows=plans.map(p=>{const onchain=fundState.perAgent[p.agent_id];const mine=w&&String(p.wallet_address||'').toLowerCase()===w.address.toLowerCase();return `<tr><td><b>${esc(p.agent_name||'Agent')}</b>${mine||!w?'':`<small class="market-meta" style="display:block">Saved for ${esc(shortAddr(p.wallet_address))}</small>`}</td><td>${money(p.planned_allocation_usdg)}</td><td>${onchain===undefined||onchain===null?'—':fmtToken(onchain)+' USDG'}</td><td>${money(p.max_order_usdg)} · ${money(p.daily_limit_usdg)}/day</td><td><span class="tag">${esc(p.status==='paused'?'Paused':'Active')}</span></td><td class="fund-actions">${autoCell(p,w)}<button class="btn primary" data-fund-allocate="${esc(p.id)}" ${vaultOn&&w&&!busy?'':'disabled'}>Reserve</button><button class="btn" data-fund-deallocate="${esc(p.id)}" ${vaultOn&&w&&onchain&&!busy?'':'disabled'}>Release</button><button class="btn" data-fund-pause="${esc(p.id)}">${p.status==='paused'?'Resume':'Pause'}</button><button class="btn" data-fund-revoke="${esc(p.id)}">Remove</button></td></tr>`}).join('');
+ const planRows=plans.map(p=>{const onchain=fundState.perAgent[p.agent_id];const mine=w&&String(p.wallet_address||'').toLowerCase()===w.address.toLowerCase();return `<tr><td><b>${esc(p.agent_name||'Agent')}</b>${mine||!w?'':`<small class="market-meta" style="display:block">Saved for ${esc(shortAddr(p.wallet_address))}</small>`}</td><td>${money(p.planned_allocation_usdg)}</td><td>${onchain===undefined||onchain===null?'—':fmtToken(onchain)+' USDG'}</td><td>${money(p.max_order_usdg)} · ${dailyText(p.daily_limit_usdg)}</td><td><span class="tag">${esc(p.status==='paused'?'Paused':'Active')}</span></td><td class="fund-actions">${autoCell(p,w)}<button class="btn primary" data-fund-allocate="${esc(p.id)}" ${vaultOn&&w&&!busy?'':'disabled'}>Reserve</button><button class="btn" data-fund-deallocate="${esc(p.id)}" ${vaultOn&&w&&onchain&&!busy?'':'disabled'}>Release</button><button class="btn" data-fund-pause="${esc(p.id)}">${p.status==='paused'?'Resume':'Pause'}</button><button class="btn" data-fund-revoke="${esc(p.id)}">Remove</button></td></tr>`}).join('');
  return `<section class="panel fund-wallet">
   <div class="toolbar" style="justify-content:space-between;align-items:flex-start"><div><span class="eyebrow">YOUR WALLET</span><h3 style="margin:6px 0 4px">Robinhood Chain wallet</h3><p class="muted" style="font-size:14px;margin:0">${w?.type==='external'?'Your browser wallet. Only you can approve transactions from it.':'Created with your Google sign-in. Only you can approve transactions from it.'}</p></div><button class="btn" id="fund-refresh" ${w&&!fundState.loading?'':'disabled'}>${fundState.loading?'Refreshing…':'↻ Refresh'}</button></div>
   ${walletBlock}
@@ -1327,17 +1364,17 @@ function appFunding(){
   <p class="market-meta">To top up, send USDG and a little ETH for fees to the address above on Robinhood Chain. Deposits ask for two confirmations: allow USDG, then deposit.</p>
  </section>
  <section class="panel" style="margin-top:14px">
-  <div class="toolbar" style="justify-content:space-between;align-items:flex-start"><div><span class="eyebrow">AGENT BUDGETS</span><h3 style="margin:6px 0 4px">How much each agent may use</h3><p class="muted" style="font-size:14px;margin:0;max-width:640px;line-height:1.7">Agents don't get their own wallet or keys. A budget reserves part of your vault balance for one agent. Reserved USDG stays in the vault under your wallet, and you can release it at any time. ${isV2()?'If you let an agent trade, it can buy and sell allowlisted tokens with that budget only, within its per-order and daily limits, for up to 7 days at a time. Agents can\'t move funds anywhere else.':'Agents can\'t move it.'}</p></div></div>
+  <div class="toolbar" style="justify-content:space-between;align-items:flex-start"><div><span class="eyebrow">AGENT BUDGETS</span><h3 style="margin:6px 0 4px">How much each agent may use</h3><p class="muted" style="font-size:14px;margin:0;max-width:640px;line-height:1.7">Agents don't get their own wallet or keys. A budget reserves part of your vault balance for one agent. Reserved USDG stays in the vault under your wallet, and you can release it at any time. ${isV2()?'If you let an agent trade, it buys and sells with that budget only, following the rules you set, within its per-order and daily limits, for as long as you choose. You pick which tokens it may buy (your allowlist, or any token in degen mode). Agents can\'t move funds anywhere else.':'Agents can\'t move it.'}</p></div></div>
   ${plans.length?`<div class="tablewrap" style="margin-top:12px"><table style="min-width:760px"><thead><tr><th>Agent</th><th>Budget</th><th>Reserved in vault</th><th>Limits</th><th>Status</th><th></th></tr></thead><tbody>${planRows}</tbody></table></div>`:'<div class="empty" style="margin-top:12px">No budgets yet. Pick an agent below to create one.</div>'}
   <div class="fund-form">
    <div class="field"><label>Agent</label><select class="select" id="fund-agent" ${agents.length?'':'disabled'}>${agents.length?agents.map(a=>`<option value="${esc(a.id)}">${esc(a.name)}</option>`).join(''):'<option>Create an agent first</option>'}</select></div>
    <div class="field"><label>Budget (USDG)</label><input class="input" id="fund-allocation" type="number" min="1" step="0.01" placeholder="250"></div>
    <div class="field"><label>Max per order</label><input class="input" id="fund-max-order" type="number" min="1" step="0.01" placeholder="25"></div>
-   <div class="field"><label>Max per day</label><input class="input" id="fund-daily-limit" type="number" min="1" step="0.01" placeholder="100"></div>
+   <div class="field"><label>Max per day <span class="market-meta" style="font-weight:400"><input type="checkbox" id="fund-no-daily" style="vertical-align:middle"> no limit</span></label><input class="input" id="fund-daily-limit" type="number" min="1" step="0.01" placeholder="100"></div>
    <div class="field"><label>&nbsp;</label><button class="btn primary" id="fund-save" ${agents.length&&w?'':'disabled'}>Save budget</button></div>
   </div>
  </section>
- ${agentPositionsHtml()}
+ ${agentPositionsHtml()}${agentTradingHtml()}
  <p class="market-meta" style="margin-top:12px">Vault ${cfg.vault?`<a href="https://robinhoodchain.blockscout.com/address/${esc(cfg.vault)}?tab=contract" target="_blank" rel="noopener noreferrer">${esc(shortAddr(cfg.vault))} ↗</a> (source verified)`:'not live yet'} · USDG <a href="https://robinhoodchain.blockscout.com/token/${esc(cfg.token)}" target="_blank" rel="noopener noreferrer">${esc(shortAddr(cfg.token))} ↗</a> · Robinhood Chain 4663</p>`;
 }
 async function loadFundingPlans(){if(data._fundingLoading)return;data._fundingLoading=true;try{const r=await apiRequest('/api/v1/funding/overview');data.fundingPlans=Array.isArray(r.plans)?r.plans:[];data.fundingStatus=r;data._fundingLoaded=true;fundState.loadedAt=0;if(pagePath==='/funding')renderApp('funding')}catch(e){console.warn('Funding plans unavailable',e.message)}finally{data._fundingLoading=false}}
@@ -1348,7 +1385,7 @@ function bindFunding(){
  const create=document.getElementById('fund-create-wallet');if(create)create.onclick=async()=>{create.disabled=true;try{await window.__hormusPrivy?.createWallet?.();toast('Wallet created')}catch(err){toast(err?.message||'Could not create the wallet')}finally{create.disabled=false}};
  const browser=document.getElementById('fund-browser-wallet');if(browser)browser.onclick=async()=>{if(!window.ethereum)return toast('No browser wallet found. Install MetaMask or use your HORMUS wallet.');try{const [addr]=await window.ethereum.request({method:'eth_requestAccounts'});fundState.browser={address:addr,type:'external',label:'Browser wallet',provider:async()=>window.ethereum};fundState.source='browser';fundState.loadedAt=0;renderApp('funding')}catch(err){toast(txError(err))}};
  const save=document.getElementById('fund-save');if(save)save.onclick=async()=>{
-  const w=fundWallet();const payload={agentId:document.getElementById('fund-agent').value,walletAddress:w?.address||'',plannedAllocationUsdg:num('fund-allocation'),maxOrderUsdg:num('fund-max-order'),dailyLimitUsdg:num('fund-daily-limit'),maxSlippageBps:100,mode:'paper'};
+  const w=fundWallet();const payload={agentId:document.getElementById('fund-agent').value,walletAddress:w?.address||'',plannedAllocationUsdg:num('fund-allocation'),maxOrderUsdg:num('fund-max-order'),dailyLimitUsdg:document.getElementById('fund-no-daily')?.checked?NO_DAILY_LIMIT:num('fund-daily-limit'),maxSlippageBps:100,mode:'paper'};
   if(!payload.walletAddress)return toast('Your wallet is still loading.');
   if(![payload.plannedAllocationUsdg,payload.maxOrderUsdg,payload.dailyLimitUsdg].every(n=>Number.isFinite(n)&&n>0))return toast('Fill in the budget, max per order and max per day.');
   if(payload.maxOrderUsdg>payload.plannedAllocationUsdg)return toast('Max per order can\'t be more than the budget.');
@@ -1357,7 +1394,7 @@ function bindFunding(){
  document.querySelectorAll('[data-fund-pause],[data-fund-revoke]').forEach(b=>b.onclick=async()=>{const id=b.dataset.fundPause||b.dataset.fundRevoke;if(b.dataset.fundRevoke&&!confirm('Remove this budget? Anything reserved in the vault stays reserved until you press Release.'))return;try{if(b.dataset.fundRevoke)await apiRequest('/api/v1/funding/plans/'+encodeURIComponent(id),{method:'DELETE'});else{const p=data.fundingPlans.find(x=>x.id===id);await apiRequest('/api/v1/funding/plans/'+encodeURIComponent(id)+'/status',{method:'PATCH',body:JSON.stringify({status:p?.status==='paused'?'draft':'paused'})})}await loadFundingPlans();toast('Budget updated')}catch(e){toast('Could not update the budget: '+e.message)}});
  const dep=document.getElementById('fund-deposit');if(dep)dep.onclick=()=>{const amount=num('fund-deposit-amount');if(!Number.isFinite(amount)||amount<=0)return toast('Enter how much USDG to deposit.');if(fundState.usdg!==null&&amount>fundState.usdg)return toast('You don\'t have that much USDG in your wallet.');runTx('deposit',async()=>{const {e,signer}=await fundSigner(),cfg=fundCfg(),units=e.parseUnits(amount.toFixed(6),6),me=await signer.getAddress();const token=new e.Contract(cfg.token,TOKEN_ABI,signer),v=new e.Contract(cfg.vault,VAULT_ABI,signer);if((await v.usdg()).toLowerCase()!==cfg.token.toLowerCase())throw new Error('Vault token mismatch');if((await token.allowance(me,cfg.vault))<units){const a=await token.approve(cfg.vault,units);await a.wait()}const tx=await v.deposit(units);await tx.wait();return `Deposited ${fmtToken(amount)} USDG`})};
  const wd=document.getElementById('fund-withdraw');if(wd)wd.onclick=()=>{const amount=num('fund-withdraw-amount');if(!Number.isFinite(amount)||amount<=0)return toast('Enter how much USDG to withdraw.');runTx('withdraw',async()=>{const {e,signer}=await fundSigner(),cfg=fundCfg(),units=e.parseUnits(amount.toFixed(6),6),me=await signer.getAddress();const v=new e.Contract(cfg.vault,VAULT_ABI,signer);const [d,r]=await Promise.all([v.deposited(me),v.allocatedTotal(me)]);if(units>d-r)throw new Error('That is more than the free balance. Release an agent budget first.');const tx=await v.withdraw(units,me);await tx.wait();return `Withdrew ${fmtToken(amount)} USDG to your wallet`})};
- document.querySelectorAll('[data-fund-allocate]').forEach(b=>b.onclick=()=>{const plan=data.fundingPlans.find(x=>x.id===b.dataset.fundAllocate);const w=fundWallet();if(!plan||!w)return;if(String(plan.wallet_address||'').toLowerCase()!==w.address.toLowerCase())return toast('This budget was saved for another wallet. Save it again to use this one.');const free=fundState.deposited===null?null:fundState.deposited-(fundState.reserved||0)+(fundState.perAgent[plan.agent_id]||0);if(free!==null&&Number(plan.planned_allocation_usdg)>free+1e-9)return toast(`Deposit more first: this budget needs ${money(plan.planned_allocation_usdg)}, you have ${fmtToken(free)} USDG free in the vault.`);runTx('allocate',async()=>{const {e,signer}=await fundSigner(),cfg=fundCfg();const u=n=>e.parseUnits(Number(n).toFixed(6),6);const v=new e.Contract(cfg.vault,VAULT_ABI,signer);const tx=await v.allocate(agentKey(e,plan.agent_id),u(plan.planned_allocation_usdg),u(plan.max_order_usdg),u(plan.daily_limit_usdg));await tx.wait();return `${plan.agent_name||'Agent'} budget reserved`})});
+ document.querySelectorAll('[data-fund-allocate]').forEach(b=>b.onclick=()=>{const plan=data.fundingPlans.find(x=>x.id===b.dataset.fundAllocate);const w=fundWallet();if(!plan||!w)return;if(String(plan.wallet_address||'').toLowerCase()!==w.address.toLowerCase())return toast('This budget was saved for another wallet. Save it again to use this one.');const free=fundState.deposited===null?null:fundState.deposited-(fundState.reserved||0)+(fundState.perAgent[plan.agent_id]||0);if(free!==null&&Number(plan.planned_allocation_usdg)>free+1e-9)return toast(`Deposit more first: this budget needs ${money(plan.planned_allocation_usdg)}, you have ${fmtToken(free)} USDG free in the vault.`);runTx('allocate',async()=>{const {e,signer}=await fundSigner(),cfg=fundCfg();const u=n=>e.parseUnits(Number(n).toFixed(6),6);const v=new e.Contract(cfg.vault,VAULT_ABI,signer);const tx=await v.allocate(agentKey(e,plan.agent_id),u(plan.planned_allocation_usdg),u(plan.max_order_usdg),isNoLimit(plan.daily_limit_usdg)?MAX_U128:u(plan.daily_limit_usdg));await tx.wait();return `${plan.agent_name||'Agent'} budget reserved`})});
  document.querySelectorAll('[data-fund-deallocate]').forEach(b=>b.onclick=()=>{const plan=data.fundingPlans.find(x=>x.id===b.dataset.fundDeallocate);if(!plan)return;runTx('deallocate',async()=>{const {e,signer}=await fundSigner(),cfg=fundCfg();const v=new e.Contract(cfg.vault,VAULT_ABI,signer);const tx=await v.deallocate(agentKey(e,plan.agent_id));await tx.wait();return `${plan.agent_name||'Agent'} budget released`})});
 }
 window.addEventListener('hormus:wallets',()=>{if(pagePath==='/funding'){fundState.loadedAt=0;renderApp('funding')}else if(pagePath==='/settings')renderApp('settings');else if(pagePath==='/portfolio'){const w=fundWallet();if(!data.livePortfolio||!w||data.livePortfolio.wallet!==w.address.toLowerCase())renderApp('portfolio')}});
@@ -1545,7 +1582,7 @@ function bindMarketContent(){document.querySelectorAll('[data-market-tab]').forE
 let tokenIntelligenceState={address:'',data:null,loading:false,error:'',interval:'15m',tab:'overview',txFilter:'all',txLimit:25,requestId:0};
 const PONS_ADDRESS='0x39dbed3a2bd333467115de45665cc57f813c4571';
 // Set this to the HORMUS token contract after it launches on Pons. Empty = hidden everywhere.
-const HORMUS_TOKEN_ADDRESS='';
+let HORMUS_TOKEN_ADDRESS='';let hormusCoin=null;
 const X_URL='https://x.com/hormusapp';
 const ponsKnown=new Set([PONS_ADDRESS]);
 function notePons(rows){for(const r of rows||[])if(/pons/i.test(r.source||'')||['bonding','graduating'].includes(r.stage))ponsKnown.add(String(r.address||'').toLowerCase())}
@@ -1598,7 +1635,7 @@ function renderTokenIntelligence(){
  const explorer=`https://robinhoodchain.blockscout.com/token/${encodeURIComponent(addr)}`,ponsUrl=`https://www.ponsfamily.com/launchpad/${encodeURIComponent(addr)}`;
  const hero=`<section class="panel ti-hero"><div class="ti-id">${marketTokenImage(t.imageUrl,t.symbol||t.name||'TOKEN')}<div><h2>${tiEsc(t.name||'Token')}</h2><div class="ti-sub"><span class="ti-sym">${tiEsc(t.symbol||'')}</span>${isPons?'<span class="ti-chip">Pons</span>':''}${status&&status!=='market data only'?`<span class="ti-chip">${tiEsc(status)}</span>`:''}<button class="ti-copy" data-copy="${esc(addr)}" title="Copy contract address">${tiShort(addr)}<i>Copy</i></button></div></div></div>
   <div class="ti-pricebox"><b>${tiPrice(t.priceUsd)}</b>${chg===null?'':`<span class="ti-chg ${chg>=0?'up':'down'}">${chg>0?'+':''}${chg.toFixed(2)}% <small>24h</small></span>`}</div>
-  <div class="ti-actions"><a class="btn primary" href="#ti-trade" data-ti-jump>Trade</a>${tiAlertButton()}<a class="btn" href="${explorer}" target="_blank" rel="noopener noreferrer">Explorer ↗</a>${isPons?`<a class="btn" href="${ponsUrl}" target="_blank" rel="noopener noreferrer">Pons ↗</a>`:''}<button class="btn ghost" id="ti-refresh" title="Refresh">↻</button></div>${tiSocials(t.links)}</section>`;
+  <div class="ti-actions"><a class="btn primary" href="#ti-trade" data-ti-jump>Trade</a>${tiAlertButton()}${tiAgentAllowButton(addr,t.symbol)}<a class="btn" href="${explorer}" target="_blank" rel="noopener noreferrer">Explorer ↗</a>${isPons?`<a class="btn" href="${ponsUrl}" target="_blank" rel="noopener noreferrer">Pons ↗</a>`:''}<button class="btn ghost" id="ti-refresh" title="Refresh">↻</button></div>${tiSocials(t.links)}</section>`;
  const metrics=`<div class="ti-metrics">${[['24h volume',tiMoney(t.volume24h)],['Liquidity',tiMoney(t.liquidityUsd)],['Market cap',tiMoney(t.marketCapUsd)],['FDV',tiMoney(t.fdvUsd)],['Holders',tiNum(t.holders)],['Circulating',t.circulatingSupply?tiNum(t.circulatingSupply):tiNum(t.totalSupply)]].map(([k,v])=>`<div class="ti-metric"><small>${k}</small><b>${v}</b></div>`).join('')}</div>`;
  const intervals=`<div class="ti-intervals">${['5m','15m','1h','4h','1d'].map(v=>`<button data-ti-interval="${v}" class="${S.interval===v?'active':''}">${v}</button>`).join('')}</div>`;
  const chartSection=`<section class="panel"><div class="ti-section-head"><h3>Price</h3>${intervals}</div>${tiChart(chartRows)}</section>`;
@@ -1899,7 +1936,7 @@ function alBindEyes(){
  window.addEventListener('pointermove',e=>{const f=document.querySelector('.al-face'),g=document.getElementById('al-look');if(!f||!g)return;const r=f.getBoundingClientRect();const dx=e.clientX-(r.left+r.width/2),dy=e.clientY-(r.top+r.height/2),d=Math.hypot(dx,dy)||1,m=Math.min(1,d/400);g.setAttribute('transform',`translate(${(dx/d*5*m).toFixed(2)} ${(dy/d*3*m).toFixed(2)})`)},{passive:true});
 }
 setInterval(()=>{if(pagePath==='/'&&document.getElementById('al-list')&&!document.hidden)dmLoad()},60000);
-function initDemo(){const hpTok=document.getElementById('hp-token');if(hpTok&&HORMUS_TOKEN_ADDRESS){hpTok.href='https://app.hormus.io/markets/token/'+HORMUS_TOKEN_ADDRESS;hpTok.hidden=false}
+function initDemo(){coinLoad();
  hpLoad();dmLoad();alBindEyes();
  if(dmBound)return;dmBound=true;
  document.querySelectorAll('[data-dm-tab]').forEach(b=>b.addEventListener('click',()=>{
@@ -2214,14 +2251,16 @@ document.addEventListener('click',e=>{const x=e.target.closest('[data-idea-exec]
 
 
 // ===== Vault v2: agent auto-trading, agent positions, moving funds from the previous vault =====
-const VAULT2_ABI=['function setAutoTrade(bytes32 agentId,uint64 until)','function positions(address user,bytes32 agentId,address token) view returns (uint256)','function withdrawPosition(bytes32 agentId,address token,uint256 amount,address recipient)'];
+const VAULT2_ABI=['function setAutoTrade(bytes32 agentId,uint64 until)','function setAgentMode(bytes32 agentId,bool degen)','function positions(address user,bytes32 agentId,address token) view returns (uint256)','function withdrawPosition(bytes32 agentId,address token,uint256 amount,address recipient)'];
 function isV2(){return Number(data.fundingStatus?.vaultVersion)===2}
 async function refreshV2Extras(e,p,w){
  const cfg=fundCfg();fundState.auto={};fundState.agentPositions={};fundState.legacy=null;
  if(isV2()&&cfg.vault){
   const v=new e.Contract(cfg.vault,VAULT_ABI,p);
   for(const plan of (data.fundingPlans||[])){try{const a=await v.allocations(w.address,agentKey(e,plan.agent_id));fundState.auto[plan.agent_id]=Number(a[3])}catch{}}
+  await loadAgentTrading().catch(()=>{});
   try{const r=await apiRequest('/api/v1/trade-ideas?status=executed&limit=100');const pairs=new Map();for(const i of r.ideas||[])if(i.execution_mode==='auto')pairs.set(i.agent_id+'|'+i.token_address,{agentId:i.agent_id,agentName:i.agent_name,token:i.token_address,symbol:i.token_symbol});
+   for(const plan of (data.fundingPlans||[]))for(const x of [...(fundState.trading?.[plan.agent_id]?.open||[]),...(fundState.trading?.[plan.agent_id]?.closed||[])])pairs.set(plan.agent_id+'|'+x.token_address,{agentId:plan.agent_id,agentName:plan.agent_name,token:x.token_address,symbol:x.token_symbol});
    const v2=new e.Contract(cfg.vault,VAULT2_ABI,p);
    for(const x of pairs.values()){try{const raw=await v2.positions(w.address,agentKey(e,x.agentId),x.token);if(raw>0n){let dec=18;try{dec=Number(await new e.Contract(x.token,['function decimals() view returns (uint8)'],p).decimals())}catch{}(fundState.agentPositions[x.agentId]=fundState.agentPositions[x.agentId]||[]).push({...x,raw,dec,amount:Number(e.formatUnits(raw,dec))})}}catch{}}
   }catch{}
@@ -2233,7 +2272,8 @@ function autoCell(p,w){
  if(!isV2())return '';
  const until=fundState.auto?.[p.agent_id]||0,on=until*1000>Date.now(),avail=data.fundingStatus?.autoTrade?.available;
  if(!avail&&!on)return `<div class="auto-cell muted">Auto-trade: coming soon</div>`;
- return `<div class="auto-cell">${on?`<span class="tag on">Auto-trade on · until ${new Date(until*1000).toLocaleDateString()}</span><button class="btn" data-auto-off="${esc(p.id)}" ${w&&!fundState.busy?'':'disabled'}>Turn off</button>`:`<button class="btn" data-auto-on="${esc(p.id)}" ${w&&!fundState.busy&&(fundState.perAgent[p.agent_id]||0)>0?'':'disabled'} title="Reserve a budget first">Let agent trade (7 days)</button>`}</div>`;
+ const T=fundState.trading?.[p.agent_id]||{},forever=until>=2**62,rules=T.settings?.enabled?(T.settings.mode==='ask'?'Rules on · asks first':'Rules on'):'Rules off';
+ return `<div class="auto-cell">${on?`<span class="tag on">Auto-trade on · ${forever?'until switched off':'until '+new Date(until*1000).toLocaleDateString()}${T.chain?.degen?' · degen':''}</span><button class="btn" data-auto-off="${esc(p.id)}" ${w&&!fundState.busy?'':'disabled'}>Turn off</button>`:`<button class="btn" data-auto-pick="${esc(p.id)}" ${w&&!fundState.busy&&(fundState.perAgent[p.agent_id]||0)>0?'':'disabled'} title="Reserve a budget first">Let agent trade…</button>`}<button class="btn" data-agent-rules="${esc(p.agent_id)}" title="What it buys and when it sells">${esc(rules)}</button></div>`;
 }
 function agentPositionsHtml(){
  const groups=Object.values(fundState.agentPositions||{});if(!groups.length)return '';
@@ -2258,6 +2298,125 @@ document.addEventListener('click',ev=>{
    const [dep,res]=await Promise.all([v.deposited(me),v.allocatedTotal(me)]);const free=dep-res;if(free<=0n)throw new Error('Some USDG is still reserved in the old vault for an agent that is no longer listed.');
    await (await v.withdraw(free,me)).wait();return `${e.formatUnits(free,6)} USDG moved from the old vault to your wallet`})}
 });
+
+
+// ===== Agent auto-trading: rules, degen mode, own allowlist (gasless), Telegram requests =====
+const NO_DAILY_LIMIT=1e15;
+// Like apiRequest, but keeps the server's readable message for errors.
+async function atRequest(path,options={}){if(!window.hormusFetch)throw new Error('Your session is still loading. Try again in a moment.');const r=await window.hormusFetch(API_BASE+path,{...options,headers:{'Content-Type':'application/json',...(options.headers||{})}});let b={};try{b=await r.json()}catch{}if(!r.ok)throw new Error(b.message||b.error||('Request failed ('+r.status+')'));return b}
+const MAX_U128=(1n<<128n)-1n,MAX_U64=(1n<<64n)-1n;
+const isNoLimit=v=>Number(v)>=NO_DAILY_LIMIT;
+const dailyText=v=>isNoLimit(v)?'no daily limit':money(v)+'/day';
+fundState.trading=fundState.trading||{};
+async function loadAgentTrading(){
+ const out={};
+ for(const plan of (data.fundingPlans||[])){try{out[plan.agent_id]=await atRequest('/api/v1/agent-trading/agents/'+encodeURIComponent(plan.agent_id))}catch{}}
+ fundState.trading=out;
+ try{fundState.myTokens=(await atRequest('/api/v1/agent-trading/my-tokens')).tokens||[]}catch{fundState.myTokens=fundState.myTokens||[]}
+}
+// Sign once in the wallet (no ETH needed); HORMUS sends it to the vault and pays the network fee.
+async function agentAllowTokens(tokens,symbols,allowed=true){
+ const w=fundWallet();if(!w)return toast('Your wallet is still loading. Try again in a few seconds.');
+ if(!isV2()||!data.fundingStatus?.autoTrade?.available)return toast('Agent trading is not switched on yet.');
+ try{
+  const td=await atRequest('/api/v1/agent-trading/allow/typed-data',{method:'POST',body:JSON.stringify({wallet:w.address,tokens,allowed})});
+  const {signer}=await fundSigner();toast('Sign in your wallet (free, no network fee)');
+  const signature=await signer.signTypedData(td.domain,td.types,td.message);
+  toast('Saving on Robinhood Chain…');
+  await atRequest('/api/v1/agent-trading/allow',{method:'POST',body:JSON.stringify({wallet:w.address,tokens,allowed,deadline:Number(td.message.deadline),nonce:String(td.message.nonce),signature,symbols})});
+  toast(allowed?`${symbols?.[0]||'Token'} added to your agent allowlist`:`${symbols?.[0]||'Token'} removed from your agent allowlist`);
+  await loadAgentTrading();if(pagePath==='/funding')renderApp('funding');
+ }catch(err){toast(/wallet_not_yours|linked to your agent budget/i.test(err.message||'')?'Use the wallet you saved your agent budget with.':txError(err))}
+}
+function agentTradingHtml(){
+ if(!isV2())return '';
+ const plans=data.fundingPlans||[],T=fundState.trading||{},avail=data.fundingStatus?.autoTrade?.available;
+ const pending=plans.flatMap(p=>(T[p.agent_id]?.pending||[]).map(x=>({...x,agentName:p.agent_name})));
+ const mine=fundState.myTokens||[];
+ const pendingHtml=pending.length?`<section class="panel" style="margin-top:14px"><span class="eyebrow">WAITING FOR YOU</span><h3 style="margin:6px 0 10px">Your agents are asking</h3><div class="tablewrap"><table style="min-width:620px"><tbody>${pending.map(x=>`<tr><td><b>${esc(x.agentName||'Agent')}</b><small class="market-meta" style="display:block">${esc(x.reason||'')}</small></td><td><a href="/markets/token/${esc(x.token_address)}">${esc(x.token_symbol||shortAddr(x.token_address))}</a></td><td>${money(x.amount_usdg)}</td><td style="text-align:right"><a class="btn primary" href="/agent-allow/${esc(x.id)}">${x.kind==='allow'?'Allow & buy':'Review'}</a></td></tr>`).join('')}</tbody></table></div></section>`:'';
+ const listHtml=`<section class="panel" style="margin-top:14px"><span class="eyebrow">YOUR TOKEN ALLOWLIST</span><h3 style="margin:6px 0 4px">Tokens your agents may buy</h3><p class="muted" style="font-size:14px;margin:0 0 10px;max-width:680px;line-height:1.7">Any token you like: Pons launches, graduated tokens, Uniswap pools or tokenized stocks. You sign once in your wallet (free, HORMUS pays the network fee). Agents in degen mode may buy any token without this list.</p>
+  <div class="fund-inline" style="max-width:640px"><input class="input" id="agl-addr" placeholder="Token contract 0x…"><button class="btn primary" id="agl-add" ${avail?'':'disabled'}>Allow</button></div>
+  ${mine.length?`<div class="tablewrap" style="margin-top:10px"><table style="min-width:460px"><tbody>${mine.map(t=>`<tr><td><a href="/markets/token/${esc(t.token_address)}">${esc(t.token_symbol||shortAddr(t.token_address))}</a> <small class="market-meta">${esc(shortAddr(t.token_address))}</small></td><td class="market-meta">${new Date(t.created_at).toLocaleDateString()}</td><td style="text-align:right"><button class="btn" data-agl-remove="${esc(t.token_address)}|${esc(t.token_symbol||'')}" ${avail?'':'disabled'}>Remove</button></td></tr>`).join('')}</tbody></table></div>`:'<div class="empty" style="margin-top:10px">No tokens yet. Add one here or press "Allow for my agents" on any token page.</div>'}
+ </section>`;
+ const openRows=plans.flatMap(p=>(T[p.agent_id]?.open||[]).map(x=>({...x,agentName:p.agent_name})));
+ const closedRows=plans.flatMap(p=>(T[p.agent_id]?.closed||[]).map(x=>({...x,agentName:p.agent_name}))).sort((a,b)=>new Date(b.closed_at)-new Date(a.closed_at)).slice(0,10);
+ const tradesHtml=openRows.length||closedRows.length?`<section class="panel" style="margin-top:14px"><span class="eyebrow">AGENT TRADES</span><h3 style="margin:6px 0 10px">Open and recent positions</h3><div class="tablewrap"><table style="min-width:640px"><thead><tr><th>Agent</th><th>Token</th><th>Cost</th><th>Entry</th><th>Result</th></tr></thead><tbody>${[...openRows.map(x=>`<tr><td>${esc(x.agentName||'Agent')}</td><td><a href="/markets/token/${esc(x.token_address)}">${esc(x.token_symbol||shortAddr(x.token_address))}</a></td><td>${money(x.cost_usdg)}</td><td>${x.entry_price_usd?tiPrice(Number(x.entry_price_usd)):'—'}</td><td><span class="tag on">Open</span></td></tr>`),...closedRows.map(x=>{const pnl=Number(x.cost_usdg)>0&&x.proceeds_usdg!==null?(Number(x.proceeds_usdg)/Number(x.cost_usdg)-1)*100:null;return `<tr><td>${esc(x.agentName||'Agent')}</td><td><a href="/markets/token/${esc(x.token_address)}">${esc(x.token_symbol||shortAddr(x.token_address))}</a></td><td>${money(x.cost_usdg)}</td><td>${x.entry_price_usd?tiPrice(Number(x.entry_price_usd)):'—'}</td><td>${pnl===null?esc(x.close_reason||'closed'):`<span class="${pnl>=0?'up':'down'}">${pnl>=0?'+':''}${pnl.toFixed(1)}%</span> <small class="market-meta">${esc(String(x.close_reason||'').replace('_',' '))}</small>`}</td></tr>`})].join('')}</tbody></table></div></section>`:'';
+ return pendingHtml+tradesHtml+listHtml;
+}
+const RULE_FIELDS=[
+ ['What to buy',[['minMcap','Min market cap ($)'],['maxMcap','Max market cap ($)'],['minLiquidity','Min liquidity ($)'],['minVol5m','Min volume 5m ($)'],['minVol1h','Min volume 1h ($)'],['minVol24h','Min volume 24h ($)'],['minBuys1h','Min buys 1h'],['minBuySellRatio','Min buys ÷ sells 1h'],['minChange5m','Min change 5m (%)'],['minChange1h','Min change 1h (%)'],['maxChange1h','Max change 1h (%)'],['minAgeMin','Min age (minutes)'],['maxAgeMin','Max age (minutes)'],['minCurve','Min Pons curve (%)'],['maxCurve','Max Pons curve (%)']]],
+ ['Launch check (Pons launches)',[['minHolders','Min holders'],['maxTop10Pct','Max top 10 (%)'],['maxSniperPct','Max snipers (%)'],['maxBundlePct','Max bundles (%)'],['maxDevPct','Max dev holds (%)']]],
+ ['When to sell',[['takeProfitPct','Take profit (+%)'],['stopLossPct','Stop loss (−%)'],['maxHoldMin','Max hold (minutes)']]],
+ ['How much',[['buyUsdg','USDG per buy'],['maxOpenPositions','Max open positions'],['slippagePct','Slippage (%)'],['rebuyCooldownMin','Wait before buying the same token again (minutes)']]]];
+function openAgentRules(agentId){
+ const plan=(data.fundingPlans||[]).find(p=>p.agent_id===agentId);const T=fundState.trading?.[agentId]||{};const s=T.settings||{};const r=s.rules||{};
+ const val=k=>r[k]===undefined||r[k]===null?'':r[k];
+ const deflt={buyUsdg:plan?Math.min(Number(plan.max_order_usdg),25):25,maxOpenPositions:3,slippagePct:5,rebuyCooldownMin:240};
+ const degen=!!T.chain?.degen;
+ openModal(`<div class="modalhead"><h3>${esc(plan?.agent_name||'Agent')} · trading rules</h3><button class="close" data-close>×</button></div>
+ <form id="rulesform"><p class="muted" style="font-size:14px;line-height:1.7;margin:0 0 12px">The agent reads live data every 20 seconds and only buys a token that passes every rule you fill in. Empty fields are ignored. All numbers are your choice.</p>
+ <div class="grid2"><div class="field"><label>Status</label><select class="select" name="enabled"><option value="1" ${s.enabled?'selected':''}>On: follow these rules</option><option value="0" ${s.enabled?'':'selected'}>Off</option></select></div>
+ <div class="field"><label>Mode</label><select class="select" name="mode"><option value="auto" ${s.mode!=='ask'?'selected':''}>Auto: buy on its own</option><option value="ask" ${s.mode==='ask'?'selected':''}>Ask me first in Telegram</option></select></div>
+ <div class="field"><label>Tokens</label><select class="select" name="scope"><option value="any" ${(r.scope||'any')==='any'?'selected':''}>Any token that passes</option><option value="fresh" ${r.scope==='fresh'?'selected':''}>Only Pons launches</option><option value="mylist" ${r.scope==='mylist'?'selected':''}>Only my allowlist</option></select></div>
+ <div class="field"><label>Tokenized stocks</label><select class="select" name="includeStocks"><option value="0" ${r.includeStocks?'':'selected'}>Skip</option><option value="1" ${r.includeStocks?'selected':''}>Include</option></select></div></div>
+ ${RULE_FIELDS.map(([title,fields])=>`<h4 style="margin:14px 0 6px">${title}</h4><div class="grid3">${fields.map(([k,l])=>`<div class="field"><label>${l}</label><input class="input" name="${k}" type="number" step="any" value="${esc(String(val(k)!==''?val(k):(deflt[k]??'')))}"></div>`).join('')}</div>`).join('')}
+ <p class="market-meta" id="rules-warn"></p>
+ <div class="info-note" style="margin-top:10px"><b>Degen mode: ${degen?'on':'off'}</b><br>${degen?'This agent may buy any token, not only your allowlist.':'Off: the agent only buys tokens on your allowlist or the HORMUS list. A token that passes your rules but is not allowed yet comes to Telegram as "Allow & buy".'} <button type="button" class="btn" id="rules-degen" style="margin-left:6px">${degen?'Turn degen mode off':'Turn degen mode on'}</button></div>
+ <div class="toolbar" style="justify-content:flex-end;margin-top:14px"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary" type="submit">Save rules</button></div></form>`);
+ const form=document.getElementById('rulesform');
+ const warn=()=>{const sl=Number(form.slippagePct.value);document.getElementById('rules-warn').textContent=sl>10?`Slippage ${sl}%: the price can be much worse than the quote.`:''};form.slippagePct.oninput=warn;warn();
+ document.getElementById('rules-degen').onclick=()=>{const on=!degen;if(on&&!confirm('Degen mode lets this agent buy ANY token that passes your rules, including brand-new launches, without asking.\n\nIf something goes wrong, you can lose up to this agent\'s whole budget. Your funds outside this budget stay safe, and you can withdraw any time.\n\nTurn it on?'))return;closeModal();
+  runTx('degen',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);await (await v.setAgentMode(agentKey(e,agentId),on)).wait();await loadAgentTrading();return on?'Degen mode on':'Degen mode off'})};
+ form.onsubmit=async ev=>{ev.preventDefault();const rules={scope:form.scope.value,includeStocks:form.includeStocks.value==='1'};
+  for(const [,fields] of RULE_FIELDS)for(const [k] of fields){const raw=form[k].value.trim();if(raw!=='')rules[k]=Number(raw)}
+  if(!(rules.buyUsdg>0))return toast('Set how much USDG to use per buy.');
+  try{await atRequest('/api/v1/agent-trading/agents/'+encodeURIComponent(agentId),{method:'PUT',body:JSON.stringify({enabled:form.enabled.value==='1',mode:form.mode.value,rules})});closeModal();toast('Rules saved');await loadAgentTrading();renderApp('funding')}
+  catch(err){toast('Could not save the rules: '+(err.message||'check the numbers'))}};
+}
+function openAutoTrade(plan){
+ openModal(`<div class="modalhead"><h3>Let ${esc(plan.agent_name||'this agent')} trade</h3><button class="close" data-close>×</button></div>
+ <p class="muted" style="font-size:14px;line-height:1.7">It trades only its reserved budget (${money(plan.planned_allocation_usdg)}), at most ${money(plan.max_order_usdg)} per order and ${dailyText(plan.daily_limit_usdg)}, following the rules you set. You can turn it off any time.</p>
+ <div class="field"><label>For how long</label><select class="select" id="at-dur"><option value="1">1 day</option><option value="7" selected>7 days</option><option value="30">30 days</option><option value="0">Until I turn it off</option></select></div>
+ <div class="toolbar" style="justify-content:flex-end;margin-top:12px"><button class="btn" data-close>Cancel</button><button class="btn primary" id="at-go">Confirm in wallet</button></div>`);
+ document.getElementById('at-go').onclick=()=>{const d=Number(document.getElementById('at-dur').value);closeModal();
+  runTx('auto',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);const until=d===0?MAX_U64:BigInt(Math.floor(Date.now()/1000)+d*86400-60);await (await v.setAutoTrade(agentKey(e,plan.agent_id),until)).wait();await patchAgentAuto(plan.agent_id,true);return d===0?`${plan.agent_name||'Agent'} can trade until you turn it off`:`${plan.agent_name||'Agent'} can trade for ${d} day${d>1?'s':''}`})};
+}
+document.addEventListener('click',ev=>{
+ const rb=ev.target.closest('[data-agent-rules]'),at=ev.target.closest('[data-auto-pick]'),add=ev.target.closest('#agl-add'),rm=ev.target.closest('[data-agl-remove]'),ta=ev.target.closest('[data-agent-allow]');
+ if(rb){ev.preventDefault();openAgentRules(rb.dataset.agentRules)}
+ if(at){ev.preventDefault();const plan=(data.fundingPlans||[]).find(x=>x.id===at.dataset.autoPick);if(plan)openAutoTrade(plan)}
+ if(add){const a=(document.getElementById('agl-addr')?.value||'').trim();if(!/^0x[a-fA-F0-9]{40}$/.test(a))return toast('Paste a full token contract address (0x… 42 characters).');agentAllowTokens([a],[''],true)}
+ if(rm){const [a,s]=rm.dataset.aglRemove.split('|');if(confirm(`Remove ${s||'this token'} from your agent allowlist?`))agentAllowTokens([a],[s],false)}
+ if(ta){ev.preventDefault();const [a,s]=ta.dataset.agentAllow.split('|');if(confirm(`Allow your agents to buy ${s||'this token'}?\n\nThey still follow your rules and limits. You sign once in your wallet, no network fee.`))agentAllowTokens([a],[s],true)}
+});
+function tiAgentAllowButton(address,sym){return isV2()&&data.fundingStatus?.autoTrade?.available&&/^0x[a-fA-F0-9]{40}$/.test(address||'')?`<button class="btn" data-agent-allow="${esc(address)}|${esc(sym||'')}" title="Let your agents buy this token">Allow for my agents</button>`:''}
+
+// "Allow & buy" / "Buy?" request opened from Telegram.
+function appAgentAllowShell(){return `<section class="panel" id="aa-box" style="max-width:640px"><div class="empty">Loading the request…</div></section>`}
+async function loadAgentAllow(id){
+ const box=document.getElementById('aa-box');if(!box)return;
+ if(!data._fundingLoaded)await loadFundingPlans().catch(()=>{});
+ let r;try{r=await atRequest('/api/v1/agent-trading/pending/'+encodeURIComponent(id))}catch{box.innerHTML='<div class="empty">This request was not found for your account.</div>';return}
+ const p=r.pending,w=fundWallet(),live=p.status==='pending';
+ const wrongWallet=w&&p.wallet&&w.address.toLowerCase()!==p.wallet.toLowerCase();
+ box.innerHTML=`<span class="eyebrow">${esc(p.agentName||'Agent')}</span><h3 style="margin:6px 0 4px">${p.kind==='allow'?`Allow ${esc(p.tokenSymbol||'this token')} and buy`:`Buy ${esc(p.tokenSymbol||'this token')}?`}</h3>
+  <p class="muted" style="font-size:14px;line-height:1.7">${esc(p.reason||'')}</p>
+  <div class="grid3" style="margin:10px 0"><div class="metric"><small>Token</small><b><a href="/markets/token/${esc(p.tokenAddress)}">${esc(p.tokenSymbol||shortAddr(p.tokenAddress))}</a></b></div><div class="metric"><small>Amount</small><b>${money(p.amountUsdg)}</b></div><div class="metric"><small>Status</small><b>${esc(live?'Waiting for you':p.status)}</b></div></div>
+  ${p.kind==='allow'&&live?'<p class="market-meta">You sign once in your wallet. It is free: HORMUS sends it to the vault and pays the network fee. Then the agent buys within your limits.</p>':''}
+  ${wrongWallet?`<div class="info-note warn">Open this with the wallet ${esc(shortAddr(p.wallet))}. Your current wallet is ${esc(shortAddr(w.address))}.</div>`:''}
+  ${p.note&&!live?`<p class="market-meta">${esc(p.note)}</p>`:''}
+  ${live?`<div class="toolbar" style="margin-top:12px"><button class="btn primary" id="aa-yes" ${wrongWallet||!w?'disabled':''}>${p.kind==='allow'?'Allow & buy':'Buy'}</button><button class="btn" id="aa-skip">Skip</button></div>`:`<div class="toolbar" style="margin-top:12px"><a class="btn" href="/funding">Agent funding</a></div>`}`;
+ const yes=document.getElementById('aa-yes'),skip=document.getElementById('aa-skip');
+ if(skip)skip.onclick=async()=>{skip.disabled=true;try{await atRequest('/api/v1/agent-trading/pending/'+encodeURIComponent(id)+'/skip',{method:'POST',body:'{}'});toast('Skipped')}catch{}loadAgentAllow(id)};
+ if(yes)yes.onclick=async()=>{yes.disabled=true;yes.textContent='Working…';
+  try{let res;
+   if(p.kind==='allow'){if(!r.typedData)throw new Error('This request can no longer be signed.');const {signer}=await fundSigner();toast('Sign in your wallet (free)');const signature=await signer.signTypedData(r.typedData.domain,r.typedData.types,r.typedData.message);toast('Allowing and buying…');
+    res=await atRequest('/api/v1/agent-trading/pending/'+encodeURIComponent(id)+'/allow',{method:'POST',body:JSON.stringify({deadline:Number(r.typedData.message.deadline),nonce:String(r.typedData.message.nonce),signature})})}
+   else res=await atRequest('/api/v1/agent-trading/pending/'+encodeURIComponent(id)+'/buy',{method:'POST',body:'{}'});
+   toast(res.ok?`Bought via ${res.route}`:(res.message||'Done'))}
+  catch(err){toast(txError(err))}
+  loadAgentAllow(id)};
+}
 
 
 // ===== Community skills =====
@@ -2359,7 +2518,7 @@ async function runSkillCommand(text){
 let pulseState={tf:'5m',sort:'gainers',data:null,loading:false,error:'',timer:null,tick:null};
 function fmtAge(m){if(m===null||m===undefined||!Number.isFinite(Number(m)))return '—';m=Number(m);if(m<1)return 'just now';if(m<60)return m+'m';if(m<1440)return Math.floor(m/60)+'h '+(m%60?m%60+'m':'');return Math.floor(m/1440)+'d'}
 function pulseUsd(n){if(n===null||n===undefined||n===0)return '—';const a=Math.abs(n);return '$'+(a>=1e9?(n/1e9).toFixed(2)+'B':a>=1e6?(n/1e6).toFixed(2)+'M':a>=1e3?(n/1e3).toFixed(1)+'K':n.toFixed(a<10?2:0))}
-// ===== DAY-2-23: since you were here =====
+// ===== DAY-2-24: since you were here =====
 const recapState={base:null,seen:{},data:null,loading:false};
 (function(){try{
  recapState.seen=JSON.parse(localStorage.getItem('hormus-seen')||'{}')||{};
@@ -2715,6 +2874,48 @@ function renderPulse(){
  if(s.sort==='fresh')setTimeout(loadPulseLaunch,0);
 }
 
+
+// ===== HORMUS token card =====
+function ovTokenHtml(){return HORMUS_TOKEN_ADDRESS?`<a class="ov-token" href="/markets/token/${HORMUS_TOKEN_ADDRESS}"><span><b>$HORMUS${hormusCoin&&hormusCoin.priceUsd!==null?` <em class="ov-token-px">${coinPrice(hormusCoin.priceUsd)}</em>${hormusCoin.change24h!==null?` <em class="${hormusCoin.change24h>=0?'positive':'negative'}">${hormusCoin.change24h>0?'+':''}${hormusCoin.change24h.toFixed(1)}%</em>`:''}`:''}</b><small>${hormusCoin&&hormusCoin.marketCapUsd!==null?`MC ${hpUsd(hormusCoin.marketCapUsd)} · ${hormusCoin.holders??'—'} holders · `:''}Price, chart, holders and live trades</small></span><i>Open token page →</i></a>`:''}
+// Price with the leading zeros folded: 0.0000482 -> $0.0₄482
+function coinPrice(n){if(n===null||n===undefined||!Number.isFinite(n))return '—';if(n>=0.01)return hpPrice(n);const m=n.toFixed(20).match(/^0\.(0+)(\d{1,4})/);if(!m)return hpPrice(n);const z=m[1].length;return z<4?'$'+n.toPrecision(4).replace(/0+$/,''):'$0.0'+String(z).split('').map(d=>'₀₁₂₃₄₅₆₇₈₉'[d]).join('')+m[2].replace(/0+$/,'')}
+function coinAgo(iso){const s=Math.max(0,Math.round((Date.now()-Date.parse(iso))/1000));return !Number.isFinite(s)?'':s<10?'just now':s<60?s+'s ago':Math.round(s/60)+'m ago'}
+const COIN_LOGO='<svg viewBox="0 0 100 100" aria-hidden="true"><rect x="10" y="10" width="80" height="80" rx="24" fill="#eef5f2"/><rect x="20" y="27" width="60" height="44" rx="20" fill="#0b1917"/><rect x="38" y="39" width="7" height="18" rx="3.5" fill="#5ff0b0"/><rect x="55" y="39" width="7" height="18" rx="3.5" fill="#5ff0b0"/></svg>';
+function coinSet(c){
+ const had=HORMUS_TOKEN_ADDRESS;
+ hormusCoin=c&&c.configured&&/^0x[a-f0-9]{40}$/.test(c.address||'')?c:null;HORMUS_TOKEN_ADDRESS=hormusCoin?hormusCoin.address:'';
+ const nav=document.getElementById('hp-token');if(nav){nav.hidden=!hormusCoin;if(hormusCoin)nav.href='https://app.hormus.io/markets/token/'+hormusCoin.address}
+ coinPaint();
+ if(pagePath==='/overview'){const ov=document.querySelector('.ov-token');if(had!==HORMUS_TOKEN_ADDRESS)route();else if(ov&&hormusCoin)ov.outerHTML=ovTokenHtml()}
+}
+function coinPaint(){
+ const box=document.getElementById('hp-coin');if(!box)return;const c=hormusCoin;
+ if(!c){box.hidden=true;box.innerHTML='';return}
+ const app='https://app.hormus.io/markets/token/'+c.address,ch=c.change24h;
+ const stat=(k,v)=>`<div><small>${k}</small><b>${v}</b></div>`;
+ const flow=c.buys1h===null&&c.sells1h===null?'—':`<em>● ${c.buys1h??0}</em> · <u>● ${c.sells1h??0}</u>`;
+ const curve=c.graduated?`<div class="hp-coin-curve"><div class="hp-coin-curve-h"><span>Pons curve</span><b>graduated</b></div><div class="hp-coin-bar"><i style="width:100%"></i></div></div>`
+  :c.progressPct!==null?`<div class="hp-coin-curve"><div class="hp-coin-curve-h"><span>Pons curve</span><b>${c.progressPct.toFixed(1)}%</b></div><div class="hp-coin-bar"><i style="width:${c.progressPct}%"></i></div></div>`:'';
+ box.hidden=false;
+ box.innerHTML=`<section class="hp-coin">
+ <div class="hp-coin-top"><div class="hp-coin-id">${COIN_LOGO}<div><b>$${esc(c.symbol||'HORMUS')}</b><small><i class="${c.stale?'off':''}"></i>${c.graduated?'Graduated':'Live on Pons'} · Robinhood Chain<span class="hp-coin-ago" data-at="${esc(c.fetchedAt||'')}">${c.stale?'reconnecting…':'updated '+coinAgo(c.fetchedAt)}</span></small></div></div>
+  <div class="hp-coin-price"><b>${coinPrice(c.priceUsd)}</b>${ch===null?'':`<span class="${ch>=0?'hp-up':'hp-down'}">${ch>0?'+':''}${ch.toFixed(1)}% 24h</span>`}</div></div>
+ <div class="hp-coin-stats">${stat('Market cap',hpUsd(c.marketCapUsd))}${stat('Volume 24h',hpUsd(c.volume24h))}${stat('Holders',c.holders===null?'—':c.holders.toLocaleString('en-US'))}<div><small>Buys / sells 1h</small><b class="bs">${flow}</b></div></div>
+ ${curve}
+ <div class="hp-coin-foot"><button type="button" class="hp-coin-ca" data-copy-ca="${esc(c.address)}" aria-label="Copy contract address"><span>${esc(c.address)}</span><em>Copy</em></button>
+  <span class="hp-coin-btns"><a class="sec" href="${esc(c.ponsUrl)}" target="_blank" rel="noopener noreferrer">Buy on Pons ↗</a><a class="pri" href="${app}">Open in Markets →</a></span></div>
+</section>`;
+}
+let coinLoadedAt=0;
+async function coinLoad(){
+ if(Date.now()-coinLoadedAt<10000)return;coinLoadedAt=Date.now();
+ if(!hormusCoin){try{const c=JSON.parse(localStorage.getItem('hormus-coin')||'null');if(c&&c.configured&&Date.now()-Date.parse(c.fetchedAt)<6*3600000)coinSet({...c,stale:true})}catch{}}
+ let c;try{const r=await fetch(API_BASE+'/public/hormus-token',{cache:'no-store'});c=await r.json();if(!r.ok&&!c.address)throw new Error('down')}catch{if(hormusCoin){hormusCoin.stale=true;coinPaint()}return}
+ if(c.configured&&c.address){try{localStorage.setItem('hormus-coin',JSON.stringify(c))}catch{}}else{try{localStorage.removeItem('hormus-coin')}catch{}}
+ coinSet(c);
+}
+setInterval(()=>{if(document.hidden)return;if(pagePath==='/'&&document.getElementById('hp-coin'))coinLoad();else if(pagePath==='/overview'&&hormusCoin)coinLoad()},15000);
+setInterval(()=>{const el=document.querySelector('#hp-coin .hp-coin-ago');if(el&&el.dataset.at&&!hormusCoin?.stale)el.textContent='updated '+coinAgo(el.dataset.at)},5000);
 
 // ===== Homepage live board (public GeckoTerminal data, no login needed) =====
 function hpPrice(n){if(n===null||n===undefined)return '—';if(n>=1)return '$'+n.toLocaleString('en-US',{maximumFractionDigits:2});if(n>=0.01)return '$'+n.toFixed(4);return '$'+n.toPrecision(3)}

@@ -71,13 +71,13 @@ All on Robinhood Chain (chain id 4663).
 
 | Contract | Address | Status |
 |---|---|---|
-| HormusAgentVault (v1) | [`0xC1a68e303354537A29F34aA178821F799a91D32e`](https://robinhoodchain.blockscout.com/address/0xC1a68e303354537A29F34aA178821F799a91D32e) | Live, source verified on Blockscout |
-| HormusAgentVaultV2 | not deployed | Work in progress |
+| HormusAgentVaultV2 | [`0x5156281349c6EF0F992F2D20B33376585257F3d9`](https://robinhoodchain.blockscout.com/address/0x5156281349c6EF0F992F2D20B33376585257F3d9?tab=contract) | Live, source verified on Blockscout |
+| HormusAgentVault (v1) | [`0xC1a68e303354537A29F34aA178821F799a91D32e`](https://robinhoodchain.blockscout.com/address/0xC1a68e303354537A29F34aA178821F799a91D32e) | Previous vault, withdrawals only |
 | USDG | [`0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168`](https://robinhoodchain.blockscout.com/address/0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168) | Token used by the vault |
 
 The v1 vault keeps your USDG under your address. You deposit, set a budget for each agent and withdraw with your own signature. Budgets are bookkeeping only: v1 has no function that lets an agent or the HORMUS backend move your funds. The owner key can only pause new deposits and new budgets; releasing a budget and withdrawing always stay open.
 
-v2 adds optional agent trading inside the limits you set. It is not deployed and nothing in the app uses it yet.
+v2 adds optional agent trading inside the limits you set: a budget, max per order and max per day per agent, the tokens you allow (your own list, signed gaslessly, or any token in degen mode), and how long auto-trading stays on. Trades go through Uniswap v3, Uniswap v4 or the token's Pons curve and always start and end in USDG inside the vault; the backend executor can never send funds anywhere else. It is deployed and source verified; users who still have USDG in v1 see a Move to wallet button and can deposit into v2.
 
 ## Run it locally
 
