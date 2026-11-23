@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-14"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
+<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-17"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
-<title>HORMUS — Autonomous Market Intelligence</title>
+<title>HORMUS | Know the token before you trade it</title>
 <style>
 :root{--bg:#050809;--bg2:#080e11;--surface:#0b1317;--surface2:#0e1a1e;--line:#1b3036;--line2:#25434a;--white:#eef7f6;--muted:#829397;--muted2:#a6b6b7;--cyan:#83e8ed;--blue:#78b9ff;--mint:#a2f4c4;--green:#67d99a;--gold:#d8c28b;--red:#ff8585;--radius:18px;--glow:0 0 70px #51dce51a}
 *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font:14px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;overflow-x:hidden}button,input,textarea,select{font:inherit}button,a{cursor:pointer}a{color:inherit;text-decoration:none}button{color:inherit}.ambient{position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(ellipse at 76% 8%,#10363a33,transparent 33%),radial-gradient(ellipse at 9% 47%,#0c2d4725,transparent 36%),linear-gradient(180deg,#050809,#060a0c 60%,#050809)}.ambient:after{content:"";position:absolute;inset:0;opacity:.13;background-image:linear-gradient(#7edee80b 1px,transparent 1px),linear-gradient(90deg,#7edee80b 1px,transparent 1px);background-size:62px 62px;mask-image:linear-gradient(to bottom,black,transparent 75%)}
@@ -425,7 +425,90 @@
  #public .hp-board-head{padding:16px;font-size:14px;flex-wrap:wrap}#public .hp-board-foot{padding:14px 16px}
  #public .hp-row .hp-mono{font-size:14px}#public .hp-tok small{display:none}#public .hp-tok img,#public .hp-tok .hp-fb{width:28px;height:28px;flex-basis:28px}#public .hp-visual{padding:18px}#public .hp-final{padding-top:110px;padding-bottom:90px}#public .hp-final h2{font-size:44px}}
 
-/* ===== DAY-2-14 token page + readability ===== */
+/* price alerts */
+#application .nav-badge{display:inline-grid;place-items:center;min-width:20px;height:20px;padding:0 6px;margin-left:8px;border-radius:10px;background:var(--a-mint);color:#07100e;font:600 12px Geist,sans-serif}
+#application .nav-badge[hidden]{display:none}
+#application .appnavlinks a .nav-badge{margin-left:auto}
+#application .navlink-bell{position:relative}
+#application .navlink-bell svg{width:17px;height:17px;fill:currentColor}
+#application .navlink-bell .nav-badge{position:absolute;top:-6px;right:-6px;margin:0;min-width:18px;height:18px;font-size:11px;padding:0 5px}
+@media(min-width:1024px){#application .navlink-bell{display:none!important}}
+#application .navlink-bell .nav-badge:not([hidden]){display:inline-grid!important}
+#application #ti-alert-btn{display:inline-flex;align-items:center;gap:8px}
+#application #ti-alert-btn svg{width:15px;height:15px;fill:currentColor}
+#application #ti-alert-btn.on{border-color:var(--a-mint);color:var(--a-fg)}
+#application .ti-alert{border-color:#2f5a4b}
+#application .ti-alert-kinds{margin-bottom:14px}
+#application .ti-alert-form{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+#application .ti-af{display:inline-flex;align-items:center;gap:8px;font-size:15px;color:var(--a-mut)}
+#application .ti-af .input{width:130px;font-family:"Geist Mono",Consolas,monospace}
+#application .ti-af .select{width:auto}
+#application .ti-alert-list{margin-top:14px;border-top:1px solid var(--a-line)}
+#application .ti-alert-item{display:flex;align-items:center;gap:14px;padding:10px 0;border-bottom:1px solid var(--a-line);font-size:15px}
+#application .ti-alert-item>span{flex:1}
+#application .ti-alert-item small{color:var(--a-mut);font-size:13px}
+#application .ti-alert-item.off span{color:var(--a-mut)}
+#application .alerts-notify{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:16px;border-color:#2f5a4b}
+#application .alerts-notify p{margin:4px 0 0;font-size:14px}
+#application .alerts-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+#application .alert-rule{display:grid;grid-template-columns:minmax(0,1fr) auto auto;gap:14px;align-items:center;padding:12px 0;border-top:1px solid var(--a-line)}
+#application .alert-rule>span:first-child a{color:var(--a-fg);text-decoration:none}
+#application .alert-rule>span:first-child small{display:block;margin-top:2px;color:var(--a-mut);font-size:14px}
+#application .alert-rule.off>span:first-child{opacity:.6}
+#application .alert-acts{display:flex;gap:6px}
+#application .alert-acts .btn{padding:7px 10px;font-size:13px}
+#application .alert-ev{display:block;padding:12px 0 12px 14px;border-top:1px solid var(--a-line);text-decoration:none;color:var(--a-fg);position:relative}
+#application .alert-ev:before{content:"";position:absolute;left:0;top:18px;width:6px;height:6px;border-radius:50%;background:transparent}
+#application .alert-ev.new:before{background:var(--a-mint)}
+#application .alert-ev.new.warn:before{background:#ff7a7a}
+#application .alert-ev b{display:block;font-size:15px}
+#application .alert-ev small{display:block;margin-top:3px;color:var(--a-mut);font-size:14px;line-height:1.5}
+#application .alert-ev em{display:block;margin-top:4px;font-style:normal;color:var(--a-dim);font-size:13px}
+#alert-pops{position:fixed;top:18px;right:18px;z-index:200;display:flex;flex-direction:column;gap:10px;width:min(380px,calc(100vw - 32px))}
+.alert-pop{display:flex;gap:12px;padding:14px 16px;border-radius:14px;background:#0d1715;border:1px solid #2f5a4b;color:#f1f5f4;text-decoration:none;box-shadow:0 18px 50px rgba(0,0,0,.5);font-family:Geist,Inter,sans-serif;animation:hmSlideIn .35s ease-out;transition:opacity .4s,transform .4s}
+.alert-pop.warn{border-color:#6b3434}
+.alert-pop.out{opacity:0;transform:translateY(-6px)}
+.alert-pop i{flex:none;display:grid;place-items:center;width:32px;height:32px;border-radius:10px;background:#5ff0b0;color:#07100e}
+.alert-pop.warn i{background:#ff7a7a}
+.alert-pop i svg{width:16px;height:16px;fill:currentColor}
+.alert-pop b{display:block;font-size:15px}
+.alert-pop small{display:block;margin-top:3px;font-size:13.5px;color:#a9b7b3;line-height:1.45}
+@media(max-width:1023px){#alert-pops{top:72px;right:16px}#application .alerts-grid{grid-template-columns:1fr}}
+@media(max-width:560px){#application .alert-rule{grid-template-columns:minmax(0,1fr) auto}#application .alert-rule>small{display:none}#application .ti-af .input{width:110px}#application .alerts-notify{flex-direction:column;align-items:flex-start}}
+#application .alerts-top{display:grid;gap:16px;margin-bottom:16px}
+#application .tg-card{display:flex;align-items:center;gap:16px;border-color:#24312e}
+#application .tg-card.on{border-color:#2f5a4b;background:#0b1513}
+#application .tg-card>div:nth-child(2){flex:1;min-width:0}
+#application .tg-card b{font-size:16px}
+#application .tg-card p{margin:4px 0 0;font-size:14px}
+#application .tg-ico{flex:none;display:grid;place-items:center;width:44px;height:44px;border-radius:12px;background:#229ed9;color:#fff}
+#application .tg-ico svg{width:22px;height:22px;fill:currentColor}
+#application .tg-acts{display:flex;gap:8px;flex-wrap:wrap}
+#application .presets{margin-bottom:16px}
+#application .preset-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:8px}
+#application .preset{padding:16px;border:1px solid var(--a-line);border-radius:12px}
+#application .preset.on{border-color:#2f5a4b;background:#0b1513}
+#application .preset-top{display:flex;align-items:center;gap:10px}
+#application .preset-top b{font-size:16px}
+#application .preset-on{font-size:12px;font-weight:600;color:#07100e;background:var(--a-mint);padding:2px 8px;border-radius:999px}
+#application .preset p{margin:6px 0 12px;font-size:14px;line-height:1.5}
+#application .preset-form{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+#application .preset-form .ti-af{font-size:14px}
+#application .preset-form .input{width:96px}
+#application .preset-rule{display:flex;align-items:center;justify-content:space-between;gap:10px;padding-top:10px;border-top:1px solid var(--a-line);font-size:14px}
+@media(max-width:900px){#application .preset-grid{grid-template-columns:1fr}}
+@media(max-width:560px){#application .tg-card{flex-wrap:wrap}#application .tg-acts{width:100%}#application .tg-acts .btn{flex:1}#application .preset-rule{flex-direction:column;align-items:flex-start}}
+/* since you were here */
+#application .recap{margin-top:24px;border-color:#2f5a4b;background:#0b1513}
+#application .recap-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:8px 0 6px}
+#application .recap-stats>*{display:block;padding:14px 16px;border:1px solid var(--a-line);border-radius:12px;text-decoration:none;color:var(--a-fg)}
+#application .recap-stats a:hover{border-color:#2f5a4b}
+#application .recap-stats b{display:block;font:600 26px "Geist Mono",Consolas,monospace}
+#application .recap-stats small{display:block;margin-top:2px;font-size:13px;color:var(--a-mut)}
+#application .recap-moves{margin-top:8px}#application .recap [data-recap-hide]{white-space:nowrap;flex:none}
+#application .recap-moves .ov-row{grid-template-columns:minmax(0,1fr) auto}
+@media(max-width:560px){#application .recap-stats{gap:8px}#application .recap-stats>*{padding:12px}#application .recap-stats b{font-size:22px}}
+/* ===== token page + readability ===== */
 #application .apphead.is-token{display:none}
 #application .ti-wrap{gap:16px}
 #application .ti-crumb{display:flex}
@@ -535,7 +618,7 @@
 #application .ov-token b{display:block;font-size:17px}#application .ov-token small{display:block;color:var(--a-mut);font-size:14px;margin-top:3px}#application .ov-token i{font-style:normal;color:var(--a-mint);white-space:nowrap}
 @media(max-width:1023px){#application .appnav>.toolbar{display:flex;gap:8px;align-items:center}#application .navlink-x{margin:0;height:40px;width:40px!important;flex:0 0 40px;padding:0!important;border-radius:10px}#application .navlink-x span{display:none}}
 
-/* homepage footer (DAY-2-14) */
+/* homepage footer (DAY-2-17) */
 #public .hp-foot{border-top:1px solid var(--hp-line);padding-top:72px;overflow:hidden;position:relative}
 #public .hp-fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.25fr;gap:40px}
 #public .hp-fbrand p{margin:18px 0 0;max-width:340px;font-size:15px;line-height:1.65;color:var(--hp-mut)}
@@ -563,7 +646,7 @@
 #public .hp-footx{display:inline-flex;align-items:center;gap:8px}#public .hp-footx svg{width:16px;height:16px;fill:currentColor}
 #public .hp-x+.hp-x{margin-left:-22px}#public .hp-footx svg{display:block}
 @media(max-width:640px){#public .hp-x{margin-left:auto}#public .hp-x+.hp-x{margin-left:-4px}#public .hp-x+.hp-btn{margin-left:0!important}}
-/* ===== DAY-2-14 live layer ===== */
+/* ===== live layer ===== */
 @keyframes hmFlashUp{0%{background:rgba(95,240,176,.32);color:#bfffe2}100%{background:transparent}}
 @keyframes hmFlashDown{0%{background:rgba(255,107,107,.3);color:#ffd0d0}100%{background:transparent}}
 @keyframes hmSlideIn{0%{opacity:0;transform:translateY(-8px)}100%{opacity:1;transform:none}}
@@ -977,7 +1060,7 @@
 </div>
 <div id="loginpage" class="hidden"><header class="navbar"><div class="navinner"><a class="brand" href="/"><img class="brandmascot" src="/hormus-logo.svg" alt="HORMUS"><span>HORMUS<small>AUTONOMOUS MARKET INTELLIGENCE</small></span></a></div></header><main style="min-height:calc(100vh - 76px);display:grid;place-items:center;padding:30px 18px"><div class="panel" style="width:min(420px,100%);padding:30px;text-align:center;box-shadow:var(--glow)"><img class="loginmascot" src="/hormus-logo.svg" alt="HORMUS"><div class="eyebrow" style="justify-content:center">PRIVATE INTELLIGENCE WORKSPACE</div><h1 style="font-size:28px;letter-spacing:-1px;margin:13px 0 7px">Sign in to HORMUS</h1><p class="muted" style="font-size:11px;margin:0 0 24px">Your research, agents and market workflows in one place.</p><button class="btn primary" id="google-signin" style="width:100%;padding:13px">◎　Continue with Google</button><div class="notice warn hidden" id="login-error" style="text-align:left;margin-top:17px"></div><p class="muted" style="font-size:9px">By continuing, you agree to use HORMUS responsibly and review all automated outputs before acting.</p></div></main></div>
 <div id="docsPage" class="hidden"><header class="navbar"><div class="navinner"><a class="brand" href="/"><img class="brandmascot" src="/hormus-logo.svg" alt="HORMUS"><span>HORMUS<small>DOCUMENTATION</small></span></a><div class="navactions"><a class="btn ghost" href="/">Home</a><a class="btn primary" href="https://app.hormus.io/login">Sign in</a></div></div></header><div class="docsLayout"><aside class="docside" id="docside"></aside><article class="doccontent" id="doccontent"></article></div><footer class="footer"><div class="footerinner"><div>HORMUS Documentation · 2026</div><div class="footerlinks"><a href="/">Home</a><a href="https://app.hormus.io/login">Sign in</a><a href="https://x.com/hormusio" target="_blank" rel="noopener noreferrer">𝕏 @hormusio</a></div></div></footer></div>
-<div id="application" class="appShell"><header class="appnav"><a class="brand" href="/overview"><img class="brandmascot" src="/hormus-logo.svg" alt="HORMUS"><span>HORMUS<small>INTELLIGENCE SYSTEM</small></span></a><nav class="appnavlinks" id="appnavlinks"><span class="navgroup">Explore</span><a href="/overview">Overview</a><a href="/markets">Markets</a><a href="/terminal">Terminal</a><a href="/trade">Trade</a><span class="navgroup">Agents</span><a href="/agents">Agents</a><a href="/skills">Skills</a><a href="/activity">Activity</a><a href="/agent-analytics">Agent analytics</a><span class="navgroup">Wallet</span><a href="/portfolio">Portfolio</a><a href="/funding">Agent funding</a><span class="navgroup">Account</span><a href="/settings">Settings</a><a href="https://docs.hormus.io" target="_blank" rel="noopener noreferrer">Docs ↗</a></nav><div class="toolbar"><a class="btn ghost navlink-x" href="https://x.com/hormusapp" target="_blank" rel="noopener noreferrer" aria-label="HORMUS on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="btn ghost navlink-x" href="https://github.com/hormus-ai" target="_blank" rel="noopener noreferrer" aria-label="HORMUS on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg></a><button class="btn ghost" id="app-signout">Sign out</button></div></header><main class="appmain"><div class="app-ticker" id="app-ticker" hidden><div class="tk-track" id="tk-track"></div></div><div class="apphead"><div class="eyebrow">HORMUS / INTELLIGENCE SYSTEM</div><h1 id="apptitle">Overview</h1><p id="appsubtitle"></p></div><section id="appview"></section></main><nav class="mobile-app-nav" id="mobile-app-nav" aria-label="App navigation"><a href="/overview" data-mobile-route="overview"><i></i><small>Home</small></a><a href="/markets" data-mobile-route="markets"><i></i><small>Markets</small></a><a href="/terminal" data-mobile-route="terminal"><i></i><small>Ask</small></a><a href="/trade" data-mobile-route="trade"><i></i><small>Trade</small></a><a href="#" id="mobile-more" role="button" aria-label="More pages"><i></i><small>More</small></a></nav><div class="more-sheet hidden" id="more-sheet"><div class="more-panel"><div class="grab"></div><a href="/agents">Agents</a><a href="/skills">Skills</a><a href="/activity">Activity</a><a href="/portfolio">Portfolio</a><a href="/funding">Agent funding</a><a href="/agent-analytics">Agent analytics</a><a href="/settings">Settings</a><a href="https://docs.hormus.io" target="_blank" rel="noopener noreferrer">Docs ↗</a><a href="#" data-more-signout>Sign out</a></div></div></div>
+<div id="application" class="appShell"><header class="appnav"><a class="brand" href="/overview"><img class="brandmascot" src="/hormus-logo.svg" alt="HORMUS"><span>HORMUS</span></a><nav class="appnavlinks" id="appnavlinks"><span class="navgroup">Explore</span><a href="/overview">Overview</a><a href="/markets">Markets</a><a href="/alerts">Alerts<span class="nav-badge" data-alert-badge hidden></span></a><a href="/terminal">Terminal</a><a href="/trade">Trade</a><span class="navgroup">Agents</span><a href="/agents">Agents</a><a href="/skills">Skills</a><a href="/activity">Activity</a><a href="/agent-analytics">Agent analytics</a><span class="navgroup">Wallet</span><a href="/portfolio">Portfolio</a><a href="/funding">Agent funding</a><span class="navgroup">Account</span><a href="/settings">Settings</a><a href="https://docs.hormus.io" target="_blank" rel="noopener noreferrer">Docs ↗</a></nav><div class="toolbar"><a class="btn ghost navlink-x navlink-bell" href="/alerts" aria-label="Alerts"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2Z"/></svg><span class="nav-badge" data-alert-badge hidden></span></a><a class="btn ghost navlink-x" href="https://x.com/hormusapp" target="_blank" rel="noopener noreferrer" aria-label="HORMUS on X"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a><a class="btn ghost navlink-x" href="https://github.com/hormus-ai" target="_blank" rel="noopener noreferrer" aria-label="HORMUS on GitHub"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z"/></svg></a><button class="btn ghost" id="app-signout">Sign out</button></div></header><main class="appmain"><div class="app-ticker" id="app-ticker" hidden><div class="tk-track" id="tk-track"></div></div><div class="apphead"><div class="eyebrow">HORMUS</div><h1 id="apptitle">Overview</h1><p id="appsubtitle"></p></div><section id="appview"></section></main><nav class="mobile-app-nav" id="mobile-app-nav" aria-label="App navigation"><a href="/overview" data-mobile-route="overview"><i></i><small>Home</small></a><a href="/markets" data-mobile-route="markets"><i></i><small>Markets</small></a><a href="/terminal" data-mobile-route="terminal"><i></i><small>Ask</small></a><a href="/trade" data-mobile-route="trade"><i></i><small>Trade</small></a><a href="#" id="mobile-more" role="button" aria-label="More pages"><i></i><small>More</small></a></nav><div class="more-sheet hidden" id="more-sheet"><div class="more-panel"><div class="grab"></div><a href="/alerts">Alerts<span class="nav-badge" data-alert-badge hidden></span></a><a href="/agents">Agents</a><a href="/skills">Skills</a><a href="/activity">Activity</a><a href="/portfolio">Portfolio</a><a href="/funding">Agent funding</a><a href="/agent-analytics">Agent analytics</a><a href="/settings">Settings</a><a href="https://docs.hormus.io" target="_blank" rel="noopener noreferrer">Docs ↗</a><a href="#" data-more-signout>Sign out</a></div></div></div>
 <div class="modalback" id="modalback"><div class="modal" id="modal"></div></div><div class="toast" id="toast"></div>
 <script>
 const STORE='ami_v3_local';const API_BASE='https://hormus-backend-production.up.railway.app';let backendStatus='connecting';let backendUser=null;const defaults={agents:[],watchlist:[],activity:[],paper:{cash:0,positions:[],trades:[]},settings:{mode:'research',maxOrder:50,maxDaily:100,approval:true},briefs:[],alertRules:[]};
@@ -994,7 +1077,7 @@ function money(n){return '$'+Number(n||0).toFixed(2)}
 function toast(s){let t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2800)}
 function go(path){history.pushState({},'',path);route()}
 window.addEventListener('popstate',route);
-function route(){pagePath=location.pathname.replace(/\/+$/,'')||'/';if(location.hostname==='app.hormus.io'&&pagePath==='/'){history.replaceState({},'', '/login');pagePath='/login'}if(!['/','/login','/docs'].includes(pagePath)&&!pagePath.startsWith('/docs/')){if(!window.__privyReady){document.getElementById('public').classList.add('hidden');document.getElementById('loginpage').classList.remove('hidden');return}if(!window.__privyAuthenticated){history.replaceState({},'', '/login');pagePath='/login'}}['public','loginpage','docsPage','application'].forEach(id=>document.getElementById(id).classList.add('hidden'));document.getElementById('application').classList.remove('show');if(pagePath==='/'){document.getElementById('public').classList.remove('hidden');document.title='HORMUS — Autonomous Market Intelligence';initDemo()}else if(pagePath==='/login'){document.getElementById('loginpage').classList.remove('hidden');document.title='Sign in — HORMUS'}else if(pagePath==='/docs'||pagePath.startsWith('/docs/')){location.replace('https://docs.hormus.io/');return;document.getElementById('docsPage').classList.remove('hidden');document.title='Documentation — HORMUS';renderDocs()}else{document.getElementById('application').classList.remove('hidden');document.getElementById('application').classList.add('show');renderApp(pagePath.slice(1));document.title=(document.getElementById('apptitle').textContent||'Overview')+' — HORMUS'}}
+function route(){pagePath=location.pathname.replace(/\/+$/,'')||'/';if(location.hostname==='app.hormus.io'&&pagePath==='/'){history.replaceState({},'', '/login');pagePath='/login'}if(!['/','/login','/docs'].includes(pagePath)&&!pagePath.startsWith('/docs/')){if(!window.__privyReady){document.getElementById('public').classList.add('hidden');document.getElementById('loginpage').classList.remove('hidden');return}if(!window.__privyAuthenticated){history.replaceState({},'', '/login');pagePath='/login'}}['public','loginpage','docsPage','application'].forEach(id=>document.getElementById(id).classList.add('hidden'));document.getElementById('application').classList.remove('show');if(pagePath==='/'){document.getElementById('public').classList.remove('hidden');document.title='HORMUS | Know the token before you trade it';initDemo()}else if(pagePath==='/login'){document.getElementById('loginpage').classList.remove('hidden');document.title='Sign in — HORMUS'}else if(pagePath==='/docs'||pagePath.startsWith('/docs/')){location.replace('https://docs.hormus.io/');return;document.getElementById('docsPage').classList.remove('hidden');document.title='Documentation — HORMUS';renderDocs()}else{document.getElementById('application').classList.remove('hidden');document.getElementById('application').classList.add('show');renderApp(pagePath.slice(1));document.title=(document.getElementById('apptitle').textContent||'Overview')+' — HORMUS'}}
 document.addEventListener('click',e=>{let a=e.target.closest('a[href^="/"]');if(a&&!e.ctrlKey&&!e.metaKey){e.preventDefault();go(a.getAttribute('href'))}});
 document.getElementById('google-signin').onclick=async()=>{const b=document.getElementById('google-signin');const err=document.getElementById('login-error');b.disabled=true;b.textContent='Connecting to Google…';err.classList.add('hidden');err.textContent='';try{let auth=window.__hormusPrivy;const deadline=Date.now()+12000;while((!auth||!auth.ready||typeof auth.login!=='function')&&Date.now()<deadline){await new Promise(resolve=>setTimeout(resolve,250));auth=window.__hormusPrivy}if(!auth||!auth.ready||typeof auth.login!=='function'){throw new Error('Privy did not finish loading. Check that this site URL is listed under Privy → App Settings → Basics → Allowed origins, then check the browser console for a loading error.')}await auth.login()}catch(e){console.error('HORMUS sign-in error:',e);err.textContent=e?.message||'Google sign-in could not start. Please check your Privy configuration.';err.classList.remove('hidden')}finally{b.disabled=false;b.textContent='◎　Continue with Google'}};
 document.getElementById('app-signout').onclick=()=>{localStorage.removeItem(STORE);window.dispatchEvent(new Event('hormus:logout'))};
@@ -1070,7 +1153,7 @@ function uiRole(role){return ({research_analyst:'Research',market_monitor:'Quant
 function fromApiAgent(a){const c=a.config||{};return {id:a.id,name:a.name,role:uiRole(a.role),mode:c.mode||'Research',description:a.description||'',instructions:c.instructions||'',maxOrder:c.maxOrder??data.settings.maxOrder,tradeIdeas:c.tradeIdeas===true||['execution_agent','trading_agent'].includes(a.role),status:a.status==='active'?'Active':a.status==='paused'?'Paused':'Draft',_remote:true}}
 function toApiAgent(a){return {name:String(a.name||'').trim(),role:apiRole(a.role),description:a.description||'',config:{mode:a.mode||'Research',instructions:a.instructions||'',maxOrder:Number(a.maxOrder??data.settings.maxOrder),tradeIdeas:a.tradeIdeas===true||a.tradeIdeas==='on'}}}
 async function loadBackendWorkspace(){try{const [me,agents,workspaceResult,runsResult,paperResult,tradingResult,proposalsResult,ordersResult]=await Promise.all([apiRequest('/api/v1/me'),apiRequest('/api/v1/agents'),apiRequest('/api/v1/workspace'),apiRequest('/api/v1/runs?limit=100').catch(()=>({runs:[]})),apiRequest('/api/v1/paper'),apiRequest('/api/v1/trading/config'),apiRequest('/api/v1/trading/proposals?limit=50').catch(()=>({proposals:[]})),apiRequest('/api/v1/trading/orders?limit=50').catch(()=>({orders:[]}))]);backendUser=me.user||null;data.agentRuns=Array.isArray(runsResult.runs)?runsResult.runs:[];let remote=agents.agents||[];const workspace=workspaceResult.workspace||{};data.watchlist=Array.isArray(workspace.watchlist)?workspace.watchlist:[];data.activity=Array.isArray(workspace.activity)?workspace.activity:[];data.paper=paperResult.paper||{cash:0,positions:[],trades:[]};data.tradingPolicy=tradingResult.policy||data.tradingPolicy;data.tradingProposals=Array.isArray(proposalsResult.proposals)?proposalsResult.proposals:[];data.tradingOrders=Array.isArray(ordersResult.orders)?ordersResult.orders:[];data.settings=workspace.settings&&typeof workspace.settings==='object'?workspace.settings:defaults.settings;data.briefs=Array.isArray(workspace.briefs)?workspace.briefs:[];data.alertRules=Array.isArray(workspace.alertRules)?workspace.alertRules:[];data.agents=remote.map(fromApiAgent);backendStatus='connected';save();if(pagePath!=='/login'&&pagePath!=='/'&&!pagePath.startsWith('/docs'))renderApp(pagePath.slice(1));return true}catch(err){backendStatus='error';console.error('HORMUS backend sync failed:',err);toast('Backend sync failed: '+err.message);return false}}
-function appHead(title,sub){setTimeout(loadTicker,0);document.getElementById('more-sheet')?.classList.add('hidden');document.querySelector('#application .apphead')?.classList.toggle('is-overview',pagePath==='/overview');document.querySelector('#application .apphead')?.classList.toggle('is-token',pagePath.startsWith('/markets/token/'));document.getElementById('apptitle').textContent=title;document.getElementById('appsubtitle').textContent=sub;document.querySelectorAll('#appnavlinks a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='/'+pagePath.slice(1)));document.querySelectorAll('#mobile-app-nav a').forEach(a=>a.classList.toggle('active',a.dataset.mobileRoute===pagePath.slice(1)))}
+function appHead(title,sub){setTimeout(loadTicker,0);setTimeout(pollAlerts,0);document.getElementById('more-sheet')?.classList.add('hidden');document.querySelector('#application .apphead')?.classList.toggle('is-overview',pagePath==='/overview');document.querySelector('#application .apphead')?.classList.toggle('is-token',pagePath.startsWith('/markets/token/'));document.getElementById('apptitle').textContent=title;document.getElementById('appsubtitle').textContent=sub;document.querySelectorAll('#appnavlinks a').forEach(a=>a.classList.toggle('active',a.getAttribute('href')==='/'+pagePath.slice(1)));document.querySelectorAll('#mobile-app-nav a').forEach(a=>a.classList.toggle('active',a.dataset.mobileRoute===pagePath.slice(1)))}
 function appOverview(){
  setTimeout(()=>{loadLivePortfolio(false);loadTradeIdeas(false);loadOverviewPulse();loadOnboardData()},0);
  const pf=data.livePortfolio,v=pf?.vault,h=new Date().getHours();
@@ -1079,6 +1162,7 @@ function appOverview(){
  const chg=c=>c===null||c===undefined?'<span class="num muted">—</span>':`<span class="num ${c>=0?'positive':'negative'}">${c>0?'+':''}${Math.abs(c)>=1000?Math.round(c).toLocaleString():c.toFixed(1)}%</span>`;
  const agents=data.agents||[],recent=(data.activity||[]).slice(-5).reverse();
  return `<div class="ov-hello"><div><p>${hello}. Here is your HORMUS today.</p><div class="ov-total">${pf?usd(pf.totals.totalUsd):'—'}</div><p style="margin-top:6px;font-size:14px">Wallet and vault on Robinhood Chain</p></div><a class="btn" href="/portfolio">Open portfolio</a></div>
+ ${recapHtml()}
  <div class="ov-actions">
   <a class="ov-action" href="/terminal"><i>→</i><div><b>Ask the agent</b><br><span>What moved, what launched, is it real</span></div></a>
   <a class="ov-action" href="/markets"><i>→</i><div><b>Find a token</b><br><span>Live Pulse, trending and new launches</span></div></a>
@@ -1110,7 +1194,7 @@ async function loadOverviewPulse(){
  if(pagePath==='/overview')renderApp('overview');
 }
 
-function renderApp(route){if(route.startsWith('markets/token/')){const address=route.split('/')[2]||'';appHead('Token Intelligence','Market detail · Robinhood Chain 4663');document.getElementById('appview').innerHTML=tokenIntelligenceShell(address);bindApp();bindTokenIntelligence();loadTokenIntelligence(address);return}let map={overview:['Overview','Your agents, wallet and watchlist.',appOverview],agents:['Agents','Create agents, give them skills, run research and set schedules.',appAgents],skills:['Skills','Community skills: add them to your agents or type /name in the Terminal.',appSkills],funding:['Agent funding','Set how much each agent may use, and manage USDG in the vault.',appFunding],'agent-analytics':['Agent analytics','Run counts, durations and swap results.',appAgentAnalytics],markets:['Markets','Explore live pools and token activity across Robinhood Chain.',appMarkets],terminal:['Research terminal','Ask about a token or market and get an answer with sources.',appTerminal],trade:['Trade','Swap tokens from your wallet.',appTrade],'paper-trading':['Trade','Swap tokens from your wallet.',appTrade],portfolio:['Portfolio','Your real balances on Robinhood Chain, your vault and your swaps.',appPortfolio],activity:['Activity','Review completed and failed agent runs, with persistent alerts.',appActivity],settings:['Settings','Manage account preferences and export your workspace.',appSettings]};let x=map[route]||map.overview;appHead(x[0],x[1]);document.getElementById('appview').innerHTML=x[2]();bindApp();bindTradeAndPortfolio();if(route==='skills')bindSkills();if(route==='funding')bindFunding()}
+function renderApp(route){if(route.startsWith('markets/token/')){const address=route.split('/')[2]||'';appHead('Token Intelligence','Market detail · Robinhood Chain 4663');document.getElementById('appview').innerHTML=tokenIntelligenceShell(address);bindApp();bindTokenIntelligence();loadTokenIntelligence(address);return}let map={overview:['Overview','Your agents, wallet and watchlist.',appOverview],agents:['Agents','Create agents, give them skills, run research and set schedules.',appAgents],skills:['Skills','Community skills: add them to your agents or type /name in the Terminal.',appSkills],funding:['Agent funding','Set how much each agent may use, and manage USDG in the vault.',appFunding],'agent-analytics':['Agent analytics','Run counts, durations and swap results.',appAgentAnalytics],markets:['Markets','Explore live pools and token activity across Robinhood Chain.',appMarkets],alerts:['Alerts','Token moves, new Pons launches and graduations, sent to you here and on Telegram. Checked every 30 seconds.',appAlerts],terminal:['Research terminal','Ask about a token or market and get an answer with sources.',appTerminal],trade:['Trade','Swap tokens from your wallet.',appTrade],'paper-trading':['Trade','Swap tokens from your wallet.',appTrade],portfolio:['Portfolio','Your real balances on Robinhood Chain, your vault and your swaps.',appPortfolio],activity:['Activity','Review completed and failed agent runs, with persistent alerts.',appActivity],settings:['Settings','Manage account preferences and export your workspace.',appSettings]};let x=map[route]||map.overview;appHead(x[0],x[1]);document.getElementById('appview').innerHTML=x[2]();bindApp();bindTradeAndPortfolio();if(route==='skills')bindSkills();if(route==='funding')bindFunding()}
 // ===== Agent funding: Privy wallet + USDG vault =====
 const USDG_ADDRESS='0x5fc5360D0400a0Fd4f2af552ADD042D716F1d168';
 const RH_CHAIN_ID=4663;
@@ -1467,7 +1551,7 @@ function renderTokenIntelligence(){
  const explorer=`https://robinhoodchain.blockscout.com/token/${encodeURIComponent(addr)}`,ponsUrl=`https://www.ponsfamily.com/launchpad/${encodeURIComponent(addr)}`;
  const hero=`<section class="panel ti-hero"><div class="ti-id">${marketTokenImage(t.imageUrl,t.symbol||t.name||'TOKEN')}<div><h2>${tiEsc(t.name||'Token')}</h2><div class="ti-sub"><span class="ti-sym">${tiEsc(t.symbol||'')}</span>${isPons?'<span class="ti-chip">Pons</span>':''}${status&&status!=='market data only'?`<span class="ti-chip">${tiEsc(status)}</span>`:''}<button class="ti-copy" data-copy="${esc(addr)}" title="Copy contract address">${tiShort(addr)}<i>Copy</i></button></div></div></div>
   <div class="ti-pricebox"><b>${tiPrice(t.priceUsd)}</b>${chg===null?'':`<span class="ti-chg ${chg>=0?'up':'down'}">${chg>0?'+':''}${chg.toFixed(2)}% <small>24h</small></span>`}</div>
-  <div class="ti-actions"><a class="btn primary" href="#ti-trade" data-ti-jump>Trade</a><a class="btn" href="${explorer}" target="_blank" rel="noopener noreferrer">Explorer ↗</a>${isPons?`<a class="btn" href="${ponsUrl}" target="_blank" rel="noopener noreferrer">Pons ↗</a>`:''}<button class="btn ghost" id="ti-refresh" title="Refresh">↻</button></div></section>`;
+  <div class="ti-actions"><a class="btn primary" href="#ti-trade" data-ti-jump>Trade</a>${tiAlertButton()}<a class="btn" href="${explorer}" target="_blank" rel="noopener noreferrer">Explorer ↗</a>${isPons?`<a class="btn" href="${ponsUrl}" target="_blank" rel="noopener noreferrer">Pons ↗</a>`:''}<button class="btn ghost" id="ti-refresh" title="Refresh">↻</button></div></section>`;
  const metrics=`<div class="ti-metrics">${[['24h volume',tiMoney(t.volume24h)],['Liquidity',tiMoney(t.liquidityUsd)],['Market cap',tiMoney(t.marketCapUsd)],['FDV',tiMoney(t.fdvUsd)],['Holders',tiNum(t.holders)],['Circulating',t.circulatingSupply?tiNum(t.circulatingSupply):tiNum(t.totalSupply)]].map(([k,v])=>`<div class="ti-metric"><small>${k}</small><b>${v}</b></div>`).join('')}</div>`;
  const intervals=`<div class="ti-intervals">${['5m','15m','1h','4h','1d'].map(v=>`<button data-ti-interval="${v}" class="${S.interval===v?'active':''}">${v}</button>`).join('')}</div>`;
  const chartSection=`<section class="panel"><div class="ti-section-head"><h3>Price</h3>${intervals}</div>${tiChart(chartRows)}</section>`;
@@ -1482,7 +1566,7 @@ function renderTokenIntelligence(){
  const signals=`<section class="panel"><div class="ti-section-head"><h3>Signals</h3></div><p class="ti-muted">${tiEsc(d.intelligence?.note||'Signals show up when there is enough data behind them.')}</p>${Array.isArray(d.intelligence?.signals)&&d.intelligence.signals.length?d.intelligence.signals.map(x=>`<div class="ti-signal"><div><b>${tiEsc(x.label||x.key)}</b><p class="ti-muted">${tiEsc(x.evidence||'')}</p></div><span class="ti-chip">${tiEsc(x.confidence||x.risk||'limited')}</span></div>`).join(''):''}<p class="ti-muted" style="margin-top:14px">Want a deeper read? <a href="/terminal" data-ti-ask>Ask the agent about ${tiEsc(t.symbol||'this token')}</a>.</p></section>`;
  const content=sel==='overview'?`${chartSection}${bonding}<div class="ti-grid2">${about}${links}</div>${recent}`:sel==='transactions'?`<section class="panel"><div class="ti-section-head"><h3>Trades</h3>${txFilters}</div>${trades}</section>`:sel==='holders'?renderTokenHolders(d.holders||{}):signals;
  const src=Object.entries(d.sources||{}).filter(([k,v])=>['profile','candles','trades','pool','holders'].includes(k)&&v&&v!=='unavailable').map(([,v])=>v);
- root.innerHTML=`${hero}${metrics}${S.error?`<div class="ti-warning">${tiEsc(S.error)}</div>`:''}<div class="ti-tabs">${tabs.map(([k,v])=>`<button data-ti-tab="${k}" class="${sel===k?'active':''}">${v}</button>`).join('')}</div>${content}<p class="ti-foot">Data from ${src.length?[...new Set(src)].map(esc).join(', '):'public market sources'}${d.fetchedAt?' · updated '+new Date(d.fetchedAt).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}):''}. Empty fields were not reported by the source. Not financial advice.</p>`;
+ root.innerHTML=`${hero}${tiAlertPanel()}${metrics}${S.error?`<div class="ti-warning">${tiEsc(S.error)}</div>`:''}<div class="ti-tabs">${tabs.map(([k,v])=>`<button data-ti-tab="${k}" class="${sel===k?'active':''}">${v}</button>`).join('')}</div>${content}<p class="ti-foot">Data from ${src.length?[...new Set(src)].map(esc).join(', '):'public market sources'}${d.fetchedAt?' · updated '+new Date(d.fetchedAt).toLocaleTimeString([], {hour:'2-digit',minute:'2-digit'}):''}. Empty fields were not reported by the source. Not financial advice.</p>`;
  bindTokenIntelligence();
 }
 async function loadTokenIntelligence(address,interval=tokenIntelligenceState.interval||'15m'){
@@ -1496,7 +1580,7 @@ function bindTokenIntelligence(){
  const back=document.getElementById('ti-back');if(back)back.onclick=()=>go('/markets');document.querySelectorAll('[data-copy]').forEach(c=>c.onclick=async()=>{try{await navigator.clipboard.writeText(c.dataset.copy);toast('Contract address copied')}catch{toast(c.dataset.copy)}});document.querySelectorAll('[data-ti-jump]').forEach(j=>j.onclick=e=>{e.preventDefault();document.getElementById('ti-trade')?.scrollIntoView({behavior:'smooth',block:'start'})});document.querySelectorAll('[data-ti-ask]').forEach(q=>q.onclick=e=>{e.preventDefault();const t=tokenIntelligenceState.data?.token||{};data._terminalPrefill=`Is ${t.symbol||'this token'} (${tokenIntelligenceState.address}) organic right now? Check buys, sells, liquidity and holders.`;go('/terminal')});
  const refresh=document.getElementById('ti-refresh');if(refresh)refresh.onclick=()=>loadTokenIntelligence(tokenIntelligenceState.address,tokenIntelligenceState.interval);
  document.querySelectorAll('[data-ti-interval]').forEach(b=>b.onclick=()=>loadTokenIntelligence(tokenIntelligenceState.address,b.dataset.tiInterval));
- document.querySelectorAll('[data-ti-tab]').forEach(b=>b.onclick=()=>{tokenIntelligenceState.tab=b.dataset.tiTab;renderTokenIntelligence()});
+ document.querySelectorAll('[data-ti-tab]').forEach(b=>b.onclick=()=>{tokenIntelligenceState.tab=b.dataset.tiTab;renderTokenIntelligence()});bindTiAlerts();
 }
 
 function showMarketDetail(item){
@@ -2228,8 +2312,195 @@ async function runSkillCommand(text){
 let pulseState={tf:'5m',sort:'gainers',data:null,loading:false,error:'',timer:null,tick:null};
 function fmtAge(m){if(m===null||m===undefined||!Number.isFinite(Number(m)))return '—';m=Number(m);if(m<1)return 'just now';if(m<60)return m+'m';if(m<1440)return Math.floor(m/60)+'h '+(m%60?m%60+'m':'');return Math.floor(m/1440)+'d'}
 function pulseUsd(n){if(n===null||n===undefined||n===0)return '—';const a=Math.abs(n);return '$'+(a>=1e9?(n/1e9).toFixed(2)+'B':a>=1e6?(n/1e6).toFixed(2)+'M':a>=1e3?(n/1e3).toFixed(1)+'K':n.toFixed(a<10?2:0))}
-// ===== DAY-2-14: live numbers, agent working steps, onboarding =====
-function pulseFlashDiff(oldD,newD){notePons(newD?.rows);
+// ===== DAY-2-17: since you were here =====
+const recapState={base:null,seen:{},data:null,loading:false};
+(function(){try{
+ recapState.seen=JSON.parse(localStorage.getItem('hormus-seen')||'{}')||{};
+ const now=Date.now(),last=+localStorage.getItem('hormus-last-active')||0;
+ let base=null;try{base=JSON.parse(localStorage.getItem('hormus-recap-base')||'null')}catch{}
+ if(last&&now-last>30*60000){base={at:last,seen:{...recapState.seen}};localStorage.setItem('hormus-recap-base',JSON.stringify(base))}
+ else if(base&&now-base.at>36*3600000){base=null;localStorage.removeItem('hormus-recap-base')}
+ recapState.base=base;localStorage.setItem('hormus-last-active',String(now));
+}catch{}})();
+setInterval(()=>{if(!document.hidden)try{localStorage.setItem('hormus-last-active',String(Date.now()))}catch{}},60000);
+function notePrices(rows){
+ let n=0;for(const r of rows||[]){if(!r||!r.address||r.priceUsd===null||r.priceUsd===undefined)continue;recapState.seen[String(r.address).toLowerCase()]={p:Number(r.priceUsd),t:Date.now()};n++}
+ if(!n)return;const keys=Object.keys(recapState.seen);
+ if(keys.length>400)keys.sort((a,b)=>recapState.seen[a].t-recapState.seen[b].t).slice(0,keys.length-400).forEach(k=>delete recapState.seen[k]);
+ try{localStorage.setItem('hormus-seen',JSON.stringify(recapState.seen))}catch{}
+}
+async function loadRecap(){
+ if(recapState.loading||recapState.data)return;recapState.loading=true;
+ try{const [a,b]=await Promise.all([apiRequest('/api/v1/markets/pulse?tf=24h&sort=volume&limit=40'),apiRequest('/api/v1/markets/pulse?tf=24h&sort=fresh&limit=40').catch(()=>({rows:[]}))]);recapState.data={rows:[...(a.rows||[]),...(b.rows||[])],fresh:b.rows||[]}}
+ catch{recapState.tries=(recapState.tries||0)+1;if(recapState.tries<4)setTimeout(()=>{if(pagePath==='/overview')renderApp('overview')},6000)}
+ finally{recapState.loading=false;if(recapState.data){notePrices(recapState.data.rows);if(pagePath==='/overview')renderApp('overview')}}
+}
+function recapHtml(){
+ const base=recapState.base;if(!base)return '';
+ const mins=Math.round((Date.now()-base.at)/60000);if(mins<30)return '';
+ if(!recapState.data){if(!recapState.loading&&(recapState.tries||0)<4)setTimeout(loadRecap,0);return ''}
+ const before=base.seen||{},uniq=new Map();
+ for(const r of recapState.data.rows){const k=String(r.address||'').toLowerCase();if(k&&!uniq.has(k))uniq.set(k,r)}
+ const moves=[...uniq.entries()].filter(([k,r])=>before[k]&&before[k].p>0&&r.priceUsd!==null&&r.priceUsd!==undefined).map(([k,r])=>({r,ch:(Number(r.priceUsd)/before[k].p-1)*100})).filter(x=>Number.isFinite(x.ch)&&Math.abs(x.ch)>=1).sort((a,b)=>Math.abs(b.ch)-Math.abs(a.ch)).slice(0,5);
+ const fresh=(recapState.data.fresh||[]).filter(r=>r.ageMinutes!==null&&r.ageMinutes!==undefined&&r.ageMinutes<=mins).length;
+ const news=(data.activity||[]).filter(a=>new Date(a.at||a.created_at||a.createdAt||0).getTime()>base.at).length;
+ if(!moves.length&&!fresh&&!news)return '';
+ const nm=r=>String(r.name||r.symbol||'').replace(/&amp;/g,'&').replace(/\s*[•·-]?\s*robinhood token\s*$/i,'');
+ const pct=c=>`${c>0?'+':''}${Math.abs(c)>=1000?Math.round(c).toLocaleString():c.toFixed(1)}%`;
+ return `<section class="panel recap"><div class="ov-head"><div><h3>Since you were here ${esc(fmtAge(mins).trim())} ago</h3><p class="muted" style="margin:4px 0 0;font-size:14px">What changed while you were away</p></div><button class="btn ghost" data-recap-hide>Got it</button></div>
+  <div class="recap-stats"><a href="/markets"><b>${fresh}</b><small>new launch${fresh===1?'':'es'}</small></a><a href="/activity"><b>${news}</b><small>new in your activity</small></a><div><b>${moves.length}</b><small>token${moves.length===1?'':'s'} you saw moved</small></div></div>
+  ${moves.length?`<div class="recap-moves">${moves.map(({r,ch})=>`<a class="ov-row" href="/markets/token/${esc(r.address)}"><span><b>${esc(nm(r))}</b><small>${esc(r.symbol||'')} · now ${tiPrice(r.priceUsd)}</small></span><span class="num ${ch>=0?'positive':'negative'}">${pct(ch)}</span></a>`).join('')}</div>`:''}
+ </section>`;
+}
+document.addEventListener('click',e=>{const b=e.target.closest('[data-recap-hide]');if(!b)return;recapState.base=null;try{localStorage.removeItem('hormus-recap-base')}catch{}b.closest('.recap')?.remove()});
+// ===== price alerts (UI) =====
+const BELL_SVG='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a2.5 2.5 0 0 0 2.45-2h-4.9A2.5 2.5 0 0 0 12 22Zm7-6V11a7 7 0 0 0-5.5-6.84V3.5a1.5 1.5 0 0 0-3 0v.66A7 7 0 0 0 5 11v5l-2 2v1h18v-1l-2-2Z"/></svg>';
+const TG_SVG='<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.6 4.2 2.9 11.4c-1.3.5-1.3 1.2-.2 1.6l4.8 1.5 1.8 5.6c.2.6.1.9.8.9.5 0 .7-.2 1-.5l2.4-2.3 4.9 3.6c.9.5 1.6.2 1.8-.8l3.3-15.5c.3-1.3-.5-1.9-1.4-1.5ZM8.2 14.2l9.6-6.1c.5-.3.9-.1.5.2l-8.2 7.4-.3 3.4-1.6-4.9Z"/></svg>';
+const alertsState={unread:0,lastId:0,polling:false,lastPoll:0,page:null,tg:null,tgWait:0};
+try{alertsState.lastId=+localStorage.getItem('hormus-alert-seen')||0}catch{}
+const MARKET_KINDS=['new_launch','near_graduation','graduated','any_pump'];
+function alertLabel(a){const v=Number(a.value),w=a.window_tf==='1h'?'1h':'5m',mv=Number(a.min_volume)||0,mb=Number(a.min_buys)||0;
+ return a.kind==='pump'?`Pumps ${v}% in ${w}`:a.kind==='dump'?`Dumps ${v}% in ${w}`:a.kind==='price_above'?`Goes above ${tiPrice(v)}`:a.kind==='price_below'?`Goes below ${tiPrice(v)}`
+ :a.kind==='volume'?`Volume over ${tiMoney(v)} in ${w}`:a.kind==='buy_pressure'?`Buys ${v}x sells in ${w}`
+ :a.kind==='new_launch'?`New Pons launches${mv||mb?` with ${[mv?tiMoney(mv)+' volume':'',mb?mb+' buys':''].filter(Boolean).join(' and ')} in the first hour`:''}`
+ :a.kind==='near_graduation'?`Pons curve past ${v}%${mv?` with ${tiMoney(mv)}+ volume`:''}`:a.kind==='graduated'?'Pons tokens that just graduated':`Any token up ${v}% in ${w}${mv?` on ${tiMoney(mv)}+ volume`:''}`}
+function askNotify(){try{if('Notification' in window&&Notification.permission==='default')Notification.requestPermission().then(()=>{if(pagePath==='/alerts')renderAlertsPage()})}catch{}}
+function setAlertBadges(n){alertsState.unread=n;document.querySelectorAll('[data-alert-badge]').forEach(b=>{b.hidden=!n;b.textContent=n>99?'99+':String(n)})}
+function alertPop(a){
+ let box=document.getElementById('alert-pops');if(!box){box=document.createElement('div');box.id='alert-pops';document.body.appendChild(box)}
+ const addr=a.payload?.tokenAddress,el=document.createElement('a');el.className='alert-pop'+(a.severity==='warning'?' warn':'');el.href=addr?`/markets/token/${addr}`:'/alerts';
+ el.innerHTML=`<i>${BELL_SVG}</i><span><b>${esc(a.title)}</b><small>${esc(a.message)}</small></span>`;
+ el.addEventListener('click',()=>el.remove());box.prepend(el);setTimeout(()=>el.classList.add('out'),8500);setTimeout(()=>el.remove(),9000);
+ try{if('Notification' in window&&Notification.permission==='granted'){const n=new Notification(a.title,{body:a.message,icon:'/hormus-logo.svg',tag:'hormus-alert-'+a.id});n.onclick=()=>{window.focus();if(addr)go('/markets/token/'+addr);n.close()}}}catch{}
+}
+async function pollAlerts(force=false){
+ if(!window.__privyAuthenticated||!window.hormusFetch||alertsState.polling)return;
+ const app=document.getElementById('application');if(!app||app.classList.contains('hidden'))return;
+ if(!force&&Date.now()-alertsState.lastPoll<10000)return;
+ alertsState.polling=true;alertsState.lastPoll=Date.now();
+ try{
+  const r=await apiRequest('/api/v1/alerts?limit=10'),list=Array.isArray(r.alerts)?r.alerts:[];
+  setAlertBadges(Number(r.unread)||0);
+  const maxId=list.reduce((m,a)=>Math.max(m,Number(a.id)||0),0);
+  if(alertsState.lastId){list.filter(a=>Number(a.id)>alertsState.lastId&&!a.acknowledged_at).slice(0,3).reverse().forEach(alertPop)}
+  if(maxId>alertsState.lastId){alertsState.lastId=maxId;try{localStorage.setItem('hormus-alert-seen',String(maxId))}catch{}}
+  if(pagePath==='/alerts'&&alertsState.page&&list.some(a=>!alertsState.page.events.some(e=>e.id===a.id)))loadAlertsPage();
+ }catch{}finally{alertsState.polling=false}
+}
+setInterval(()=>{if(!document.hidden)pollAlerts(true)},30000);
+document.addEventListener('visibilitychange',()=>{if(!document.hidden){pollAlerts();if(alertsState.tgWait&&Date.now()<alertsState.tgWait)loadTelegramStatus()}});
+async function createAlert(body){
+ try{await apiRequest('/api/v1/price-alerts',{method:'POST',body:JSON.stringify(body)});askNotify();return true}
+ catch(e){toast(e.message==='too_many_alerts'?'You already have 50 active alerts. Remove one first.':e.message==='invalid_alert'?'Check the numbers and try again.':'Could not save the alert. Try again.');return false}
+}
+// ---- token page ----
+async function loadTiAlerts(){const S=tokenIntelligenceState,addr=S.address;try{const r=await apiRequest('/api/v1/price-alerts?token='+encodeURIComponent(addr));if(S.address===addr){S.alerts=r.alerts||[];renderTokenIntelligence()}}catch{if(S.address===addr)S.alerts=[]}}
+function tiAlertButton(){const n=(tokenIntelligenceState.alerts||[]).filter(a=>a.enabled).length;return `<button class="btn${tokenIntelligenceState.alertOpen?' on':''}" id="ti-alert-btn">${BELL_SVG}${n?`Alerts · ${n}`:'Alert'}</button>`}
+function tiAlertPanel(){
+ const S=tokenIntelligenceState;if(!S.alertOpen)return '';
+ const t=S.data?.token||{},sym=t.symbol||'this token',k=S.alertKind||'pump',list=S.alerts||[];
+ const kinds=[['pump','Pumps'],['dump','Dumps'],['price_above','Goes above'],['price_below','Goes below'],['volume','Volume spike'],['buy_pressure','Buy pressure']].map(([v,l])=>`<button data-ti-alert-kind="${v}" class="${k===v?'active':''}">${l}</button>`).join('');
+ const win=`<label class="ti-af"><span>within</span><select id="ti-alert-window" class="select"><option value="5m"${S.alertWindow!=='1h'?' selected':''}>5 minutes</option><option value="1h"${S.alertWindow==='1h'?' selected':''}>1 hour</option></select></label>`;
+ const field=(pre,post,def,step)=>`<label class="ti-af">${pre?`<span>${pre}</span>`:''}<input id="ti-alert-value" class="input" type="number" min="0" step="${step}" inputmode="decimal" value="${esc(S.alertValue??def)}">${post?`<span>${post}</span>`:''}</label>`;
+ const form=k==='pump'||k==='dump'?field('by','%',10,'0.1')+win
+  :k==='volume'?field('over $','',10000,'100')+win
+  :k==='buy_pressure'?field('buys at least','x sells',3,'0.5')+win
+  :`<label class="ti-af"><span>$</span><input id="ti-alert-value" class="input" type="number" min="0" step="any" inputmode="decimal" placeholder="${esc(t.priceUsd??'')}" value="${esc(S.alertValue??'')}"></label><span class="ti-muted">now ${tiPrice(t.priceUsd)}</span>`;
+ const hint={pump:'Fires when the price jumps that much inside the window.',dump:'Fires when the price drops that much inside the window.',price_above:'Fires once when the price reaches your level.',price_below:'Fires once when the price falls to your level.',volume:'Fires when trading volume inside the window passes your amount.',buy_pressure:'Fires when buys outnumber sells by your ratio, with at least 10 buys.'}[k];
+ return `<section class="panel ti-alert"><div class="ti-section-head"><h3>Alert me when ${esc(sym)}</h3><button class="btn ghost" data-ti-alert-close>Close</button></div>
+  <div class="ti-intervals ti-alert-kinds">${kinds}</div>
+  <div class="ti-alert-form">${form}<button class="btn primary" id="ti-alert-save">Set alert</button></div>
+  <p class="ti-muted" style="margin-top:10px">${hint} Checked every 30 seconds, sent as a pop-up, a browser notification and on Telegram if you connect it on the <a href="/alerts">Alerts page</a>.</p>
+  ${list.length?`<div class="ti-alert-list">${list.map(a=>`<div class="ti-alert-item${a.enabled?'':' off'}"><span>${esc(alertLabel(a))}</span><small>${a.enabled?(a.last_triggered_at?'active · last fired '+tiAgo(a.last_triggered_at):'active'):(a.last_triggered_at?'fired '+tiAgo(a.last_triggered_at):'paused')}</small><button class="btn ghost" data-alert-del="${esc(a.id)}">Remove</button></div>`).join('')}</div>`:''}
+ </section>`;
+}
+function bindTiAlerts(){
+ const S=tokenIntelligenceState;
+ if(S.alerts===undefined&&S.address){S.alerts=null;loadTiAlerts()}
+ const btn=document.getElementById('ti-alert-btn');if(btn)btn.onclick=()=>{S.alertOpen=!S.alertOpen;renderTokenIntelligence();if(S.alertOpen)document.querySelector('.ti-alert')?.scrollIntoView({behavior:'smooth',block:'nearest'})};
+ document.querySelectorAll('[data-ti-alert-close]').forEach(b=>b.onclick=()=>{S.alertOpen=false;renderTokenIntelligence()});
+ document.querySelectorAll('[data-ti-alert-kind]').forEach(b=>b.onclick=()=>{S.alertKind=b.dataset.tiAlertKind;S.alertValue=undefined;renderTokenIntelligence()});
+ const val=document.getElementById('ti-alert-value');if(val)val.oninput=()=>{S.alertValue=val.value};
+ const win=document.getElementById('ti-alert-window');if(win)win.onchange=()=>{S.alertWindow=win.value};
+ const save=document.getElementById('ti-alert-save');if(save)save.onclick=async()=>{
+  const v=Number(document.getElementById('ti-alert-value')?.value);if(!Number.isFinite(v)||v<=0)return toast('Enter a number above 0');
+  save.disabled=true;
+  const ok=await createAlert({tokenAddress:S.address,tokenSymbol:String(S.data?.token?.symbol||'').slice(0,40),kind:S.alertKind||'pump',value:v,window:S.alertWindow==='1h'?'1h':'5m'});
+  if(ok){S.alertValue=undefined;toast('Alert set. We check it every 30 seconds.');await loadTiAlerts()}
+  save.disabled=false;
+ };
+ document.querySelectorAll('#ti-content [data-alert-del]').forEach(b=>b.onclick=async()=>{b.disabled=true;try{await apiRequest('/api/v1/price-alerts/'+encodeURIComponent(b.dataset.alertDel),{method:'DELETE'});await loadTiAlerts()}catch{toast('Could not remove the alert');b.disabled=false}});
+}
+// ---- telegram ----
+async function loadTelegramStatus(){try{alertsState.tg=await apiRequest('/api/v1/telegram/status')}catch{alertsState.tg=alertsState.tg||{available:false}}if(alertsState.tg?.linked)alertsState.tgWait=0;renderAlertsPage()}
+function telegramCard(){
+ const t=alertsState.tg;if(!t)return `<section class="panel tg-card"><div class="market-skeleton"></div></section>`;
+ const head=`<i class="tg-ico">${TG_SVG}</i>`;
+ if(!t.available)return `<section class="panel tg-card">${head}<div><b>Telegram alerts</b><p class="muted">Coming soon. Alerts show up here and as browser notifications for now.</p></div></section>`;
+ if(t.linked)return `<section class="panel tg-card on">${head}<div><b>Telegram connected${t.username?` as @${esc(t.username)}`:''}</b><p class="muted">Every alert is also sent to your Telegram, even when this tab is closed.</p></div><div class="tg-acts"><button class="btn" data-tg-test>Send a test</button><button class="btn ghost" data-tg-off>Disconnect</button></div></section>`;
+ const waiting=alertsState.tgWait&&Date.now()<alertsState.tgWait;
+ return `<section class="panel tg-card">${head}<div><b>Get alerts on Telegram</b><p class="muted">${waiting?'Press Start in the Telegram chat that just opened. This page updates once you are connected.':'Connect once and every alert also lands in your Telegram, even with the browser closed.'}</p></div><div class="tg-acts"><button class="btn primary" data-tg-connect>${waiting?'Open Telegram again':'Connect Telegram'}</button></div></section>`;
+}
+// ---- alerts page ----
+function appAlerts(){setTimeout(loadAlertsPage,0);if(!alertsState.tg)setTimeout(loadTelegramStatus,0);return `<div id="alerts-page">${alertsState.page?alertsPageHtml():'<div class="panel"><div class="market-skeleton"></div><div class="market-skeleton"></div></div>'}</div>`}
+async function loadAlertsPage(){
+ try{const [rules,events]=await Promise.all([apiRequest('/api/v1/price-alerts'),apiRequest('/api/v1/alerts?limit=50')]);alertsState.page={rules:rules.alerts||[],events:events.alerts||[]};setAlertBadges(Number(events.unread)||0)}
+ catch{alertsState.page=alertsState.page||{rules:[],events:[],error:true}}
+ renderAlertsPage();
+}
+function renderAlertsPage(){const root=document.getElementById('alerts-page');if(root&&pagePath==='/alerts'&&alertsState.page){const keep=document.activeElement?.id;root.innerHTML=alertsPageHtml();bindAlertsPage();if(keep)document.getElementById(keep)?.focus()}}
+const PRESETS=[
+ {kind:'new_launch',title:'New Pons launches',text:'Every new token on Pons that gets real buying in its first hour.',fields:[['minVolume','First-hour volume over $',1000,'100'],['minBuys','and at least',10,'1','buys']]},
+ {kind:'near_graduation',title:'About to graduate',text:'Pons tokens whose curve is almost full, right before they move to Uniswap.',fields:[['value','Curve past',80,'1','%'],['minVolume','with 1h volume over $',500,'100']]},
+ {kind:'graduated',title:'Just graduated',text:'The moment a Pons token fills its curve and gets a Uniswap pool.',fields:[]},
+ {kind:'any_pump',title:'Anything pumping',text:'Any token on Robinhood Chain that jumps hard, with real volume behind it.',fields:[['value','Up at least',20,'1','%'],['window','within',null],['minVolume','on volume over $',2000,'100']]}
+];
+function presetCard(p,rules){
+ const on=rules.filter(a=>a.kind===p.kind);
+ const inputs=p.fields.map(([k,label,def,step,post])=>k==='window'?`<label class="ti-af"><span>${label}</span><select class="select" id="pf-${p.kind}-window"><option value="5m">5 minutes</option><option value="1h" selected>1 hour</option></select></label>`:`<label class="ti-af"><span>${label}</span><input class="input" type="number" min="0" step="${step}" inputmode="decimal" id="pf-${p.kind}-${k}" value="${def}">${post?`<span>${post}</span>`:''}</label>`).join('');
+ return `<div class="preset${on.some(a=>a.enabled)?' on':''}"><div class="preset-top"><b>${p.title}</b>${on.some(a=>a.enabled)?'<span class="preset-on">On</span>':''}</div><p class="muted">${p.text}</p>
+  ${on.map(a=>`<div class="preset-rule"><span>${esc(alertLabel(a))}</span><span class="alert-acts"><button class="btn ghost" data-alert-toggle="${esc(a.id)}" data-on="${a.enabled?1:0}">${a.enabled?'Pause':'Resume'}</button><button class="btn ghost" data-alert-del="${esc(a.id)}">Remove</button></span></div>`).join('')}
+  ${on.length?'':`<div class="preset-form">${inputs}<button class="btn primary" data-preset="${p.kind}">Turn on</button></div>`}</div>`;
+}
+function alertsPageHtml(){
+ const p=alertsState.page||{rules:[],events:[]},tokenRules=p.rules.filter(a=>!MARKET_KINDS.includes(a.kind)),active=tokenRules.filter(a=>a.enabled);
+ const perm='Notification' in window?Notification.permission:'unsupported';
+ const tok=a=>`<a href="/markets/token/${esc(a.token_address)}"><b>${esc(a.token_symbol||String(a.token_address||'').slice(0,6)+'…'+String(a.token_address||'').slice(-4))}</b></a>`;
+ return `<div class="alerts-top">${telegramCard()}${perm==='default'?`<section class="panel alerts-notify"><div><b>Browser notifications</b><p class="muted">Get alerts even when this tab is in the background.</p></div><button class="btn" data-alert-notify>Turn on</button></section>`:''}</div>
+ <section class="panel presets"><div class="ov-head"><div><h3>Launchpad and market</h3><p class="muted" style="margin:4px 0 0;font-size:14px">No token to pick. Turn one on and new hits come to you.</p></div></div><div class="preset-grid">${PRESETS.map(x=>presetCard(x,p.rules)).join('')}</div></section>
+ <div class="alerts-grid">
+  <section class="panel"><div class="ov-head"><h3>Token alerts</h3><span class="muted" style="font-size:14px">${active.length} active</span></div>
+   ${tokenRules.length?tokenRules.map(a=>`<div class="alert-rule${a.enabled?'':' off'}"><span>${tok(a)}<small>${esc(alertLabel(a))}</small></span><small class="muted">${a.enabled?'active':a.last_triggered_at?'fired '+tiAgo(a.last_triggered_at):'paused'}</small><span class="alert-acts">${['price_above','price_below'].includes(a.kind)&&a.last_triggered_at?'':`<button class="btn ghost" data-alert-toggle="${esc(a.id)}" data-on="${a.enabled?1:0}">${a.enabled?'Pause':'Resume'}</button>`}<button class="btn ghost" data-alert-del="${esc(a.id)}">Remove</button></span></div>`).join('')
+   :`<p class="muted" style="margin:6px 0 14px">Open any token and press Alert to get pinged when it pumps, dumps, hits a price, spikes in volume or gets heavy buying.</p><a class="btn primary" href="/markets">Find a token</a>`}
+  </section>
+  <section class="panel"><div class="ov-head"><h3>Recent</h3>${p.events.some(e=>!e.acknowledged_at)?'<button class="btn ghost" data-alert-readall>Mark all read</button>':''}</div>
+   ${p.events.length?p.events.map(e=>{const addr=e.payload?.tokenAddress;return `<a class="alert-ev${e.acknowledged_at?'':' new'}${e.severity==='warning'?' warn':''}" href="${addr?'/markets/token/'+esc(addr):'/alerts'}"><b>${esc(e.title)}</b><small>${esc(e.message)}</small><em>${tiAgo(e.created_at)}</em></a>`}).join('')
+   :'<p class="muted" style="margin:6px 0">Nothing fired yet. When an alert hits, it shows up here, as a pop-up and on Telegram.</p>'}
+  </section>
+ </div>`;
+}
+function bindAlertsPage(){
+ const root=document.getElementById('alerts-page');if(!root)return;
+ root.querySelectorAll('[data-alert-del]').forEach(b=>b.onclick=async()=>{b.disabled=true;try{await apiRequest('/api/v1/price-alerts/'+encodeURIComponent(b.dataset.alertDel),{method:'DELETE'})}catch{toast('Could not remove the alert')}loadAlertsPage()});
+ root.querySelectorAll('[data-alert-toggle]').forEach(b=>b.onclick=async()=>{b.disabled=true;try{await apiRequest('/api/v1/price-alerts/'+encodeURIComponent(b.dataset.alertToggle),{method:'PATCH',body:JSON.stringify({enabled:b.dataset.on!=='1'})})}catch(e){toast(e.message==='too_many_alerts'?'You already have 50 active alerts.':'Could not update the alert')}loadAlertsPage()});
+ root.querySelectorAll('[data-preset]').forEach(b=>b.onclick=async()=>{
+  const kind=b.dataset.preset,p=PRESETS.find(x=>x.kind===kind),body={kind};
+  for(const [k] of p.fields){const el=document.getElementById(`pf-${kind}-${k}`);if(!el)continue;if(k==='window')body.window=el.value;else{const n=Number(el.value);if(!Number.isFinite(n)||n<0)return toast('Check the numbers and try again.');body[k]=k==='minBuys'?Math.round(n):n}}
+  b.disabled=true;if(await createAlert(body)){toast(`${p.title} is on. New hits come to you.`);loadAlertsPage()}else b.disabled=false;
+ });
+ const ra=root.querySelector('[data-alert-readall]');if(ra)ra.onclick=async()=>{ra.disabled=true;try{await apiRequest('/api/v1/alerts/read-all',{method:'POST',body:'{}'});setAlertBadges(0)}catch{}loadAlertsPage()};
+ const nb=root.querySelector('[data-alert-notify]');if(nb)nb.onclick=askNotify;
+ const tc=root.querySelector('[data-tg-connect]');if(tc)tc.onclick=async()=>{
+  const w=window.open('about:blank','_blank');tc.disabled=true;
+  try{const r=await apiRequest('/api/v1/telegram/link',{method:'POST',body:'{}'});if(w)w.location.href=r.url;else location.href=r.url;alertsState.tgWait=Date.now()+15*60000;renderAlertsPage();
+   const t0=Date.now(),iv=setInterval(async()=>{if(Date.now()-t0>3*60000||!alertsState.tgWait){clearInterval(iv);return}await loadTelegramStatus();if(alertsState.tg?.linked){clearInterval(iv);toast('Telegram connected')}},4000)}
+  catch(e){if(w)w.close();toast(e.message==='telegram_unavailable'?'Telegram alerts are not set up yet.':'Could not start the Telegram link. Try again.');tc.disabled=false}
+ };
+ const tt=root.querySelector('[data-tg-test]');if(tt)tt.onclick=async()=>{tt.disabled=true;try{await apiRequest('/api/v1/telegram/test',{method:'POST',body:'{}'});toast('Test sent. Check Telegram.')}catch{toast('Could not send. Try connecting again.')}tt.disabled=false};
+ const to=root.querySelector('[data-tg-off]');if(to)to.onclick=async()=>{to.disabled=true;try{await apiRequest('/api/v1/telegram/link',{method:'DELETE'})}catch{}await loadTelegramStatus();toast('Telegram disconnected')};
+}
+// ===== live numbers, agent working steps, onboarding =====
+function pulseFlashDiff(oldD,newD){notePons(newD?.rows);notePrices(newD?.rows);
  pulseState.flash={};pulseState.fresh=new Set();
  if(!oldD||!newD||oldD.timeframe!==newD.timeframe)return;
  const before=new Map((oldD.rows||[]).map(r=>[r.address,r.priceUsd]));
@@ -2251,7 +2522,7 @@ async function loadTicker(){
 }
 function renderTicker(){
  const box=document.getElementById('app-ticker'),track=document.getElementById('tk-track');if(!box||!track)return;
- const rows=tickerState.rows;notePons(rows);if(!rows.length){box.hidden=true;return}
+ const rows=tickerState.rows;notePons(rows);notePrices(rows);if(!rows.length){box.hidden=true;return}
  const item=r=>{const c=r.tf?.['1h']?.change,cls=c===null||c===undefined?'':c>=0?'positive':'negative';return `<a class="tk-item" href="/markets/token/${esc(r.address)}"><b>${esc(r.symbol)}</b><span>${tiPrice(r.priceUsd)}</span>${c===null||c===undefined?'':`<span class="${cls}">${c>0?'+':''}${Math.abs(c)>=1000?Math.round(c).toLocaleString():c.toFixed(1)}%</span>`}</a>`};
  const one=rows.map(item).join('');
  const key=rows.map(r=>r.address+r.priceUsd).join('|');
@@ -2319,7 +2590,12 @@ function hpPrice(n){if(n===null||n===undefined)return '—';if(n>=1)return '$'+n
 function hpUsd(n){if(n===null||n===undefined)return '—';return n>=1e6?'$'+(n/1e6).toFixed(2)+'M':n>=1e3?'$'+(n/1e3).toFixed(1)+'K':'$'+Math.round(n)}
 async function hpLoad(){
  const box=document.getElementById('hp-rows');if(!box)return;
- let res;try{res=await dmFetchTrending()}catch{box.innerHTML='<div class="hp-row" style="grid-template-columns:1fr;color:#93a29f">Live prices are unavailable right now. Try again in a minute.</div>';return}
+ if(box.querySelector('.hp-skel')){try{const c=JSON.parse(localStorage.getItem('hormus-hp-board')||'null');if(c&&Array.isArray(c.rows)&&c.rows.length&&Date.now()-c.at<12*3600000)hpPaint(box,c)}catch{}}
+ let res;try{res=await dmFetchTrending()}catch{if(box.querySelector('.hp-skel'))box.innerHTML='<div class="hp-row" style="grid-template-columns:1fr;color:#93a29f">Live prices are unavailable right now. Try again in a minute.</div>';return}
+ try{const keep=(res.rows||[]).filter(r=>r.price).slice(0,6);if(keep.length)localStorage.setItem('hormus-hp-board',JSON.stringify({at:res.at||Date.now(),rows:keep}))}catch{}
+ hpPaint(box,res);
+}
+function hpPaint(box,res){
  const rows=(res.rows||[]).filter(r=>r.price).slice(0,6),t=new Date(res.at).toLocaleTimeString([],{hour:'2-digit',minute:'2-digit'});
  const up=document.getElementById('hp-updated');if(up)up.textContent='updated '+t;
  const tok=r=>`<span class="hp-tok">${r.img?`<img src="${esc(r.img)}" alt="" loading="lazy" referrerpolicy="no-referrer">`:`<span class="hp-fb">${esc(r.sym.slice(0,3))}</span>`}<span><b>${esc(r.sym)}</b><small class="hp-mono">${esc(r.addr.slice(0,6)+'…'+r.addr.slice(-4))}</small></span></span>`;
