@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-21"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
+<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-22"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <title>HORMUS | Know the token before you trade it</title>
 <style>
@@ -510,7 +510,8 @@
 .ca-copy:hover{border-color:#2f5a4b}
 #application .alert-ev small,.alert-pop small{white-space:pre-line}
 #application .alert-ev .ca-copy{display:flex;width:fit-content}
-#application .ti-launch .lc-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}
+#application .ti-launch .lc-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#application .lc-cell em.lc-strip{display:block;margin-top:4px;font-style:normal;letter-spacing:1px;line-height:1.3;word-break:break-all}
 #application .lc-cell{padding:14px;border:1px solid var(--a-line);border-radius:12px}
 #application .lc-cell small{display:block;font-size:13px;color:var(--a-dim)}
 #application .lc-cell b{display:block;margin-top:6px;font:600 20px "Geist Mono",Consolas,monospace}
@@ -659,7 +660,7 @@
 #application .ov-token b{display:block;font-size:17px}#application .ov-token small{display:block;color:var(--a-mut);font-size:14px;margin-top:3px}#application .ov-token i{font-style:normal;color:var(--a-mint);white-space:nowrap}
 @media(max-width:1023px){#application .appnav>.toolbar{display:flex;gap:8px;align-items:center}#application .navlink-x{margin:0;height:40px;width:40px!important;flex:0 0 40px;padding:0!important;border-radius:10px}#application .navlink-x span{display:none}}
 
-/* homepage footer (DAY-2-21) */
+/* homepage footer (DAY-2-22) */
 #public .hp-foot{border-top:1px solid var(--hp-line);padding-top:72px;overflow:hidden;position:relative}
 #public .hp-fgrid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.25fr;gap:40px}
 #public .hp-fbrand p{margin:18px 0 0;max-width:340px;font-size:15px;line-height:1.65;color:var(--hp-mut)}
@@ -2353,7 +2354,7 @@ async function runSkillCommand(text){
 let pulseState={tf:'5m',sort:'gainers',data:null,loading:false,error:'',timer:null,tick:null};
 function fmtAge(m){if(m===null||m===undefined||!Number.isFinite(Number(m)))return '—';m=Number(m);if(m<1)return 'just now';if(m<60)return m+'m';if(m<1440)return Math.floor(m/60)+'h '+(m%60?m%60+'m':'');return Math.floor(m/1440)+'d'}
 function pulseUsd(n){if(n===null||n===undefined||n===0)return '—';const a=Math.abs(n);return '$'+(a>=1e9?(n/1e9).toFixed(2)+'B':a>=1e6?(n/1e6).toFixed(2)+'M':a>=1e3?(n/1e3).toFixed(1)+'K':n.toFixed(a<10?2:0))}
-// ===== DAY-2-21: since you were here =====
+// ===== DAY-2-22: since you were here =====
 const recapState={base:null,seen:{},data:null,loading:false};
 (function(){try{
  recapState.seen=JSON.parse(localStorage.getItem('hormus-seen')||'{}')||{};
@@ -2567,21 +2568,26 @@ const lcCls=(v,warn,bad)=>v===null||v===undefined?'':v>=bad?'bad':v>=warn?'warn'
 function lcDev(c){return c.devPct===null?'—':c.devBought&&c.devPct===0?'sold':lcPct(c.devPct)}
 // token page panel
 async function loadTiLaunch(){const S=tokenIntelligenceState,addr=S.address;try{const r=await apiRequest('/api/v1/markets/launch-check/'+encodeURIComponent(addr));if(S.address===addr){S.launch=r.check||{available:false};if(S.launch.available)renderTokenIntelligence()}}catch{if(S.address===addr)S.launch={available:false}}}
+const LC_STRIP={b:'📦',h:'🟢',p:'🟡',s:'🔴'};
+function lcStrip(x){return String(x||'').split('').map(c=>LC_STRIP[c]||'').join('')}
+function lcBH(b,h){return b===undefined||b===null?`${lcPct(h)} held`:`bought ${lcPct(b)} · holds ${lcPct(h)}`}
 function tiLaunchPanel(){
  const c=tokenIntelligenceState.launch;if(!c||!c.available)return '';
  const cell=(label,val,cls,sub)=>`<div class="lc-cell ${cls}"><small>${label}</small><b>${val}</b>${sub?`<span>${sub}</span>`:''}</div>`;
+ const few=(c.buyers||0)>=10&&c.holders<=Math.max(5,(c.buyers||0)/3);
  return `<section class="panel ti-launch"><div class="ti-section-head"><h3>Launch check</h3><span class="ti-muted">read from the chain</span></div><div class="lc-grid">
-  ${cell('Snipers',`${c.sniperWallets}`,lcCls(c.sniperPct,5,15),`${lcPct(c.sniperPct)} still held`)}
-  ${cell('Bundle',lcPct(c.bundlePct),lcCls(c.bundlePct,5,15),`${c.bundleWallets} wallet${c.bundleWallets===1?'':'s'} at launch`)}
+  ${cell('Bundle',c.bundleWallets?`${c.bundleWallets} wallets`:'none',lcCls(c.bundlePct,5,15),c.bundleWallets?lcBH(c.bundleBoughtPct,c.bundlePct):'no same-block buys')}
+  ${cell('Snipers',c.sniperWallets?`${c.sniperWallets} wallets`:'none',lcCls(c.sniperPct,5,15),c.sniperWallets?lcBH(c.sniperBoughtPct,c.sniperPct):`no buys in the first ${c.snipeSeconds}s`)}
+  ${cell('First 20 buyers',`holds ${lcPct(c.first20HeldPct)}`,(c.first20BoughtPct||0)>0&&(c.first20HeldPct||0)<(c.first20BoughtPct||0)*0.25?'warn':'good',`bought ${lcPct(c.first20BoughtPct)}<br><em class="lc-strip">${lcStrip(c.first20Strip)}</em>`)}
   ${cell('Dev',lcDev(c),c.devBought&&c.devPct===0?'warn':lcCls(c.devPct,5,10),c.devAddress?`<a href="https://robinhoodchain.blockscout.com/address/${esc(c.devAddress)}" target="_blank" rel="noopener noreferrer">${esc(c.devAddress.slice(0,6)+'…'+c.devAddress.slice(-4))} ↗</a>`:'')}
   ${cell('Top 10',lcPct(c.top10Pct),lcCls(c.top10Pct,25,40),'of supply, curve excluded')}
-  ${cell('Holders',String(c.holders),c.holders<10?'warn':'good','wallets holding now')}
- </div><p class="ti-muted" style="margin-top:12px">Snipers bought in the first ${c.snipeSeconds} seconds, bundle in the launch block or the one right after. ${c.transfers} transfers read.</p></section>`;
+  ${cell('Holders',String(c.holders),few||c.holders<10?'warn':'good',few?'most buyers already sold':`${c.buyers??'—'} wallets have bought`)}
+ </div><p class="ti-muted" style="margin-top:12px">Bundle: two or more wallets buying in the same block in the first 5 minutes. Snipers: buys in the first ${c.snipeSeconds} seconds. 📦 bundle · 🟢 holding · 🟡 sold some · 🔴 sold all. ${c.transfers} transfers read.</p></section>`;
 }
 // live pulse fresh tab
 function pulseLaunchCell(addr){
  const c=pulseState.launch?.[addr];if(c===undefined)return '<span class="muted">…</span>';if(!c||!c.available)return '<span class="muted">—</span>';
- return `<span class="lc-mini"><i class="${lcCls(c.sniperPct,5,15)}" title="snipers still holding">S ${c.sniperWallets}·${lcPct(c.sniperPct)}</i><i class="${lcCls(c.bundlePct,5,15)}" title="bundle">B ${lcPct(c.bundlePct)}</i><i class="${c.devBought&&c.devPct===0?'warn':lcCls(c.devPct,5,10)}" title="dev">D ${lcDev(c)}</i><i class="${lcCls(c.top10Pct,25,40)}" title="top 10 holders">T10 ${lcPct(c.top10Pct)}</i></span>`;
+ return `<span class="lc-mini"><i class="${lcCls(c.sniperPct,5,15)}" title="snipers still holding">S ${c.sniperWallets}·${lcPct(c.sniperPct)}</i><i class="${lcCls(c.bundlePct,5,15)}" title="bundle wallets · still held">B ${c.bundleWallets}·${lcPct(c.bundlePct)}</i><i class="${c.devBought&&c.devPct===0?'warn':lcCls(c.devPct,5,10)}" title="dev">D ${lcDev(c)}</i><i class="${lcCls(c.top10Pct,25,40)}" title="top 10 holders">T10 ${lcPct(c.top10Pct)}</i></span>`;
 }
 async function loadPulseLaunch(){
  if(pulseState.sort!=='fresh'||pulseState.launchLoading)return;
@@ -2593,10 +2599,10 @@ async function loadPulseLaunch(){
  finally{pulseState.launchLoading=false;if(pagePath==='/markets')renderPulse()}
 }
 // alerts page: screener
-const SCREENER_FIELDS=[['maxAgeMin','Max age','min',60,1],['minVol5m','Volume 5m over','$',500,50],['risingPct','Volume rising: 5m at least','% of 1h',40,5],['minBuys1h','Buys in 1h at least','',15,1],['minHolders','Holders at least','',20,1],['maxSniperPct','Snipers holding at most','%',10,1],['maxBundlePct','Bundle at most','%',5,1],['maxDevPct','Dev holding at most','%',5,1],['maxTop10Pct','Top 10 at most','%',30,1],['minCurve','Curve from','%',0,1],['maxCurve','Curve up to','%',80,1]];
+const SCREENER_FIELDS=[['maxAgeMin','Max age','min',60,1],['minVol5m','Volume 5m over','$',500,50],['risingPct','Volume rising: 5m at least','% of 1h',40,5],['minBuys1h','Buys in 1h at least','',15,1],['minHolders','Holders at least','',20,1],['maxSniperPct','Snipers still holding at most','%',10,1],['maxBundlePct','Bundle still holding at most','%',5,1],['maxDevPct','Dev holding at most','%',5,1],['maxTop10Pct','Top 10 at most','%',30,1],['minFirst20HeldPct','First 20 still holding at least','%','',1],['minCurve','Curve from','%',0,1],['maxCurve','Curve up to','%',80,1]];
 function screenerLabel(f){f=f||{};const p=[];const has=k=>f[k]!==undefined&&f[k]!==null&&f[k]!=='';
  if(has('maxAgeMin'))p.push(`up to ${f.maxAgeMin}m old`);if(has('minVol5m'))p.push(`${tiMoney(f.minVol5m)}+ vol 5m`);if(has('risingPct')&&+f.risingPct>0)p.push(`rising ${f.risingPct}%`);if(has('minBuys1h'))p.push(`${f.minBuys1h}+ buys`);if(has('minHolders'))p.push(`${f.minHolders}+ holders`);
- if(has('maxSniperPct'))p.push(`snipers ≤ ${f.maxSniperPct}%`);if(has('maxBundlePct'))p.push(`bundle ≤ ${f.maxBundlePct}%`);if(has('maxDevPct'))p.push(`dev ≤ ${f.maxDevPct}%`);if(has('maxTop10Pct'))p.push(`top10 ≤ ${f.maxTop10Pct}%`);
+ if(has('maxSniperPct'))p.push(`snipers ≤ ${f.maxSniperPct}%`);if(has('maxBundlePct'))p.push(`bundle ≤ ${f.maxBundlePct}%`);if(has('maxDevPct'))p.push(`dev ≤ ${f.maxDevPct}%`);if(has('maxTop10Pct'))p.push(`top10 ≤ ${f.maxTop10Pct}%`);if(has('minFirst20HeldPct'))p.push(`first 20 hold ≥ ${f.minFirst20HeldPct}%`);
  if(has('minCurve')||has('maxCurve'))p.push(`curve ${has('minCurve')?f.minCurve:0}–${has('maxCurve')?f.maxCurve:100}%`);return 'Screener: '+(p.join(' · ')||'any fresh launch')}
 function readScreenerFilters(){const f={};for(const [k] of SCREENER_FIELDS){const el=document.getElementById('sc-'+k);if(!el||el.value.trim()==='')continue;const n=Number(el.value);if(!Number.isFinite(n)||n<0)return null;f[k]=['minBuys1h','minHolders'].includes(k)?Math.round(n):n}return f}
 function screenerCard(rules){
@@ -2609,7 +2615,7 @@ function screenerCard(rules){
   ${pv?`<div class="sc-preview">${pv.loading?'<p class="muted">Checking fresh launches on-chain…</p>':pv.matches.length?`<p class="muted" style="margin:0 0 6px">${pv.matches.length} token${pv.matches.length===1?'':'s'} match right now</p>${pv.matches.map(m=>`<a class="sc-hit" href="/markets/token/${esc(m.address)}"><span><b>${esc(m.symbol)}</b><small>${esc(m.name||'')} · ${fmtAge(m.ageMinutes)} old · ${tiMoney(m.volume5m)} vol 5m</small></span>${m.launch?.available?pulseLaunchMini(m.launch):''}${caChip(m.address)}</a>`).join('')}`:'<p class="muted">Nothing matches right now. Loosen a filter or wait for the next launch.</p>'}</div>`:''}
  </section>`;
 }
-function pulseLaunchMini(c){return `<span class="lc-mini"><i class="${lcCls(c.sniperPct,5,15)}">S ${c.sniperWallets}·${lcPct(c.sniperPct)}</i><i class="${lcCls(c.bundlePct,5,15)}">B ${lcPct(c.bundlePct)}</i><i class="${c.devBought&&c.devPct===0?'warn':lcCls(c.devPct,5,10)}">D ${lcDev(c)}</i><i class="${lcCls(c.top10Pct,25,40)}">T10 ${lcPct(c.top10Pct)}</i></span>`}
+function pulseLaunchMini(c){return `<span class="lc-mini"><i class="${lcCls(c.sniperPct,5,15)}">S ${c.sniperWallets}·${lcPct(c.sniperPct)}</i><i class="${lcCls(c.bundlePct,5,15)}">B ${c.bundleWallets}·${lcPct(c.bundlePct)}</i><i class="${c.devBought&&c.devPct===0?'warn':lcCls(c.devPct,5,10)}">D ${lcDev(c)}</i><i class="${lcCls(c.top10Pct,25,40)}">T10 ${lcPct(c.top10Pct)}</i></span>`}
 function bindScreener(){
  const root=document.getElementById('alerts-page');if(!root)return;
  root.querySelectorAll('.sc-grid input').forEach(i=>i.oninput=()=>{alertsState.scValues={...(alertsState.scValues||{}),[i.id.slice(3)]:i.value}});
