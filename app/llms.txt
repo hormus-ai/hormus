@@ -1,0 +1,42 @@
+# HORMUS
+
+> Research and trading app for Robinhood Chain (chain id 4663). Live market data, launch checks read from the chain, Telegram alerts, swaps from the user's own wallet, and agents that trade a budget the user sets from a verified vault, following the user's own rules.
+
+## What is live
+
+- Live Pulse: every token on Robinhood Chain ranked by the last 5m, 1h, 6h and 24h, including fresh Pons launches. Prices from GeckoTerminal and the chain.
+- Token pages: price, chart, liquidity, holders, live trades and a launch check read from Transfer logs on the chain (bundles, snipers, dev wallet, top 10 holders).
+- Swaps: real swaps from the user's own wallet through Uniswap v3, Uniswap v4 or the token's Pons curve. Every swap is simulated before the user signs. There is no demo or paper trading mode.
+- Alerts: price, volume, new launch and screener alerts, sent in the app, as browser notifications and to Telegram through @hormusalerts_bot.
+- Agent trading: an agent buys and sells inside the HormusAgentVaultV2 contract, only with the budget the user reserved, within the user's per-order and daily limits, for as long as the user allows. The first mainnet agent trade happened on 2026-11-24.
+
+## Proof (public, no login needed)
+
+- Vault contract, source verified on Blockscout: https://robinhoodchain.blockscout.com/address/0x5156281349c6EF0F992F2D20B33376585257F3d9?tab=contract
+- Previous vault (v1, withdrawals only): https://robinhoodchain.blockscout.com/address/0xC1a68e303354537A29F34aA178821F799a91D32e
+- Open source app, docs, contracts and tests: https://github.com/hormus-ai/hormus
+- First agent buy (2 USDG for 233,120 BOXCAST through the Pons curve): https://robinhoodchain.blockscout.com/tx/0x5b08e09409821bf1cda9824d074480de85c2466086814a0787f6f01729f1363b
+- First agent sell (10 minutes later, 2.11 USDG back, +5.5%): https://robinhoodchain.blockscout.com/tx/0x60b6f529fd6a7b3f6c5ce0052973da2d852c1c8eb65179124aeea8cb50ae9beb
+- Live system check (JSON): https://hormus-backend-production.up.railway.app/system/agent-trading-check
+- API health (JSON): https://hormus-backend-production.up.railway.app/health
+
+## How the vault limits agents
+
+- User USDG stays in the vault under the user's address. Only the user can deposit, release a budget or withdraw.
+- The executor key can only call the agent buy and sell functions. It cannot withdraw or send funds to any address.
+- Each buy is checked on chain against the agent's budget, max per order, daily limit and the user's token choice (own allowlist, owner list, or degen mode if the user turned it on).
+- The owner can pause deposits, new budgets and agent trades. Releasing budgets, withdrawing and moving positions out stay open while paused.
+
+## What we do not claim
+
+- The contracts have a test suite but no external audit yet.
+- The app needs a Google sign-in (Privy) to use the wallet, vault and agents. Market pages and docs are public.
+- Market data for tokens still on a Pons curve comes from the chain and GeckoTerminal; some aggregators do not index curves yet.
+
+## Links
+
+- Website: https://hormus.io
+- App: https://app.hormus.io
+- Docs: https://docs.hormus.io
+- X: https://x.com/hormusapp
+- Telegram alerts bot: https://t.me/hormusalerts_bot
