@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-30"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
+<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-31"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <title>HORMUS | Know the token before you trade it</title>
 <style>
@@ -1092,6 +1092,51 @@
 #public .hp-tg-link{display:block;text-align:center;border-top:1px solid var(--hp-line);padding-top:10px;color:#5ff0b0;font-size:14px}
 #public .hp-ftext a[href*="t.me"]{color:#5ff0b0}
 #public .hp-tg-note{color:var(--hp-dim);font-size:12px;align-self:flex-end}
+/* DAY-2-31 rules modal */
+.modal.modal-wide{width:min(960px,100%);padding:0;overflow-y:auto;overflow-x:hidden}
+.modal-wide .modalhead{padding:16px 22px;margin:0;border-bottom:1px solid #1f3a3a;position:sticky;top:0;background:#0c171b;z-index:3}
+.modal-wide .modalhead h3{margin:2px 0 0;font-size:20px}
+.rules{display:grid;grid-template-columns:minmax(0,1fr) 300px}
+.rules-main{padding:16px 22px 22px;min-width:0}
+.rules-intro{font-size:14px;line-height:1.6;margin:0 0 12px}
+.rules-presets{display:grid;grid-template-columns:auto repeat(3,1fr);gap:8px;align-items:stretch}
+.rules-lead{align-self:center;font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;padding-right:4px}
+.rules-presets button{text-align:left;border:1px solid #2a4a4a;background:#0f2023;color:inherit;border-radius:12px;padding:10px 12px;cursor:pointer;font:inherit;transition:border-color .15s,background .15s}
+.rules-presets button:hover{border-color:#3f7a6a}
+.rules-presets button b{display:block;font-size:14px}.rules-presets button small{display:block;color:var(--muted);font-size:12px;margin-top:2px;line-height:1.35}
+.rules-presets button.on{border-color:#5ff0b0;background:#0f2b23}
+.rules-sec{margin-top:18px}
+.rules-sec h4,.rules-more summary{font-size:12px;letter-spacing:.07em;text-transform:uppercase;color:#9fbab3;margin:0 0 8px;font-weight:600}
+.rules-sec h4 small,.rules-more summary small{text-transform:none;letter-spacing:0;color:var(--muted);font-weight:400;margin-left:6px}
+.rules-g2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.rules-g3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.rules-g4{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.rules .field{margin:0;min-width:0}.rules .field label{font-size:12px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.rules-more{margin-top:14px;border:1px solid #1f3a3a;border-radius:12px;padding:12px 14px;background:#0a1416}
+.rules-more summary{cursor:pointer;margin:0;list-style:none;display:flex;align-items:center;gap:6px}
+.rules-more summary::-webkit-details-marker{display:none}
+.rules-more summary::after{content:'+';margin-left:auto;font-size:18px;line-height:1;color:#9fbab3}.rules-more[open] summary::after{content:'−'}
+.rules-more[open] summary{margin-bottom:12px}
+.rules-count{font-size:11px;background:#163a30;color:#5ff0b0;border-radius:99px;padding:2px 8px;text-transform:none;letter-spacing:0;font-weight:500}.rules-count:empty{display:none}
+.rules-side{border-left:1px solid #1f3a3a;padding:16px 18px;display:flex;flex-direction:column;gap:12px;position:sticky;top:70px;align-self:start;background:#0b1518}
+.rules-sum{border:1px solid #1f3a3a;border-radius:12px;padding:12px 14px;background:#0c1a1c}
+.rules-sum ul{margin:8px 0 0;padding-left:18px;font-size:14px;line-height:1.55;color:#d6e7e2}.rules-sum li{margin-bottom:6px}
+.rules-warn{color:#f5c15c;font-size:13px;margin:6px 0 0;line-height:1.5}
+.rules-degen{border:1px solid #3a3320;background:#15130c;border-radius:12px;padding:12px 14px;font-size:13px;line-height:1.55;color:#d9cfae}
+.rules-degen.on{border-color:#8a6420;background:#241b08}
+.rules-degen p{margin:4px 0 10px}.rules-degen .btn{width:100%;justify-content:center}
+.rules-budget{margin:0}
+.rules-actions{display:flex;gap:8px}.rules-actions .btn{flex:1;justify-content:center}
+@media(max-width:780px){
+ .modalback:has(.modal-wide){padding:0;align-items:flex-end}
+ .modal.modal-wide{max-height:94vh;border-radius:16px 16px 0 0}
+ .rules{grid-template-columns:1fr}
+ .rules-main{padding:14px 16px 6px}
+ .rules-side{position:static;border-left:0;border-top:1px solid #1f3a3a;padding:14px 16px 0}
+ .rules-presets{grid-template-columns:1fr 1fr 1fr}.rules-lead{grid-column:1/-1}
+ .rules-presets button{padding:8px 10px}.rules-presets button small{display:none}
+ .rules-g3,.rules-g4{grid-template-columns:1fr 1fr}
+ .rules-g2{grid-template-columns:1fr}
+ .rules-actions{position:sticky;bottom:0;background:#0b1518;padding:12px 0 16px;margin-top:-2px}
+}
 </style>
 
 </head>
@@ -1353,15 +1398,19 @@ async function refreshFunding(force=false){
  fundState.loading=true;fundState.error='';
  try{
   const e=await getEthers(),p=await readOnlyProvider(),cfg=fundCfg();
-  const token=new e.Contract(cfg.token,TOKEN_ABI,p);
-  const [eth,usdg]=await Promise.all([p.getBalance(w.address),token.balanceOf(w.address)]);
+  const token=new e.Contract(cfg.token,TOKEN_ABI,p),v=cfg.vault?new e.Contract(cfg.vault,VAULT_ABI,p):null,plans=data.fundingPlans||[];
+  // Server-side agent data starts now too, so it is ready when the chain reads finish.
+  const sideLoad=cfg.vault&&isV2()?loadAgentTrading().catch(()=>{}):null;
+  const [eth,usdg,vault,allocs]=await Promise.all([p.getBalance(w.address),token.balanceOf(w.address),
+   v?Promise.all([v.deposited(w.address),v.allocatedTotal(w.address),v.depositsPaused(),v.usdg()]):null,
+   v?Promise.all(plans.map(plan=>v.allocations(w.address,agentKey(e,plan.agent_id)).catch(()=>null))):[]]);
   Object.assign(fundState,{address:w.address,label:w.label,eth:Number(e.formatEther(eth)),usdg:Number(e.formatUnits(usdg,6))});
   if(cfg.vault){
-   const v=new e.Contract(cfg.vault,VAULT_ABI,p);
-   const [dep,res,paused,vToken]=await Promise.all([v.deposited(w.address),v.allocatedTotal(w.address),v.depositsPaused(),v.usdg()]);
+   const [dep,res,paused,vToken]=vault;
    if(vToken.toLowerCase()!==cfg.token.toLowerCase())throw new Error('Vault token mismatch');
    const per={};
-   for(const plan of (data.fundingPlans||[])){try{const a=await v.allocations(w.address,agentKey(e,plan.agent_id));per[plan.agent_id]=Number(e.formatUnits(a.amount,6))}catch{per[plan.agent_id]=null}}
+   plans.forEach((plan,i)=>{per[plan.agent_id]=allocs[i]?Number(e.formatUnits(allocs[i].amount,6)):null});
+   fundState._sideLoad=sideLoad;
    Object.assign(fundState,{deposited:Number(e.formatUnits(dep,6)),reserved:Number(e.formatUnits(res,6)),paused,perAgent:per});
    await refreshV2Extras(e,p,w).catch(err=>console.warn('Vault v2 extras unavailable',err));
   }
@@ -1401,9 +1450,9 @@ function appFunding(){
  const plans=Array.isArray(data.fundingPlans)?data.fundingPlans:[],agents=Array.isArray(data.agents)?data.agents:[];
  const cfg=fundCfg(),w=fundWallet(),walletsReady=!!window.__hormusWallets?.ready,busy=fundState.busy,vaultOn=!!cfg.vault&&!fundState.paused;
  const available=fundState.deposited===null?null:Math.max(0,fundState.deposited-(fundState.reserved||0));
- const walletBlock=w?`<div class="fund-addr"><span class="fund-badge">${esc(w.type==='embedded'?'Privy wallet':'Browser wallet')}</span><code>${esc(w.address)}</code><button class="btn" data-copy-addr="${esc(w.address)}">Copy</button><a class="btn" href="https://robinhoodchain.blockscout.com/address/${esc(w.address)}" target="_blank" rel="noopener noreferrer">Blockscout ↗</a></div>`
+ const walletBlock=w?`<div class="fund-addr"><span class="fund-badge">${esc(w.type==='embedded'?'Privy wallet':'Browser wallet')}</span><code>${esc(w.address)}</code><button class="btn" data-copy-addr="${esc(w.address)}">Copy</button><a class="btn" href="https://robinhoodchain.blockscout.com/address/${esc(w.address)}" target="_blank" rel="noopener noreferrer">Blockscout ↗</a>${w.type==='external'&&(window.__hormusWallets?.list||[]).length?'<button class="btn" id="fund-privy-wallet">Use HORMUS wallet</button>':w.type!=='external'&&window.ethereum?'<button class="btn" id="fund-browser-wallet">Use browser wallet</button>':''}</div>`
   :`<div class="fund-addr"><span class="muted" style="font-size:14px">${walletsReady?'No wallet on this account yet.':'Loading your wallet…'}</span>${walletsReady?'<button class="btn primary" id="fund-create-wallet">Create my wallet</button>':''}<button class="btn" id="fund-browser-wallet">Use browser wallet instead</button></div>`;
- const planRows=plans.map(p=>{const onchain=fundState.perAgent[p.agent_id];const mine=w&&String(p.wallet_address||'').toLowerCase()===w.address.toLowerCase();return `<tr><td><b>${esc(p.agent_name||'Agent')}</b>${mine||!w?'':`<small class="market-meta" style="display:block">Saved for ${esc(shortAddr(p.wallet_address))}</small>`}</td><td data-label="Budget">${money(p.planned_allocation_usdg)}</td><td data-label="Reserved">${onchain===undefined||onchain===null?'—':fmtToken(onchain)+' USDG'}</td><td data-label="Limits">${money(p.max_order_usdg)} · ${dailyText(p.daily_limit_usdg)}</td><td data-label="Status"><span class="tag">${esc(p.status==='paused'?'Paused':'Active')}</span></td><td class="fund-actions" data-label="">${autoCell(p,w)}<button class="btn primary" data-fund-allocate="${esc(p.id)}" ${vaultOn&&w&&!busy?'':'disabled'}>Reserve</button><button class="btn" data-fund-deallocate="${esc(p.id)}" ${vaultOn&&w&&onchain&&!busy?'':'disabled'}>Release</button><button class="btn" data-fund-pause="${esc(p.id)}">${p.status==='paused'?'Resume':'Pause'}</button><button class="btn" data-fund-revoke="${esc(p.id)}">Remove</button></td></tr>`}).join('');
+ const planRows=plans.map(p=>{const onchain=fundState.perAgent[p.agent_id];const mine=w&&String(p.wallet_address||'').toLowerCase()===w.address.toLowerCase();return `<tr><td><b>${esc(p.agent_name||'Agent')}</b>${mine||!w?'':`<small class="market-meta" style="display:block">Saved for ${esc(shortAddr(p.wallet_address))}</small>`}</td><td data-label="Budget set">${money(p.planned_allocation_usdg)}</td><td data-label="Free to trade">${onchain===undefined||onchain===null?'—':fmtToken(onchain)+' USDG'}${(()=>{const t=(fundState.trading?.[p.agent_id]?.open||[]).reduce((s,x)=>s+Number(x.cost_usdg||0),0);return t>0?`<small class="market-meta" style="display:block">+ ${money(t)} in open trades</small>`:''})()}</td><td data-label="Limits">${money(p.max_order_usdg)} · ${dailyText(p.daily_limit_usdg)}</td><td data-label="Status"><span class="tag">${esc(p.status==='paused'?'Paused':'Active')}</span></td><td class="fund-actions" data-label="">${autoCell(p,w)}<button class="btn primary" data-fund-allocate="${esc(p.id)}" ${vaultOn&&w&&!busy?'':'disabled'}>Reserve</button><button class="btn" data-fund-deallocate="${esc(p.id)}" ${vaultOn&&w&&onchain&&!busy?'':'disabled'}>Release</button><button class="btn" data-fund-pause="${esc(p.id)}">${p.status==='paused'?'Resume':'Pause'}</button><button class="btn" data-fund-revoke="${esc(p.id)}">Remove</button></td></tr>`}).join('');
  return `<section class="panel fund-wallet">
   <div class="toolbar" style="justify-content:space-between;align-items:flex-start"><div><span class="eyebrow">YOUR WALLET</span><h3 style="margin:6px 0 4px">Robinhood Chain wallet</h3><p class="muted" style="font-size:14px;margin:0">${w?.type==='external'?'Your browser wallet. Only you can approve transactions from it.':'Created with your Google sign-in. Only you can approve transactions from it.'}</p></div><button class="btn" id="fund-refresh" ${w&&!fundState.loading?'':'disabled'}>${fundState.loading?'Refreshing…':'↻ Refresh'}</button></div>
   ${walletBlock}
@@ -1418,7 +1467,7 @@ function appFunding(){
  </section>
  <section class="panel" style="margin-top:14px">
   <div class="toolbar" style="justify-content:space-between;align-items:flex-start"><div><span class="eyebrow">AGENT BUDGETS</span><h3 style="margin:6px 0 4px">How much each agent may use</h3><p class="muted" style="font-size:14px;margin:0;max-width:640px;line-height:1.7">Agents don't get their own wallet or keys. A budget reserves part of your vault balance for one agent. Reserved USDG stays in the vault under your wallet, and you can release it at any time. ${isV2()?'If you let an agent trade, it buys and sells with that budget only, following the rules you set, within its per-order and daily limits, for as long as you choose. You pick which tokens it may buy (your allowlist, or any token in degen mode). Agents can\'t move funds anywhere else.':'Agents can\'t move it.'}</p></div></div>
-  ${plans.length?`<div class="tablewrap tm-table fund-table" style="margin-top:12px"><table style="min-width:760px"><thead><tr><th>Agent</th><th>Budget</th><th>Reserved in vault</th><th>Limits</th><th>Status</th><th></th></tr></thead><tbody>${planRows}</tbody></table></div>`:'<div class="empty" style="margin-top:12px">No budgets yet. Pick an agent below to create one.</div>'}
+  ${plans.length?`<div class="tablewrap tm-table fund-table" style="margin-top:12px"><table style="min-width:760px"><thead><tr><th>Agent</th><th>Budget set</th><th>Free to trade</th><th>Limits</th><th>Status</th><th></th></tr></thead><tbody>${planRows}</tbody></table></div>`:'<div class="empty" style="margin-top:12px">No budgets yet. Pick an agent below to create one.</div>'}
   <div class="fund-form">
    <div class="field"><label>Agent</label><select class="select" id="fund-agent" ${agents.length?'':'disabled'}>${agents.length?agents.map(a=>`<option value="${esc(a.id)}">${esc(a.name)}</option>`).join(''):'<option>Create an agent first</option>'}</select></div>
    <div class="field"><label>Budget (USDG)</label><input class="input" id="fund-allocation" type="number" min="1" step="0.01" placeholder="250"></div>
@@ -1436,7 +1485,8 @@ function bindFunding(){
  document.querySelectorAll('[data-copy-addr]').forEach(b=>b.onclick=async()=>{try{await navigator.clipboard.writeText(b.dataset.copyAddr);toast('Address copied')}catch{toast('Copy failed')}});
  const refresh=document.getElementById('fund-refresh');if(refresh)refresh.onclick=()=>refreshFunding(true);
  const create=document.getElementById('fund-create-wallet');if(create)create.onclick=async()=>{create.disabled=true;try{await window.__hormusPrivy?.createWallet?.();toast('Wallet created')}catch(err){toast(err?.message||'Could not create the wallet')}finally{create.disabled=false}};
- const browser=document.getElementById('fund-browser-wallet');if(browser)browser.onclick=async()=>{if(!window.ethereum)return toast('No browser wallet found. Install MetaMask or use your HORMUS wallet.');try{const [addr]=await window.ethereum.request({method:'eth_requestAccounts'});fundState.browser={address:addr,type:'external',label:'Browser wallet',provider:async()=>window.ethereum};fundState.source='browser';fundState.loadedAt=0;renderApp('funding')}catch(err){toast(txError(err))}};
+ const privy=document.getElementById('fund-privy-wallet');if(privy)privy.onclick=()=>{fundState.source='';fundState.loadedAt=0;data.livePortfolio=null;renderApp('funding')};
+ const browser=document.getElementById('fund-browser-wallet');if(browser)browser.onclick=async()=>{if(!window.ethereum)return toast('No browser wallet found. Install MetaMask or use your HORMUS wallet.');try{const [addr]=await window.ethereum.request({method:'eth_requestAccounts'});fundState.browser={address:addr,type:'external',label:'Browser wallet',provider:async()=>window.ethereum};fundState.source='browser';fundState.loadedAt=0;data.livePortfolio=null;renderApp('funding')}catch(err){toast(txError(err))}};
  const save=document.getElementById('fund-save');if(save)save.onclick=async()=>{
   const w=fundWallet();const payload={agentId:document.getElementById('fund-agent').value,walletAddress:w?.address||'',plannedAllocationUsdg:num('fund-allocation'),maxOrderUsdg:num('fund-max-order'),dailyLimitUsdg:document.getElementById('fund-no-daily')?.checked?NO_DAILY_LIMIT:num('fund-daily-limit'),maxSlippageBps:100,mode:'paper'};
   if(!payload.walletAddress)return toast('Your wallet is still loading.');
@@ -1813,15 +1863,24 @@ function appPortfolio(){
  if(!pf)return head+`${data._liveError?`<div class="info-note warn">${esc(data._liveError)}</div>`:'<div class="market-skeleton" style="margin-top:12px"></div><div class="market-skeleton"></div>'}</section>`;
  const rows=[{symbol:'ETH',address:null,balance:pf.eth.balance,priceUsd:pf.eth.priceUsd,valueUsd:pf.eth.valueUsd,note:'network fees'},...pf.tokens];
  const v=pf.vault;
- return head+`<div class="grid4" style="margin-top:14px"><div class="metric"><small>Total value</small><b>${usd(pf.totals.totalUsd)}</b></div><div class="metric"><small>In wallet</small><b>${usd(pf.totals.walletUsd)}</b></div><div class="metric"><small>In vault</small><b>${usd(v?.deposited??0)}</b></div><div class="metric"><small>Reserved for agents</small><b>${usd(v?.reserved??0)}</b></div></div>
+ return head+`<div class="grid4" style="margin-top:14px"><div class="metric"><small>Total value</small><b>${usd(pf.totals.totalUsd)}</b></div><div class="metric"><small>In wallet</small><b>${usd(pf.totals.walletUsd)}</b></div><div class="metric"><small>USDG in vault</small><b>${usd(v?.deposited??0)}</b></div><div class="metric"><small>Held by agents</small><b>${usd(pf.totals.agentsUsd??0)}</b></div></div>
  <div class="tablewrap" style="margin-top:14px"><table style="min-width:600px"><thead><tr><th>Asset</th><th>Balance</th><th>Price</th><th>Value</th><th></th></tr></thead><tbody>${rows.map(x=>`<tr><td><b>${esc(x.symbol)}</b>${x.note?`<small class="market-meta" style="display:block">${esc(x.note)}</small>`:''}</td><td>${Number(x.balance).toLocaleString('en-US',{maximumFractionDigits:6})}</td><td>${x.priceUsd===null?'—':tiPrice(x.priceUsd)}</td><td>${usd(x.valueUsd)}</td><td>${x.address&&x.symbol!=='USDG'&&x.symbol!=='WETH'?`<a class="btn" href="/markets/token/${esc(x.address)}">Trade</a>`:x.symbol==='USDG'?'<a class="btn" href="/funding">Deposit</a>':''}</td></tr>`).join('')}</tbody></table></div>
  ${pf.totals.unpricedTokens?`<p class="market-meta">${pf.totals.unpricedTokens} token(s) have no market price and are left out of the total.</p>`:''}
- <p class="market-meta">Shows ETH, USDG and every token you swapped in HORMUS or keep on your watchlist.</p></section>
+ <p class="market-meta">Shows ETH, USDG and every token you swapped in HORMUS, your agents traded or you keep on your watchlist.</p></section>
  <section class="panel" style="margin-top:14px"><div class="toolbar" style="justify-content:space-between"><div><span class="eyebrow">VAULT</span><h3 style="margin:6px 0 0">USDG vault</h3></div><a class="btn" href="/funding">Manage</a></div><div class="grid3" style="margin-top:12px"><div class="metric"><small>Deposited</small><b>${fmtToken(v?.deposited??0)} USDG</b></div><div class="metric"><small>Reserved for agents</small><b>${fmtToken(v?.reserved??0)} USDG</b></div><div class="metric"><small>Free to withdraw</small><b>${fmtToken(v?.free??0)} USDG</b></div></div></section>
- <section class="panel" style="margin-top:14px"><span class="eyebrow">HISTORY</span><h3 style="margin:6px 0 12px">Live swaps</h3>${swapRows(data.liveSwaps||[])}</section>`;
+ ${pfAgentHtml(pf)}
+ <section class="panel" style="margin-top:14px"><span class="eyebrow">HISTORY</span><h3 style="margin:6px 0 12px">Your swaps</h3>${swapRows(data.liveSwaps||[])}</section>`;
 }
 
 
+function pfAgentHtml(pf){
+ const H=pf.agentHoldings||[],T=pf.agentTrades||[];if(!H.length&&!T.length)return '';
+ const hold=H.length?`<section class="panel" style="margin-top:14px"><div class="toolbar" style="justify-content:space-between"><div><span class="eyebrow">HELD BY YOUR AGENTS</span><h3 style="margin:6px 0 4px">Tokens your agents bought</h3><p class="muted" style="font-size:14px;margin:0">They sit in the vault under your wallet and count in your total.</p></div><a class="btn" href="/funding">Manage</a></div>
+  <div class="tablewrap tm-table" style="margin-top:12px"><table style="min-width:640px"><thead><tr><th>Token</th><th>Agent</th><th>Amount</th><th>Value</th><th>Cost</th><th>Change</th></tr></thead><tbody>${H.map(x=>{const ch=x.valueUsd!==null&&x.costUsdg>0?(x.valueUsd/x.costUsdg-1)*100:null;return `<tr><td><a href="/markets/token/${esc(x.address)}"><b>${esc(x.symbol)}</b></a></td><td data-label="Agent">${esc(x.agentName||'Agent')}</td><td data-label="Amount">${Number(x.balance).toLocaleString('en-US',{maximumFractionDigits:2})}</td><td data-label="Value">${x.valueUsd===null?'—':usd(x.valueUsd)}</td><td data-label="Cost">${money(x.costUsdg)}</td><td data-label="Change">${ch===null?'—':`<span class="${ch>=0?'market-change-up':'market-change-down'}">${ch>=0?'+':''}${ch.toFixed(1)}%</span>`}</td></tr>`}).join('')}</tbody></table></div></section>`:'';
+ const why=r=>({max_hold:'max hold time',take_profit:'take profit',stop_loss:'stop loss',manual:'sold by you',withdrawn:'moved to wallet'}[r]||String(r||'').replace(/_/g,' '));
+ const hist=T.length?`<section class="panel" style="margin-top:14px"><span class="eyebrow">HISTORY</span><h3 style="margin:6px 0 12px">Agent trades</h3><div class="tablewrap tm-table"><table style="min-width:640px"><thead><tr><th>Token</th><th>Agent</th><th>Opened</th><th>Cost</th><th>Got back</th><th>Result</th></tr></thead><tbody>${T.map(x=>{const pnl=x.status==='closed'&&x.proceedsUsdg!==null&&x.costUsdg>0?(x.proceedsUsdg/x.costUsdg-1)*100:null;return `<tr><td><a href="/markets/token/${esc(x.token)}"><b>${esc(x.symbol||shortAddr(x.token))}</b></a></td><td data-label="Agent">${esc(x.agentName||'Agent')}</td><td data-label="Opened">${new Date(x.openedAt).toLocaleString('en-US',{month:'short',day:'numeric',hour:'2-digit',minute:'2-digit'})}</td><td data-label="Cost">${money(x.costUsdg)}</td><td data-label="Got back">${x.proceedsUsdg===null?'—':money(x.proceedsUsdg)}</td><td data-label="Result">${x.status==='open'?'<span class="tag on">Open</span>':pnl===null?esc(why(x.closeReason)||'Closed'):`<span class="${pnl>=0?'market-change-up':'market-change-down'}">${pnl>=0?'+':''}${pnl.toFixed(1)}%</span> <small class="market-meta">${esc(why(x.closeReason))}</small>`}</td></tr>`}).join('')}</tbody></table></div></section>`:'';
+ return hold+hist;
+}
 function appTrade(){
  setTimeout(()=>loadLivePortfolio(false),0);
  if(!marketState.pools.length&&!marketState.loading&&!data._tradePicksTried){data._tradePicksTried=true;setTimeout(()=>loadMarkets('trending'),0)}
@@ -1900,7 +1959,7 @@ function appSettings(){return `
   </section>
  </div>`}
 function appLog(title){data.activity.push({title,at:new Date().toISOString()});data.activity=data.activity.slice(-300);save()}
-function openModal(content){document.getElementById('modal').innerHTML=content;document.getElementById('modalback').classList.add('show')}
+function openModal(content){document.getElementById('modal').classList.remove('modal-wide');document.getElementById('modal').innerHTML=content;document.getElementById('modalback').classList.add('show')}
 function closeModal(){document.getElementById('modalback').classList.remove('show')}
 document.getElementById('modalback').addEventListener('click',e=>{if(e.target.id==='modalback'||e.target.closest('[data-close]'))closeModal()});
 function agentForm(a){openModal(`<div class="modalhead"><h3>${a?'Edit agent':'Create agent'}</h3><button class="close" data-close>×</button></div><form id="agentform"><div class="field"><label>Name</label><input class="input" name="name" required minlength="2" maxlength="80" value="${esc(a?.name||'')}" placeholder="Research Analyst"></div><div class="field"><label>Role</label><select class="select" name="role">${['Research','Quant','Portfolio','Execution','Custom'].map(r=>`<option ${a?.role===r?'selected':''}>${r}</option>`).join('')}</select></div><div class="field"><label>Mode</label><select class="select" name="mode">${['Research','Copilot','Autonomous'].map(r=>`<option ${a?.mode===r?'selected':''}>${r}</option>`).join('')}</select></div><div class="field"><label>Description</label><input class="input" name="description" maxlength="500" value="${esc(a?.description||'')}"></div><div class="field"><label>Instructions</label><textarea class="textarea" name="instructions">${esc(a?.instructions||'')}</textarea></div><div class="field"><label>Max order (USDG)</label><input class="input" name="maxOrder" type="number" min="0" value="${a?.maxOrder??data.settings.maxOrder}"></div><label class="idea-switch"><input type="checkbox" name="tradeIdeas" ${a?.tradeIdeas?'checked':''}> <span><b>Can suggest trades</b><small>The agent may add up to 3 trade ideas to its reports. You approve each one in your wallet. Limited by the agent's budget on Agent funding.</small></span></label><button class="btn primary" style="width:100%">Save agent profile</button></form>`);document.getElementById('agentform').onsubmit=async e=>{e.preventDefault();let d=Object.fromEntries(new FormData(e.target));d.maxOrder=Number(d.maxOrder||0);try{const payload=toApiAgent(d);let result;if(a&&a._remote){result=await apiRequest('/api/v1/agents/'+encodeURIComponent(a.id),{method:'PATCH',body:JSON.stringify({name:payload.name,description:payload.description,config:payload.config})})}else{result=await apiRequest('/api/v1/agents',{method:'POST',body:JSON.stringify(payload)})}const saved=fromApiAgent(result.agent);if(a)data.agents=data.agents.map(x=>x.id===a.id?saved:x);else data.agents.unshift(saved);appLog((a?'Updated ':'Created ')+d.name);closeModal();save();renderApp('agents');toast('Agent profile saved')}catch(err){toast('Could not save this agent. Please try again.')}}}
@@ -2304,18 +2363,30 @@ document.addEventListener('click',e=>{const x=e.target.closest('[data-idea-exec]
 
 
 // ===== Vault v2: agent auto-trading, agent positions, moving funds from the previous vault =====
-const VAULT2_ABI=['function setAutoTrade(bytes32 agentId,uint64 until)','function setAgentMode(bytes32 agentId,bool degen)','function positions(address user,bytes32 agentId,address token) view returns (uint256)','function withdrawPosition(bytes32 agentId,address token,uint256 amount,address recipient)'];
+const VAULT2_ABI=['function agentState(address user,bytes32 agentId) view returns (tuple(uint128 budget,uint128 maxOrder,uint128 dailyLimit,uint128 spentToday,uint64 day,uint64 autoUntil,bool degen) a,uint256 spentTodayNow)','function setAutoTrade(bytes32 agentId,uint64 until)','function setAgentMode(bytes32 agentId,bool degen)','function positions(address user,bytes32 agentId,address token) view returns (uint256)','function withdrawPosition(bytes32 agentId,address token,uint256 amount,address recipient)'];
 function isV2(){return Number(data.fundingStatus?.vaultVersion)===2}
+// After a confirmed tx the RPC can still return the old value for a few seconds: keep what we just set for 2 minutes.
+function fundOverride(agentId,o){fundState.override=fundState.override||{};fundState.override[agentId]={...(fundState.override[agentId]||{}),...o,at:Date.now()};if('auto' in o)(fundState.auto=fundState.auto||{})[agentId]=o.auto;if('degen' in o)(fundState.degen=fundState.degen||{})[agentId]=o.degen}
 async function refreshV2Extras(e,p,w){
  const cfg=fundCfg();fundState.auto={};fundState.agentPositions={};fundState.legacy=null;
  if(isV2()&&cfg.vault){
   const v=new e.Contract(cfg.vault,VAULT_ABI,p);
-  for(const plan of (data.fundingPlans||[])){try{const a=await v.allocations(w.address,agentKey(e,plan.agent_id));fundState.auto[plan.agent_id]=Number(a[3])}catch{}}
-  await loadAgentTrading().catch(()=>{});
-  try{const r=await apiRequest('/api/v1/trade-ideas?status=executed&limit=100');const pairs=new Map();for(const i of r.ideas||[])if(i.execution_mode==='auto')pairs.set(i.agent_id+'|'+i.token_address,{agentId:i.agent_id,agentName:i.agent_name,token:i.token_address,symbol:i.token_symbol});
+  const vs=new e.Contract(cfg.vault,VAULT2_ABI,p);fundState.degen=fundState.degen||{};
+  const plans=data.fundingPlans||[];
+  const [states,ideas]=await Promise.all([
+   Promise.all(plans.map(plan=>vs.agentState(w.address,agentKey(e,plan.agent_id)).catch(()=>v.allocations(w.address,agentKey(e,plan.agent_id)).then(a=>({fallback:a})).catch(()=>null)))),
+   apiRequest('/api/v1/trade-ideas?status=executed&limit=100').catch(()=>({ideas:[]})),
+   fundState._sideLoad||loadAgentTrading().catch(()=>{})]);
+  fundState._sideLoad=null;
+  plans.forEach((plan,i)=>{const id=plan.agent_id,st=states[i];
+   if(st?.fallback)fundState.auto[id]=Number(st.fallback[3]);else if(st){const a=st[0];fundState.auto[id]=Number(a.autoUntil);fundState.degen[id]=!!a.degen}
+   const o=fundState.override?.[id];if(o&&Date.now()-o.at<120000){if('auto' in o)fundState.auto[id]=o.auto;if('degen' in o)fundState.degen[id]=o.degen}});
+  try{const r=ideas;const pairs=new Map();for(const i of r.ideas||[])if(i.execution_mode==='auto')pairs.set(i.agent_id+'|'+i.token_address,{agentId:i.agent_id,agentName:i.agent_name,token:i.token_address,symbol:i.token_symbol});
    for(const plan of (data.fundingPlans||[]))for(const x of [...(fundState.trading?.[plan.agent_id]?.open||[]),...(fundState.trading?.[plan.agent_id]?.closed||[])])pairs.set(plan.agent_id+'|'+x.token_address,{agentId:plan.agent_id,agentName:plan.agent_name,token:x.token_address,symbol:x.token_symbol});
    const v2=new e.Contract(cfg.vault,VAULT2_ABI,p);
-   for(const x of pairs.values()){try{const raw=await v2.positions(w.address,agentKey(e,x.agentId),x.token);if(raw>0n){let dec=18;try{dec=Number(await new e.Contract(x.token,['function decimals() view returns (uint8)'],p).decimals())}catch{}(fundState.agentPositions[x.agentId]=fundState.agentPositions[x.agentId]||[]).push({...x,raw,dec,amount:Number(e.formatUnits(raw,dec))})}}catch{}}
+   const list=[...pairs.values()];
+   const got=await Promise.all(list.map(x=>Promise.all([v2.positions(w.address,agentKey(e,x.agentId),x.token).catch(()=>0n),new e.Contract(x.token,['function decimals() view returns (uint8)'],p).decimals().then(Number).catch(()=>18)])));
+   list.forEach((x,i)=>{const [raw,dec]=got[i];if(raw>0n)(fundState.agentPositions[x.agentId]=fundState.agentPositions[x.agentId]||[]).push({...x,raw,dec,amount:Number(e.formatUnits(raw,dec))})});
   }catch{}
  }
  const legacy=data.fundingStatus?.legacyVaultAddress;
@@ -2326,7 +2397,7 @@ function autoCell(p,w){
  const until=fundState.auto?.[p.agent_id]||0,on=until*1000>Date.now(),avail=data.fundingStatus?.autoTrade?.available;
  if(!avail&&!on)return `<div class="auto-cell muted">Auto-trade: coming soon</div>`;
  const T=fundState.trading?.[p.agent_id]||{},forever=until>=2**62,rules=T.settings?.enabled?(T.settings.mode==='ask'?'Rules on · asks first':'Rules on'):'Rules off';
- return `<div class="auto-cell">${on?`<span class="tag on">Auto-trade on · ${forever?'until switched off':'until '+new Date(until*1000).toLocaleDateString()}${T.chain?.degen?' · degen':''}</span><button class="btn" data-auto-off="${esc(p.id)}" ${w&&!fundState.busy?'':'disabled'}>Turn off</button>`:`<button class="btn" data-auto-pick="${esc(p.id)}" ${w&&!fundState.busy&&(fundState.perAgent[p.agent_id]||0)>0?'':'disabled'} title="Reserve a budget first">Let agent trade…</button>`}<button class="btn" data-agent-rules="${esc(p.agent_id)}" title="What it buys and when it sells">${esc(rules)}</button></div>`;
+ return `<div class="auto-cell">${on?`<span class="tag on">Auto-trade on · ${forever?'until switched off':'until '+new Date(until*1000).toLocaleDateString()}${(fundState.degen?.[p.agent_id]??T.chain?.degen)?' · degen':''}</span><button class="btn" data-auto-off="${esc(p.id)}" ${w&&!fundState.busy?'':'disabled'}>Turn off</button>`:`<button class="btn" data-auto-pick="${esc(p.id)}" ${w&&!fundState.busy&&(fundState.perAgent[p.agent_id]||0)>0?'':'disabled'} title="Reserve a budget first">Let agent trade…</button>`}<button class="btn" data-agent-rules="${esc(p.agent_id)}" title="What it buys and when it sells">${esc(rules)}</button></div>`;
 }
 function agentPositionsHtml(){
  const groups=Object.values(fundState.agentPositions||{});if(!groups.length)return '';
@@ -2342,7 +2413,7 @@ document.addEventListener('click',ev=>{
  if(on){const plan=data.fundingPlans.find(x=>x.id===on.dataset.autoOn);if(!plan)return;if(!confirm(`Let ${plan.agent_name||'this agent'} trade its reserved budget on its own for 7 days?\n\nLimits: ${money(plan.max_order_usdg)} per order, ${money(plan.daily_limit_usdg)} per day. Only tokens HORMUS has allowlisted. You can turn it off any time.`))return;
   runTx('auto',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);await (await v.setAutoTrade(agentKey(e,plan.agent_id),Math.floor(Date.now()/1000)+7*86400-60)).wait();await patchAgentAuto(plan.agent_id,true);return `${plan.agent_name||'Agent'} can now trade its budget for 7 days`})}
  if(off){const plan=data.fundingPlans.find(x=>x.id===off.dataset.autoOff);if(!plan)return;
-  runTx('auto',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);await (await v.setAutoTrade(agentKey(e,plan.agent_id),0)).wait();await patchAgentAuto(plan.agent_id,false);return 'Auto-trade turned off'})}
+  runTx('auto',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);await (await v.setAutoTrade(agentKey(e,plan.agent_id),0)).wait();fundOverride(plan.agent_id,{auto:0});await patchAgentAuto(plan.agent_id,false);return 'Auto-trade turned off'})}
  if(pw){const [agentId,token]=pw.dataset.posWithdraw.split('|');const x=(fundState.agentPositions[agentId]||[]).find(y=>y.token===token);if(!x)return;
   runTx('position',async()=>{const {e,signer}=await fundSigner(),me=await signer.getAddress();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);await v.withdrawPosition.staticCall(agentKey(e,agentId),token,x.raw,me);await (await v.withdrawPosition(agentKey(e,agentId),token,x.raw,me)).wait();return `${x.symbol||'Tokens'} moved to your wallet`})}
  if(lg){const L=fundState.legacy;if(!L)return;
@@ -2363,9 +2434,11 @@ const dailyText=v=>isNoLimit(v)?'no daily limit':money(v)+'/day';
 fundState.trading=fundState.trading||{};
 async function loadAgentTrading(){
  const out={};
- for(const plan of (data.fundingPlans||[])){try{out[plan.agent_id]=await atRequest('/api/v1/agent-trading/agents/'+encodeURIComponent(plan.agent_id))}catch{}}
+ const plans=data.fundingPlans||[];
+ const [rows,mine]=await Promise.all([Promise.all(plans.map(plan=>atRequest('/api/v1/agent-trading/agents/'+encodeURIComponent(plan.agent_id)).catch(()=>null))),atRequest('/api/v1/agent-trading/my-tokens').catch(()=>null)]);
+ plans.forEach((plan,i)=>{const prev=fundState.trading?.[plan.agent_id],r=rows[i];if(r){if(!r.chain&&prev?.chain)r.chain=prev.chain;out[plan.agent_id]=r}else if(prev)out[plan.agent_id]=prev});
  fundState.trading=out;
- try{fundState.myTokens=(await atRequest('/api/v1/agent-trading/my-tokens')).tokens||[]}catch{fundState.myTokens=fundState.myTokens||[]}
+ fundState.myTokens=mine?.tokens||fundState.myTokens||[];
 }
 // Sign once in the wallet (no ETH needed); HORMUS sends it to the vault and pays the network fee.
 async function agentAllowTokens(tokens,symbols,allowed=true){
@@ -2393,7 +2466,7 @@ function agentTradingHtml(){
  </section>`;
  const openRows=plans.flatMap(p=>(T[p.agent_id]?.open||[]).map(x=>({...x,agentName:p.agent_name})));
  const closedRows=plans.flatMap(p=>(T[p.agent_id]?.closed||[]).map(x=>({...x,agentName:p.agent_name}))).sort((a,b)=>new Date(b.closed_at)-new Date(a.closed_at)).slice(0,10);
- const tradesHtml=openRows.length||closedRows.length?`<section class="panel" style="margin-top:14px"><span class="eyebrow">AGENT TRADES</span><h3 style="margin:6px 0 10px">Open and recent positions</h3><div class="tablewrap tm-table"><table style="min-width:640px"><thead><tr><th>Agent</th><th>Token</th><th>Cost</th><th>Entry</th><th>Result</th></tr></thead><tbody>${[...openRows.map(x=>`<tr><td>${esc(x.agentName||'Agent')}</td><td data-label="Token"><a href="/markets/token/${esc(x.token_address)}">${esc(x.token_symbol||shortAddr(x.token_address))}</a></td><td data-label="Cost">${money(x.cost_usdg)}</td><td data-label="Entry">${x.entry_price_usd?tiPrice(Number(x.entry_price_usd)):'—'}</td><td data-label="Result"><span class="tag on">Open</span></td></tr>`),...closedRows.map(x=>{const pnl=Number(x.cost_usdg)>0&&x.proceeds_usdg!==null?(Number(x.proceeds_usdg)/Number(x.cost_usdg)-1)*100:null;return `<tr><td>${esc(x.agentName||'Agent')}</td><td data-label="Token"><a href="/markets/token/${esc(x.token_address)}">${esc(x.token_symbol||shortAddr(x.token_address))}</a></td><td data-label="Cost">${money(x.cost_usdg)}</td><td data-label="Entry">${x.entry_price_usd?tiPrice(Number(x.entry_price_usd)):'—'}</td><td data-label="Result">${pnl===null?esc(x.close_reason||'closed'):`<span class="${pnl>=0?'up':'down'}">${pnl>=0?'+':''}${pnl.toFixed(1)}%</span> <small class="market-meta">${esc(String(x.close_reason||'').replace('_',' '))}</small>`}</td></tr>`})].join('')}</tbody></table></div></section>`:'';
+ const tradesHtml=openRows.length||closedRows.length?`<section class="panel" style="margin-top:14px"><span class="eyebrow">AGENT TRADES</span><h3 style="margin:6px 0 10px">Open and recent positions</h3><div class="tablewrap tm-table"><table style="min-width:640px"><thead><tr><th>Agent</th><th>Token</th><th>Cost</th><th>Entry</th><th>Result</th></tr></thead><tbody>${[...openRows.map(x=>`<tr><td>${esc(x.agentName||'Agent')}</td><td data-label="Token"><a href="/markets/token/${esc(x.token_address)}">${esc(x.token_symbol||shortAddr(x.token_address))}</a></td><td data-label="Cost">${money(x.cost_usdg)}</td><td data-label="Entry">${x.entry_price_usd?tiPrice(Number(x.entry_price_usd)):'—'}</td><td data-label="Result"><span class="tag on">Open</span></td></tr>`),...closedRows.map(x=>{const pnl=Number(x.cost_usdg)>0&&x.proceeds_usdg!==null?(Number(x.proceeds_usdg)/Number(x.cost_usdg)-1)*100:null;return `<tr><td>${esc(x.agentName||'Agent')}</td><td data-label="Token"><a href="/markets/token/${esc(x.token_address)}">${esc(x.token_symbol||shortAddr(x.token_address))}</a></td><td data-label="Cost">${money(x.cost_usdg)}</td><td data-label="Entry">${x.entry_price_usd?tiPrice(Number(x.entry_price_usd)):'—'}</td><td data-label="Result">${pnl===null?esc(x.close_reason||'closed'):`<span class="${pnl>=0?'market-change-up':'market-change-down'}">${pnl>=0?'+':''}${pnl.toFixed(1)}%</span> <small class="market-meta">${esc(String(x.close_reason||'').replace('_',' '))}</small>`}</td></tr>`})].join('')}</tbody></table></div></section>`:'';
  return pendingHtml+tradesHtml+listHtml;
 }
 const RULE_FIELDS=[
@@ -2401,30 +2474,96 @@ const RULE_FIELDS=[
  ['Launch check (Pons launches)',[['minHolders','Min holders'],['maxTop10Pct','Max top 10 (%)'],['maxSniperPct','Max snipers (%)'],['maxBundlePct','Max bundles (%)'],['maxDevPct','Max dev holds (%)']]],
  ['When to sell',[['takeProfitPct','Take profit (+%)'],['stopLossPct','Stop loss (−%)'],['maxHoldMin','Max hold (minutes)']]],
  ['How much',[['buyUsdg','USDG per buy'],['maxOpenPositions','Max open positions'],['slippagePct','Slippage (%)'],['rebuyCooldownMin','Wait before buying the same token again (minutes)']]]];
+const RULE_PRESETS={
+ careful:{label:'Careful',hint:'Bigger tokens, slow and steady',v:{minLiquidity:50000,minVol1h:10000,minBuySellRatio:1.2,maxChange1h:80,minAgeMin:120,maxTop10Pct:40,maxSniperPct:10,maxBundlePct:20,maxDevPct:10,takeProfitPct:20,stopLossPct:10,maxHoldMin:240,maxOpenPositions:2,slippagePct:3}},
+ balanced:{label:'Balanced',hint:'Active tokens with real buyers',v:{minLiquidity:15000,minVol1h:5000,minBuys1h:30,minBuySellRatio:1.1,maxTop10Pct:50,maxSniperPct:20,maxBundlePct:30,takeProfitPct:30,stopLossPct:15,maxHoldMin:120,maxOpenPositions:3,slippagePct:5}},
+ fast:{label:'Fast',hint:'New launches, quick exits',v:{minLiquidity:3000,minVol1h:2000,minBuys1h:20,maxAgeMin:360,takeProfitPct:50,stopLossPct:25,maxHoldMin:60,maxOpenPositions:3,slippagePct:10}}};
+const RULE_FILTER_KEYS=[...RULE_FIELDS[0][1],...RULE_FIELDS[1][1]].map(([k])=>k);
+function rulesMoney(n){n=Number(n);return n>=1e6?'$'+(n/1e6).toLocaleString('en-US',{maximumFractionDigits:2})+'M':n>=1e3?'$'+(n/1e3).toLocaleString('en-US',{maximumFractionDigits:1})+'K':'$'+n.toLocaleString('en-US',{maximumFractionDigits:2})}
+function rulesList(a){return a.length<2?a.join(''):a.slice(0,-1).join(', ')+' and '+a[a.length-1]}
+function rulesSummary(form,degen){
+ const g=k=>{const raw=form[k]?.value?.trim?.();return raw===''||raw===undefined?null:Number(raw)};
+ const items=[],warns=[];
+ if(form.enabled.value!=='1')return {items:['Off. The agent does not buy anything until you switch it on.'],warns};
+ const scope={any:'any token',fresh:'new Pons launches',mylist:'tokens on your allowlist'}[form.scope.value];
+ const c=[];
+ if(g('minLiquidity')!==null)c.push('liquidity above '+rulesMoney(g('minLiquidity')));
+ if(g('minMcap')!==null&&g('maxMcap')!==null)c.push('market cap '+rulesMoney(g('minMcap'))+' to '+rulesMoney(g('maxMcap')));else if(g('minMcap')!==null)c.push('market cap above '+rulesMoney(g('minMcap')));else if(g('maxMcap')!==null)c.push('market cap below '+rulesMoney(g('maxMcap')));
+ for(const [k,t] of [['minVol5m','5m'],['minVol1h','1h'],['minVol24h','24h']])if(g(k)!==null)c.push(t+' volume above '+rulesMoney(g(k)));
+ if(g('minBuys1h')!==null)c.push('at least '+g('minBuys1h')+' buys in 1h');
+ if(g('minBuySellRatio')!==null)c.push(g('minBuySellRatio')+'× more buys than sells');
+ if(g('minChange5m')!==null)c.push('up '+g('minChange5m')+'%+ in 5m');
+ if(g('minChange1h')!==null)c.push('up '+g('minChange1h')+'%+ in 1h');
+ if(g('maxChange1h')!==null)c.push('not up more than '+g('maxChange1h')+'% in 1h');
+ if(g('minAgeMin')!==null)c.push('older than '+g('minAgeMin')+' min');
+ if(g('maxAgeMin')!==null)c.push('younger than '+g('maxAgeMin')+' min');
+ if(g('minCurve')!==null||g('maxCurve')!==null)c.push('Pons curve '+(g('minCurve')??0)+'–'+(g('maxCurve')??100)+'%');
+ const launch=RULE_FIELDS[1][1].filter(([k])=>g(k)!==null).length;if(launch)c.push(launch+' launch check'+(launch>1?'s':''));
+ items.push('Buys '+scope+(c.length?' with '+rulesList(c):'')+'.');
+ if(!c.length)warns.push('No filters: it may buy the first token it sees.');
+ if(form.includeStocks.value==='1')items.push('Tokenized stocks are included.');
+ const buy=g('buyUsdg'),open=g('maxOpenPositions'),sl=g('slippagePct');
+ items.push('Spends '+(buy??'?')+' USDG per buy'+(open?', up to '+open+' open at once':'')+(sl!==null?', slippage '+sl+'%':'')+'.');
+ const s=[];if(g('takeProfitPct')!==null)s.push('at +'+g('takeProfitPct')+'% profit');if(g('stopLossPct')!==null)s.push('at −'+g('stopLossPct')+'% loss');if(g('maxHoldMin')!==null)s.push('after '+g('maxHoldMin')+' min');
+ if(s.length)items.push('Sells '+(s.length<2?s[0]:s.slice(0,-1).join(', ')+' or '+s[s.length-1])+(s.length>1?', whichever comes first':'')+'.');else warns.push('No sell rule: positions stay open until you sell them.');
+ items.push(form.mode.value==='ask'?'Asks you on Telegram before every buy.':'Buys on its own while you let it trade.');
+ if(degen===false&&form.scope.value!=='mylist')items.push('Tokens not on your allowlist come to Telegram as "Allow & buy".');
+ if(sl!==null&&sl>10)warns.push('Slippage '+sl+'%: the price can end up much worse than the quote.');
+ return {items,warns};
+}
 function openAgentRules(agentId){
  const plan=(data.fundingPlans||[]).find(p=>p.agent_id===agentId);const T=fundState.trading?.[agentId]||{};const s=T.settings||{};const r=s.rules||{};
  const val=k=>r[k]===undefined||r[k]===null?'':r[k];
  const deflt={buyUsdg:plan?Math.min(Number(plan.max_order_usdg),25):25,maxOpenPositions:3,slippagePct:5,rebuyCooldownMin:240};
- const degen=!!T.chain?.degen;
- openModal(`<div class="modalhead"><h3>${esc(plan?.agent_name||'Agent')} · trading rules</h3><button class="close" data-close>×</button></div>
- <form id="rulesform"><p class="muted" style="font-size:14px;line-height:1.7;margin:0 0 12px">The agent reads live data every 20 seconds and only buys a token that passes every rule you fill in. Empty fields are ignored. All numbers are your choice.</p>
- <div class="grid2"><div class="field"><label>Status</label><select class="select" name="enabled"><option value="1" ${s.enabled?'selected':''}>On: follow these rules</option><option value="0" ${s.enabled?'':'selected'}>Off</option></select></div>
- <div class="field"><label>Mode</label><select class="select" name="mode"><option value="auto" ${s.mode!=='ask'?'selected':''}>Auto: buy on its own</option><option value="ask" ${s.mode==='ask'?'selected':''}>Ask me first in Telegram</option></select></div>
- <div class="field"><label>Tokens</label><select class="select" name="scope"><option value="any" ${(r.scope||'any')==='any'?'selected':''}>Any token that passes</option><option value="fresh" ${r.scope==='fresh'?'selected':''}>Only Pons launches</option><option value="mylist" ${r.scope==='mylist'?'selected':''}>Only my allowlist</option></select></div>
- <div class="field"><label>Tokenized stocks</label><select class="select" name="includeStocks"><option value="0" ${r.includeStocks?'':'selected'}>Skip</option><option value="1" ${r.includeStocks?'selected':''}>Include</option></select></div></div>
- ${RULE_FIELDS.map(([title,fields])=>`<h4 style="margin:14px 0 6px">${title}</h4><div class="grid3">${fields.map(([k,l])=>`<div class="field"><label>${l}</label><input class="input" name="${k}" type="number" step="any" value="${esc(String(val(k)!==''?val(k):(deflt[k]??'')))}"></div>`).join('')}</div>`).join('')}
- <p class="market-meta" id="rules-warn"></p>
- <div class="info-note" style="margin-top:10px"><b>Degen mode: ${degen?'on':'off'}</b><br>${degen?'This agent may buy any token, not only your allowlist.':'Off: the agent only buys tokens on your allowlist or the HORMUS list. A token that passes your rules but is not allowed yet comes to Telegram as "Allow & buy".'} <button type="button" class="btn" id="rules-degen" style="margin-left:6px">${degen?'Turn degen mode off':'Turn degen mode on'}</button></div>
- <div class="toolbar" style="justify-content:flex-end;margin-top:14px"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary" type="submit">Save rules</button></div></form>`);
+ const known=fundState.degen&&agentId in fundState.degen?fundState.degen[agentId]:(T.chain?T.chain.degen:undefined);
+ const degen=known===undefined?undefined:!!known;
+ const LBL={rebuyCooldownMin:'Wait before rebuying (min)',maxOpenPositions:'Max open at once',slippagePct:'Slippage (%)',buyUsdg:'USDG per buy'};
+ const input=([k,l])=>`<div class="field"><label>${esc(LBL[k]||l)}</label><input class="input" name="${k}" type="number" step="any" inputmode="decimal" value="${esc(String(val(k)!==''?val(k):(deflt[k]??'')))}"></div>`;
+ const F=Object.fromEntries(RULE_FIELDS.map(([t,f])=>[t,f]));
+ openModal(`<div class="modalhead"><div><div class="eyebrow">TRADING RULES</div><h3>${esc(plan?.agent_name||'Agent')}</h3></div><button class="close" data-close>×</button></div>
+ <form id="rulesform" class="rules"><div class="rules-main">
+  <p class="muted rules-intro">The agent checks live data every 20 seconds and only buys a token that passes every rule you fill in. Empty fields are ignored.</p>
+  <div class="rules-presets"><span class="rules-lead">Start from</span>${Object.entries(RULE_PRESETS).map(([k,p])=>`<button type="button" data-preset="${k}"><b>${p.label}</b><small>${p.hint}</small></button>`).join('')}</div>
+  <div class="rules-sec"><h4>Basics</h4><div class="rules-g2">
+   <div class="field"><label>Status</label><select class="select" name="enabled"><option value="1" ${s.enabled?'selected':''}>On: follow these rules</option><option value="0" ${s.enabled?'':'selected'}>Off</option></select></div>
+   <div class="field"><label>Mode</label><select class="select" name="mode"><option value="auto" ${s.mode!=='ask'?'selected':''}>Auto: buy on its own</option><option value="ask" ${s.mode==='ask'?'selected':''}>Ask me first in Telegram</option></select></div>
+   <div class="field"><label>Tokens</label><select class="select" name="scope"><option value="any" ${(r.scope||'any')==='any'?'selected':''}>Any token that passes</option><option value="fresh" ${r.scope==='fresh'?'selected':''}>Only Pons launches</option><option value="mylist" ${r.scope==='mylist'?'selected':''}>Only my allowlist</option></select></div>
+   <div class="field"><label>Tokenized stocks</label><select class="select" name="includeStocks"><option value="0" ${r.includeStocks?'':'selected'}>Skip</option><option value="1" ${r.includeStocks?'selected':''}>Include</option></select></div></div></div>
+  <div class="rules-sec"><h4>How much</h4><div class="rules-g4">${F['How much'].map(input).join('')}</div></div>
+  <div class="rules-sec"><h4>When to sell <small>whichever comes first</small></h4><div class="rules-g3">${F['When to sell'].map(input).join('')}</div></div>
+  <details class="rules-more" data-sec="What to buy"><summary>Market filters <span class="rules-count"></span></summary><div class="rules-g3">${F['What to buy'].map(input).join('')}</div></details>
+  <details class="rules-more" data-sec="Launch check (Pons launches)"><summary>Launch check <small>Pons launches</small> <span class="rules-count"></span></summary><div class="rules-g3">${F['Launch check (Pons launches)'].map(input).join('')}</div></details>
+ </div>
+ <aside class="rules-side">
+  <div class="rules-sum"><span class="eyebrow">WHAT IT WILL DO</span><ul id="rules-sum"></ul><div id="rules-warn"></div></div>
+  <div class="rules-degen ${degen?'on':''}"><b>Degen mode: ${degen===undefined?'checking…':degen?'on':'off'}</b><p>${degen?'May buy any token that passes your rules, not only your allowlist.':'Off: only tokens on your allowlist or the HORMUS list. Turning it on is one wallet transaction.'}</p><button type="button" class="btn" id="rules-degen" ${degen===undefined||fundState.busy?'disabled':''}>${degen?'Turn degen mode off':'Turn degen mode on'}</button></div>
+  ${plan?`<p class="market-meta rules-budget">Budget ${money(plan.planned_allocation_usdg)} · max ${money(plan.max_order_usdg)} per order · ${dailyText(plan.daily_limit_usdg)}</p>`:''}
+  <div class="rules-actions"><button type="button" class="btn" data-close>Cancel</button><button class="btn primary" type="submit" id="rules-save">Save rules</button></div>
+ </aside></form>`);
+ document.getElementById('modal').classList.add('modal-wide');
  const form=document.getElementById('rulesform');
- const warn=()=>{const sl=Number(form.slippagePct.value);document.getElementById('rules-warn').textContent=sl>10?`Slippage ${sl}%: the price can be much worse than the quote.`:''};form.slippagePct.oninput=warn;warn();
- document.getElementById('rules-degen').onclick=()=>{const on=!degen;if(on&&!confirm('Degen mode lets this agent buy ANY token that passes your rules, including brand-new launches, without asking.\n\nIf something goes wrong, you can lose up to this agent\'s whole budget. Your funds outside this budget stay safe, and you can withdraw any time.\n\nTurn it on?'))return;closeModal();
-  runTx('degen',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);await (await v.setAgentMode(agentKey(e,agentId),on)).wait();await loadAgentTrading();return on?'Degen mode on':'Degen mode off'})};
- form.onsubmit=async ev=>{ev.preventDefault();const rules={scope:form.scope.value,includeStocks:form.includeStocks.value==='1'};
-  for(const [,fields] of RULE_FIELDS)for(const [k] of fields){const raw=form[k].value.trim();if(raw!=='')rules[k]=Number(raw)}
-  if(!(rules.buyUsdg>0))return toast('Set how much USDG to use per buy.');
-  try{await atRequest('/api/v1/agent-trading/agents/'+encodeURIComponent(agentId),{method:'PUT',body:JSON.stringify({enabled:form.enabled.value==='1',mode:form.mode.value,rules})});closeModal();toast('Rules saved');await loadAgentTrading();renderApp('funding')}
-  catch(err){toast('Could not save the rules: '+(err.message||'check the numbers'))}};
+ const counts=()=>form.querySelectorAll('.rules-more').forEach(d=>{const n=[...d.querySelectorAll('input')].filter(i=>i.value.trim()!=='').length;d.querySelector('.rules-count').textContent=n?n+' on':''});
+ const paint=()=>{const {items,warns}=rulesSummary(form,degen);document.getElementById('rules-sum').innerHTML=items.map(t=>`<li>${esc(t)}</li>`).join('');document.getElementById('rules-warn').innerHTML=warns.map(t=>`<p class="rules-warn">${esc(t)}</p>`).join('');counts()};
+ form.querySelectorAll('.rules-more').forEach(d=>{if([...d.querySelectorAll('input')].some(i=>i.value.trim()!==''))d.open=true});
+ form.addEventListener('input',ev=>{if(ev.isTrusted)form.querySelectorAll('[data-preset]').forEach(b=>b.classList.remove('on'));paint()});form.addEventListener('change',paint);paint();
+ form.querySelectorAll('[data-preset]').forEach(b=>b.onclick=()=>{const p=RULE_PRESETS[b.dataset.preset];
+  for(const k of RULE_FILTER_KEYS)form[k].value='';for(const k of ['takeProfitPct','stopLossPct','maxHoldMin'])form[k].value='';
+  for(const [k,v] of Object.entries(p.v))if(form[k])form[k].value=v;
+  form.querySelectorAll('.rules-more').forEach(d=>{d.open=[...d.querySelectorAll('input')].some(i=>i.value.trim()!=='')});
+  form.querySelectorAll('[data-preset]').forEach(x=>x.classList.toggle('on',x===b));paint()});
+ const collect=()=>{const rules={scope:form.scope.value,includeStocks:form.includeStocks.value==='1'};for(const [,fields] of RULE_FIELDS)for(const [k] of fields){const raw=form[k].value.trim();if(raw!=='')rules[k]=Number(raw)}return rules};
+ const save=async()=>{const rules=collect();if(!(rules.buyUsdg>0)){toast('Set how much USDG to use per buy.');return false}
+  try{await atRequest('/api/v1/agent-trading/agents/'+encodeURIComponent(agentId),{method:'PUT',body:JSON.stringify({enabled:form.enabled.value==='1',mode:form.mode.value,rules})});
+   const cur=fundState.trading[agentId]=fundState.trading[agentId]||{};cur.settings={...(cur.settings||{}),enabled:form.enabled.value==='1',mode:form.mode.value,rules};return true}
+  catch(err){toast('Could not save the rules: '+(err.message||'check the numbers'));return false}};
+ // Degen mode is a wallet transaction: save the form first so nothing typed is lost.
+ document.getElementById('rules-degen').onclick=async()=>{const on=!degen;if(fundState.busy)return;
+  if(on&&!confirm('Degen mode lets this agent buy ANY token that passes your rules, including brand-new launches, without asking.\n\nIf something goes wrong, you can lose up to this agent\'s whole budget. Your funds outside this budget stay safe, and you can withdraw any time.\n\nTurn it on?'))return;
+  const b=document.getElementById('rules-degen');b.disabled=true;b.textContent='Saving rules…';if(!await save()){b.disabled=false;b.textContent=on?'Turn degen mode on':'Turn degen mode off';return}
+  closeModal();
+  runTx('degen',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);await (await v.setAgentMode(agentKey(e,agentId),on)).wait();fundOverride(agentId,{degen:on});return on?'Rules saved · degen mode on':'Rules saved · degen mode off'})};
+ form.onsubmit=async ev=>{ev.preventDefault();const b=document.getElementById('rules-save');b.disabled=true;b.textContent='Saving…';
+  if(await save()){closeModal();toast('Rules saved');loadAgentTrading().catch(()=>{}).then(()=>{if(pagePath==='/funding')renderApp('funding')});renderApp('funding')}else{b.disabled=false;b.textContent='Save rules'}};
 }
 function openAutoTrade(plan){
  openModal(`<div class="modalhead"><h3>Let ${esc(plan.agent_name||'this agent')} trade</h3><button class="close" data-close>×</button></div>
@@ -2432,7 +2571,7 @@ function openAutoTrade(plan){
  <div class="field"><label>For how long</label><select class="select" id="at-dur"><option value="1">1 day</option><option value="7" selected>7 days</option><option value="30">30 days</option><option value="0">Until I turn it off</option></select></div>
  <div class="toolbar" style="justify-content:flex-end;margin-top:12px"><button class="btn" data-close>Cancel</button><button class="btn primary" id="at-go">Confirm in wallet</button></div>`);
  document.getElementById('at-go').onclick=()=>{const d=Number(document.getElementById('at-dur').value);closeModal();
-  runTx('auto',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);const until=d===0?MAX_U64:BigInt(Math.floor(Date.now()/1000)+d*86400-60);await (await v.setAutoTrade(agentKey(e,plan.agent_id),until)).wait();await patchAgentAuto(plan.agent_id,true);return d===0?`${plan.agent_name||'Agent'} can trade until you turn it off`:`${plan.agent_name||'Agent'} can trade for ${d} day${d>1?'s':''}`})};
+  runTx('auto',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);const until=d===0?MAX_U64:BigInt(Math.floor(Date.now()/1000)+d*86400-60);await (await v.setAutoTrade(agentKey(e,plan.agent_id),until)).wait();fundOverride(plan.agent_id,{auto:Number(until)});await patchAgentAuto(plan.agent_id,true);return d===0?`${plan.agent_name||'Agent'} can trade until you turn it off`:`${plan.agent_name||'Agent'} can trade for ${d} day${d>1?'s':''}`})};
 }
 document.addEventListener('click',ev=>{
  const rb=ev.target.closest('[data-agent-rules]'),at=ev.target.closest('[data-auto-pick]'),add=ev.target.closest('#agl-add'),rm=ev.target.closest('[data-agl-remove]'),ta=ev.target.closest('[data-agent-allow]');
