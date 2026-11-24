@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-32"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
+<meta name="theme-color" content="#050b0a"><meta name="hormus-release" content="DAY-2-33"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="icon" type="image/png" sizes="128x128" href="/favicon.png"><link rel="alternate icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><meta name="description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:type" content="website"><meta property="og:site_name" content="HORMUS"><meta property="og:url" content="https://hormus.io/"><meta property="og:title" content="HORMUS | Know the token before you trade it"><meta property="og:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta property="og:image" content="https://hormus.io/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:site" content="@hormusapp"><meta name="twitter:title" content="HORMUS | Know the token before you trade it"><meta name="twitter:description" content="Live markets, research agents and swaps for tokens on Robinhood Chain."><meta name="twitter:image" content="https://hormus.io/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Geist:wght@400;500;600;700&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
 <title>HORMUS | Know the token before you trade it</title>
 <style>
@@ -1137,6 +1137,8 @@
  .rules-g2{grid-template-columns:1fr}
  .rules-actions{position:sticky;bottom:0;background:#0b1518;padding:12px 0 16px;margin-top:-2px}
 }
+/* DAY-2-33 outside links */
+.ti-ext{display:contents}
 </style>
 
 </head>
@@ -1738,7 +1740,7 @@ function renderTokenIntelligence(){
  const explorer=`https://robinhoodchain.blockscout.com/token/${encodeURIComponent(addr)}`,ponsUrl=`https://www.ponsfamily.com/launchpad/${encodeURIComponent(addr)}`;
  const hero=`<section class="panel ti-hero"><div class="ti-id">${marketTokenImage(t.imageUrl,t.symbol||t.name||'TOKEN')}<div><h2>${tiEsc(t.name||'Token')}</h2><div class="ti-sub"><span class="ti-sym">${tiEsc(t.symbol||'')}</span>${isPons?'<span class="ti-chip">Pons</span>':''}${status&&status!=='market data only'?`<span class="ti-chip">${tiEsc(status)}</span>`:''}<button class="ti-copy" data-copy="${esc(addr)}" title="Copy contract address">${tiShort(addr)}<i>Copy</i></button></div></div></div>
   <div class="ti-pricebox"><b>${tiPrice(t.priceUsd)}</b>${chg===null?'':`<span class="ti-chg ${chg>=0?'up':'down'}">${chg>0?'+':''}${chg.toFixed(2)}% <small>24h</small></span>`}</div>
-  <div class="ti-actions"><a class="btn primary" href="#ti-trade" data-ti-jump>Trade</a>${tiAlertButton()}${tiAgentAllowButton(addr,t.symbol)}<a class="btn" href="${explorer}" target="_blank" rel="noopener noreferrer">Explorer ↗</a>${isPons?`<a class="btn" href="${ponsUrl}" target="_blank" rel="noopener noreferrer">Pons ↗</a>`:''}<button class="btn ghost" id="ti-refresh" title="Refresh">↻</button></div>${tiSocials(t.links)}</section>`;
+  <div class="ti-actions"><a class="btn primary" href="#ti-trade" data-ti-jump>Trade</a>${tiAlertButton()}${tiAgentAllowButton(addr,t.symbol)}<a class="btn" href="${explorer}" target="_blank" rel="noopener noreferrer">Explorer ↗</a>${isPons?`<a class="btn" href="${ponsUrl}" target="_blank" rel="noopener noreferrer">Pons ↗</a>`:''}<span id="ti-ext" class="ti-ext">${tiExtLinks(addr)}</span><button class="btn ghost" id="ti-refresh" title="Refresh">↻</button></div>${tiSocials(t.links)}</section>`;
  const metrics=`<div class="ti-metrics">${[['24h volume',tiMoney(t.volume24h)],['Liquidity',tiMoney(t.liquidityUsd)],['Market cap',tiMoney(t.marketCapUsd)],['FDV',tiMoney(t.fdvUsd)],['Holders',tiNum(t.holders)],['Circulating',t.circulatingSupply?tiNum(t.circulatingSupply):tiNum(t.totalSupply)]].map(([k,v])=>`<div class="ti-metric"><small>${k}</small><b>${v}</b></div>`).join('')}</div>`;
  const intervals=`<div class="ti-intervals">${['5m','15m','1h','4h','1d'].map(v=>`<button data-ti-interval="${v}" class="${S.interval===v?'active':''}">${v}</button>`).join('')}</div>`;
  const chartSection=`<section class="panel"><div class="ti-section-head"><h3>Price</h3>${intervals}</div>${tiChart(chartRows)}</section>`;
@@ -2565,6 +2567,16 @@ function openAgentRules(agentId){
   runTx('degen',async()=>{const {e,signer}=await fundSigner();const v=new e.Contract(fundCfg().vault,VAULT2_ABI,signer);await (await v.setAgentMode(agentKey(e,agentId),on)).wait();fundOverride(agentId,{degen:on});return on?'Rules saved · degen mode on':'Rules saved · degen mode off'})};
  form.onsubmit=async ev=>{ev.preventDefault();const b=document.getElementById('rules-save');b.disabled=true;b.textContent='Saving…';
   if(await save()){closeModal();toast('Rules saved');loadAgentTrading().catch(()=>{}).then(()=>{if(pagePath==='/funding')renderApp('funding')});renderApp('funding')}else{b.disabled=false;b.textContent='Save rules'}};
+}
+// DEX Screener / GMGN: shown only when the backend found the token there (or it is tradable for GMGN).
+const tiLinkCache={};
+function tiExtHtml(l){if(!l)return '';const safe=(u,host)=>typeof u==='string'&&u.startsWith('https://'+host+'/')?u:'';const d=safe(l.dexscreener,'dexscreener.com'),g=safe(l.gmgn,'gmgn.ai');return (d?`<a class="btn" href="${esc(d)}" target="_blank" rel="noopener noreferrer">DEX Screener ↗</a>`:'')+(g?`<a class="btn" href="${esc(g)}" target="_blank" rel="noopener noreferrer">GMGN ↗</a>`:'')}
+function tiExtLinks(addr){
+ const a=String(addr||'').toLowerCase();if(!/^0x[a-f0-9]{40}$/.test(a))return '';
+ const c=tiLinkCache[a];if(c&&c.body)return tiExtHtml(c.body);
+ if(!c||(!c.busy&&Date.now()-c.at>60000)){tiLinkCache[a]={busy:true,at:Date.now()};
+  apiRequest('/api/v1/token-links/'+a).then(b=>{tiLinkCache[a]={body:b,at:Date.now()};const el=document.getElementById('ti-ext');if(el&&location.pathname.toLowerCase().includes(a))el.innerHTML=tiExtHtml(b)}).catch(()=>{tiLinkCache[a]={at:Date.now()}})}
+ return '';
 }
 function openAutoTrade(plan){
  openModal(`<div class="modalhead"><h3>Let ${esc(plan.agent_name||'this agent')} trade</h3><button class="close" data-close>×</button></div>
